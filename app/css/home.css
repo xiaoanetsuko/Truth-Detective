@@ -1,0 +1,122 @@
+.wrapper{
+    text-align: center;
+    width: 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.masthead{
+    /*background: #E04F4C;*/
+    /*background: #C58177;*/
+    background: #DB9186;
+
+}
+
+.headbox{
+    height: 550px;
+
+    /*margin-top: 80px;*/
+    padding-top: 60px;
+    padding-bottom: 60px;
+    z-index: 100;
+}
+
+
+.shadow-btm{
+    -webkit-box-shadow: 0 8px 6px -6px #707070;
+    -moz-box-shadow: 0 8px 6px -6px #707070;
+    box-shadow: 0 8px 6px -6px #707070;
+}
+
+.shadow-top{
+    -webkit-box-shadow: 0 -8px 6px -6px #707070;
+    -moz-box-shadow: 0 -8px 6px -6px #707070;
+    box-shadow: 0 -8px 6px -6px #707070;
+}
+
+.secondbox{
+    /*z-index: 1;*/
+    /*width: 100%;*/
+    margin: 95px 70px;
+}
+
+.secondboxrow{
+    margin-top: 60px;
+}
+.secondboxheader{
+    font-size: 2.8em;
+    margin-top: 5px;
+}
+
+.secondboxtext{
+    font-size: 16px;
+    display: block;
+    /*overflow: hidden;*/
+    margin-top: 50px;
+    /*color: #47120B;*/
+    color: #434E63;
+}
+.btn-outline{
+    color: #38221E;
+    background-color: transparent;
+    border-color: #38221E;
+}
+
+.joingame{
+    font-size: 2em;
+    padding: 15px 30px;
+    margin-top: 40px;
+}
+
+a.joingame:hover{
+    background: #F5EAE6;
+    border-color: #F5EAE6;
+    color: #38221E;
+}
+
+.textbox{
+    padding-top: 80px;
+    padding-left: 180px;
+    padding-right: 180px;
+    color: #ffffff;
+
+}
+.headertext{
+    font-size: 28px;
+
+    display: block;
+    text-align: center;
+}
+
+
+.thirdbox{
+    width: 100%;
+    padding: 50px 100px 50px 100px;
+    background: #F5EAE6;
+
+}
+.feature-heading{
+    line-height: 1;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.feature-body-right{
+    text-align: right;
+}
+.feature-body-left{
+    text-align: left;
+}
+.feature {
+    margin: 60px 0;
+}
+.half-rule{
+    width: 400px;
+    background-color: #DB9186;
+    border-color: #DB9186;
+    color: #DB9186;
+}
+
+.btnnav{
+    height: 200px;
+    background: #222222;
+}
+
