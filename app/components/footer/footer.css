@@ -1,0 +1,22 @@
+.btnnav{
+    /*height: 150px;*/
+    background: #BD7C2E;
+
+}
+
+.btnnav-tab a{
+    text-decoration: none;
+    color: #CCCCCC;
+}
+.btnnav-tab a:hover{
+    text-decoration: none;
+
+}
+#btm-nav{
+    padding-top: 65px;
+    width: 100%;
+}
+.ip{
+    padding-top: 30px;
+    padding-bottom: 6px;
+}
