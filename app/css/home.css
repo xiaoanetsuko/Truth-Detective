@@ -29,7 +29,7 @@
 }
 
 .headbox{
-    height: 750px;
+    /*height: 750px;*/
     padding-top: 60px;
     padding-bottom: 60px;
     z-index: 100;
@@ -79,6 +79,7 @@
     font-size: 2em;
     padding: 15px 30px;
     margin-top: 70px;
+    margin-bottom: 50px;
     transition: all 0.4s ease;
     color: #FFFFFF;
 }
@@ -98,9 +99,9 @@ a.joingame:hover{
 }
 
 .textbox{
-    padding-top: 250px;
-    padding-left: 180px;
-    padding-right: 180px;
+    margin-top: 260px;
+    margin-left: 90px;
+    margin-right: 90px;
     color: #ffffff;
 
 }
