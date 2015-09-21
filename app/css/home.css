@@ -30,9 +30,13 @@
 
 .headbox{
     /*height: 750px;*/
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 60px;
     z-index: 100;
+}
+.homelogin{
+    color: #FFFFFF;
+    text-align: right;
 }
 
 .shadow-btm{
