@@ -157,7 +157,8 @@ a.joingame:hover{
 }
 
 .btnnav{
-    /*height: 150px;*/
+    text-align: center;
+    height: 150px;
     background: #BD7C2E;
 
 }
@@ -179,4 +180,86 @@ a.joingame:hover{
     padding-bottom: 6px;
 }
 
+.topnav{
+    background: #434E63;
 
+}
+
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 70px;
+    height: 70px;
+    padding-top: 0;
+    -webkit-text-fill-color: white;
+}
+
+.navbar-default .navbar-nav{
+    background: #434E63;
+    height: 70px;
+    padding-bottom: 30px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    background-color: #172563;
+    color: #fff;
+    /*border-radius: 2rem;*/
+
+}
+
+.navbar-default .navbar-nav > li > a:focus{
+    background-color: #172563;
+    color: #fff;
+    /*border-radius: 2rem;*/
+
+}
+
+/*-- change navbar dropdown color --*/
+.navbar-default .navbar-nav .open .dropdown-menu>li>a,
+.navbar-default .navbar-nav .open .dropdown-menu {
+    background-color: #ffffff;
+    -webkit-text-fill-color:#434E63;
+}
+
+.dropdown-toggle{
+    -webkit-text-fill-color: #434E63;
+}
+
+.dropdown-toggle:active, .open .dropdown-toggle {
+    background: #172563 !important;
+}
+
+.container{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.progressbar {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    border: none;
+    margin: 1em 0em 2.5em;
+    box-shadow: none;
+    background: rgba(131, 144, 183, 0.86);
+    padding: 0em;
+    border-radius: 0.28571429rem;
+    text-align: right;
+
+}
+
+.percentagebar{
+    position: relative;
+    display: block;
+    max-width: 100%;
+    border: none;
+    margin: 1em 0em 2.5em;
+    box-shadow: none;
+    background: rgba(74, 91, 183, 0.86);
+    padding: 0em;
+    border-radius: 0.28571429rem;
+}
+
+.bartext{
+    padding-right: 5px;
+    -webkit-text-fill-color: #fff;
+}
