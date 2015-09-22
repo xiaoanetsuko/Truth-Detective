@@ -1,0 +1,162 @@
+.masthead{
+    /*background: #E04F4C;*/
+    /*background: #C58177;*/
+    /*background: #DB9186;*/
+    /*background: #4D3606;*/
+    background-color: rgba(122, 122, 122, 0.94);
+    background-image: repeating-linear-gradient(45deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
+    hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(33, 61%, 46%, 0.5) 35px, hsla(33, 61%, 46%, 0.5) 40px,
+    hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
+    hsla(33, 40%, 61%, 0.5) 60px, hsla(33, 40%, 61%, 0.5) 70px, hsla(0, 0%, 78%, 0.5) 70px, hsla(45, 2%, 72%, 0.5) 80px,
+    hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(33, 40%, 61%, 0.5) 90px, hsla(33, 40%, 61%, 0.5) 110px,
+    hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 120px, hsla(197, 62%, 11%, 0.5) 120px, hsla(197, 62%, 11%, 0.5) 140px
+    ),
+    repeating-linear-gradient(135deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
+            hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(33, 61%, 46%, 0.5) 35px, hsla(33, 61%, 46%, 0.5) 40px,
+            hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
+            hsla(33, 40%, 61%, 0.5) 60px, hsla(33, 40%, 61%, 0.5) 70px, hsla(0, 0%, 78%, 0.5) 70px, hsla(45, 2%, 72%, 0.5) 80px,
+            hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(33, 40%, 61%, 0.5) 90px, hsla(33, 40%, 61%, 0.5) 110px,
+            hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 140px, hsla(197, 62%, 11%, 0.5) 140px, hsla(197, 62%, 11%, 0.5) 160px
+    );
+
+}
+
+.headbox{
+    /*height: 750px;*/
+    padding-top: 30px;
+    padding-bottom: 60px;
+    z-index: 100;
+}
+.homelogin{
+    color: #FFFFFF;
+}
+.btn-div{
+  width: 100%;
+}
+.login-btn{
+    float: right;
+
+}
+.shadow-btm{
+    -webkit-box-shadow: 0 8px 6px -6px #707070;
+    -moz-box-shadow: 0 8px 6px -6px #707070;
+    box-shadow: 0 8px 6px -6px #707070;
+}
+
+.shadow-top{
+    -webkit-box-shadow: 0 -8px 6px -6px #707070;
+    -moz-box-shadow: 0 -8px 6px -6px #707070;
+    box-shadow: 0 -8px 6px -6px #707070;
+}
+
+.secondbox{
+    /*z-index: 1;*/
+    /*width: 100%;*/
+    margin: 95px 70px;
+}
+
+.secondboxrow{
+    margin-top: 60px;
+}
+.secondboxheader{
+    font-size: 2.8em;
+    margin-top: 5px;
+}
+
+.secondboxtext{
+    font-size: 16px;
+    display: block;
+    /*overflow: hidden;*/
+    margin-top: 50px;
+    /*color: #47120B;*/
+    color: #434E63;
+}
+.btn-outline{
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.joingame{
+    font-size: 1.4em;
+    padding: 15px 30px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    /*transition: all 0.4s ease;*/
+
+}
+.md-button.md-raised.joingame {
+  background-color: #F5F5F5;
+}
+
+/*a.joingame:link{*/
+    /*color: #FFFFFF;*/
+/*}*/
+
+/*a.joingame:visited{*/
+    /*color: #FFFFFF;*/
+/*}*/
+
+/*a.joingame:hover{*/
+    /*background: #F5F5F5;*/
+    /*border-color: #F5F5F5;*/
+    /*color: #4F4F4F;*/
+    /*transition: all 0.4s ease;*/
+/*}*/
+.buttontext{
+  color: #BD7C2E;
+}
+
+.textbox{
+    margin-top: 260px;
+    margin-left: 90px;
+    margin-right: 90px;
+    color: #ffffff;
+
+}
+.headertext{
+    font-size: 28px;
+    color: #FFFFFF;
+    display: block;
+    text-align: center;
+}
+
+
+.thirdbox{
+    width: 100%;
+
+    background: #F5EAE6;
+
+}
+.feature-heading{
+    line-height: 1;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.feature-body-right{
+    text-align: right;
+}
+.feature-body-left{
+    text-align: left;
+}
+.feature {
+    background: #222222;
+    color: #CCCCCC;
+}
+.feature-text-body{
+    padding: 190px 70px;
+}
+.feature-img{
+    max-height: 610px;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+}
+/*.half-rule{*/
+    /*width: 400px;*/
+    /*background-color: #DB9186;*/
+    /*border-color: #DB9186;*/
+    /*color: #DB9186;*/
+/*}*/

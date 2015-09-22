@@ -1,0 +1,37 @@
+<md-dialog aria-label="login" style="background-color: #F5F5F5;">
+    <md-content layout-padding layout-margin class="login-content">
+        <md-toolbar class="login-toolbar">
+            <div class="close-button-container">
+                <md-button class="md-icon-button close-button" ng-click="cancel()">
+                    <md-icon md-svg-src="../images/icons/ic_close_black_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <form name="login-form" id="login-form">
+            <md-dialog-content class="login-field">
+                <md-input-container flex>
+                    <label>Email</label>
+                    <input>
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Password</label>
+                    <input type="password">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>First name</label>
+                    <input type="password">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Last name</label>
+                    <input type="password">
+                </md-input-container>
+            </md-dialog-content>
+        </form>
+        <div class="signup-redirect">
+            <p>Don't have an account? <a href="#">Sign up</a> now!</p>
+        </div>
+        <div class="center-btn">
+            <md-button class="md-raised  login-submit" ng-click=""><span class="login-submit-text">Log in</span></md-button>
+        </div>
+    </md-content>
+</md-dialog>

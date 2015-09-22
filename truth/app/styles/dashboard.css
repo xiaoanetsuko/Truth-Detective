@@ -1,0 +1,23 @@
+md-toolbar:not(.md-menu-toolbar).dash-topnav{
+    background-color: #BD7C2E;
+}
+
+.dash-content{
+
+}
+
+.pgbar{
+    margin: 40px 200px;
+}
+
+.pg-label{
+    margin-top: 80px;
+}
+
+.chapter-tile{
+    background-color: #4F4F4F;
+}
+
+.all-ch{
+    margin: 30px 100px;
+}

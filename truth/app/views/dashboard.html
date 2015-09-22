@@ -1,0 +1,53 @@
+<md-toolbar class="dash-topnav">
+    <div class="md-toolbar-tools">
+        <span flex="5"></span>
+        <h2>
+            <span class="white-text">Truth Detective</span>
+        </h2>
+        <span flex></span>
+        <h5>
+            <span class="white-text">Test User</span>
+        </h5>
+        <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="../images/icons/ic_account_circle_white_24px.svg"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+<div class="dash-content">
+    <h3 class="pg-label">
+        Current Progress
+    </h3>
+    <div class="pgbar">
+        <md-progress-linear md-mode="determinate" value="30"></md-progress-linear>
+    </div>
+    <div class="all-ch">
+        <md-grid-list
+                      md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
+                      md-row-height-gt-md="1:1" md-row-height="4:3"
+                      md-gutter="40px" md-gutter-gt-sm="12px" >
+            <md-grid-tile class="chapter-tile" md-rowspan="2" md-colspan="3" md-colspan-sm="1">
+                <md-grid-tile-footer>
+                    <h3 class="white-text">Chapter 1</h3>
+                </md-grid-tile-footer>
+            </md-grid-tile>
+            <md-grid-tile class="chapter-tile" md-rowspan="2" md-colspan="3" md-colspan-sm="1">
+                <md-grid-tile-footer>
+                    <h3 class="white-text">Chapter 2</h3>
+                </md-grid-tile-footer>
+            </md-grid-tile>
+            <md-grid-tile class="chapter-tile" md-rowspan="2" md-colspan="3" md-colspan-sm="1">
+                <md-grid-tile-footer>
+                    <h3 class="white-text">Chapter 3</h3>
+                </md-grid-tile-footer>
+            </md-grid-tile>
+            <md-grid-tile class="chapter-tile" md-rowspan="2" md-colspan="3" md-colspan-sm="1">
+                <md-grid-tile-footer>
+                    <h3 class="white-text">Chapter 4</h3>
+                </md-grid-tile-footer>
+            </md-grid-tile>
+    </div>
+
+    </md-grid-list>
+
+
+</div>
