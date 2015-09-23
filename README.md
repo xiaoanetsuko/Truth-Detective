@@ -13,9 +13,12 @@ npm install -g grunt-cli
 
 
 ##TO START SERVER
-In terminal
-- grunt
-- grunt server
+- In terminal
+```
+grunt
+grunt server
+```
+- Any changes in the code will automatically compile once the server is started. No need to restart.
 
 ##CAUTION
 - Add node_modules/ and bower_components/ to .gitignore
