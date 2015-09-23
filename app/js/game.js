@@ -45,38 +45,27 @@ $(document).ready( function() {
 
         var apiKey = "jsk1qqntnrj7qbvf";
 
-        var url = "http://api.trove.nla.gov.au/work/" + id + "?key=" + apiKey + "&callback=?";
+        var requestUrl = "http://api.trove.nla.gov.au/work/" + id + "?encoding=json&key=" + apiKey + "&callback=?";
 
-        console.log(url);
+        console.log(requestUrl);
+
+        console.log(requestUrl === "http://api.trove.nla.gov.au/work/22743028?encoding=json&key=jsk1qqntnrj7qbvf&callback=?");
 
         clueWindow();
 
-        //$.ajax({
-        //    type: "GET",
-        //    dataType: "json",
-        //    url: url,
-        //    success: function(data) {
-        //        $.each(data.work, processImages);
-        //    }
-        //});
-        //
-        ////
-        //$.getJSON(url, function(data) {
-        //
-        //    console.log(data);
-        //    console.log("wo shi 250");
-        //    $.each(data.work, processImages);
-        //});
+        $.ajax({
+            type: "GET",
+            url:"http://api.trove.nla.gov.au/work/22743028?encoding=json&key=jsk1qqntnrj7qbvf&callback=?",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
 
+            success: function(data) {
+                var imgUrl = data.work.identifier[0].value;
+                var troveObj = data.work;
 
-        $.getJSON(url, function (data) {
-
-
-
-            $.each(data.work, processImages);
-
-            printImages();
-
+                processImages(imgUrl, troveObj);
+                printImages();
+            }
         });
     });
 
@@ -84,15 +73,15 @@ $(document).ready( function() {
 
     function clueWindow() { // when click register button, the form will pop up.
         $(".mask").css("opacity", 0.8).fadeIn(600); // mask-up level shows up
-        $("#register").show().animate({top: 64}, 500, "easeOutQuad"); // register form moves from the top of window.
+        $("#window").show().animate({top: 128}, 500, "easeOutQuad"); // register form moves from the top of window.
         //printImages();
     }
 
 
     $(".mask, .close").click(function() {
-        $("#register").animate({top: -864}, 500, "easeOutQuad", // set move out animation of form
+        $("#window").animate({top: -864}, 500, "easeOutQuad", // set move out animation of form
             function() { // form disappears by animation
-                $("#register").hide(); // display: none
+                $("#window").hide(); // display: none
             });
         $(".mask").fadeOut(600); // mask-up level fadeout
         $('#game #canvas .showImage').empty();
@@ -102,8 +91,8 @@ $(document).ready( function() {
      *   Depending where the image comes from, there is a special way to get that image from the website.
      *   This function works out where the image is from, and gets the image URL
      */
-    function processImages(troveItem) {   //index, troveItem
-        var imgUrl = troveItem.identifier[0].value;
+    function processImages(url, troveObj) {   //index, troveItem
+        var imgUrl = url;
         //if (imgUrl.indexOf(urlPatterns[0]) >= 0) { // flickr
         //
         //    addFlickrItem(imgUrl, troveItem);
@@ -116,7 +105,7 @@ $(document).ready( function() {
 
             loadedImages.push({
                 url: imgUrl + "/representativeImage?wid=900", // change ?wid=900 to scale the image
-                obj: troveItem
+                obj: troveObj
             });
 
         } else if (imgUrl.indexOf(urlPatterns[1]) >= 0) { //artsearch
@@ -169,12 +158,14 @@ $(document).ready( function() {
         for (var i in loadedImages) {
             var image = new Image();
             image.src = loadedImages[i].url;
+            //console.log(src);
             //image.style.display = "inline-block";
             //image.style.width = 200px;
             //image.style.margin = "1%";
             //image.style.verticalAlign = "top";
 
             $('#game #canvas .showImage').append(image);
+            //image.style.backgound = src;
             $('#game #canvas .showImage img').addClass("clueImage");
         }
 
