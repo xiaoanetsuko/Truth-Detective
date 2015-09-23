@@ -6,7 +6,7 @@
 ##HOW TO SETUP
 - Install grunt
 ```
-npm install -g generator-angular
+npm install -g grunt-cli
 ```
 - cd into truth
 - TBC....
