@@ -1,69 +1,159 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
-<head>
+<html lang="en">
+<head ng-app="TruthDetective">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="landing" content="truth-detective">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <link href="../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../lib/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
-    <link href="../lib/semantic-ui/semantic.min.css" rel="stylesheet">
-    <link href="../lib/semantic-ui/semantic.css" rel="stylesheet">
-    <link href="../css/home.css" rel="stylesheet">
-    <link href="../css/app.css" rel="stylesheet">
-    <script src="../lib/angular/angular.min.js"></script>
+    <title>Truth Detective</title>
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="lib/semantic-ui/semantic.min.css" rel="stylesheet">
+    <link href="lib/semantic-ui/semantic.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <script src="lib/angular/angular.min.js"></script>
 </head>
 <body>
-        <div class="wrapper">
-            <div ng-view></div>
 
-            <div class="btnnav">
-                <div class="ui horizontal bulleted link list" id="btm-nav">
-                    <a class="item">
-                        Home
+    <div class="wrapper">
+        <div class="masthead shadow-btm">
+            <div class="headbox container">
+<!--
+                    <a href="#">
+                        <div class="homelogin">
+                            Log in
+                        </div>
                     </a>
-                    <a class="item">
-                        About Us
-                    </a>
-                    <a class="item">
-                        Terms and Conditions
-                    </a>
-                    <a class="item">
-                        Privacy Policy
-                    </a>
+-->
+                <p class="lead headertext">
+
+                    <image src="resource/img/site/logo_linen.png"></image>
+                </p>
+                <div class="textbox">
+                    <p class="lead headertext">
+                        "Play Truth Detective for the first time and it's impossible not to be drawn in." OPM AU
+                    </p>
                 </div>
-                <div class="ui horizontal list">
-                    <div class="item">
-                        <a href="#"><i class="large facebook square icon"></i></a>
-                    </div>
-                    <div class="item">
-                        <a href="#"><i class="large twitter square icon"></i></a>
-                    </div>
-                    <div class="item">
-                        <a href="#"><i class="large google plus square icon"></i></a>
-                    </div>
+                <a href="html/user.html" class="btn btn-outline btn-lg joingame">Join the game</a>
+            </div>
+        </div>
+        <div class="secondbox">
+            <p class="lead secondboxheader">
+                Dare to challenge yourself?
+            </p>
+
+            <div class="row secondboxrow">
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-king" aria-hidden="true"></span>
+                    <p class="secondboxtext">
+                        Highly recommended by most of the school teachers and library instaitutions, as the most valuable digital game for students to explore historical knowledges.
+                    </p>
                 </div>
-                <div class="ip">
-                    <p>&#169;Copyright</p>
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-king" aria-hidden="true"></span>
+                    <p class="secondboxtext">
+                        Contains different formats of library resources for students who are playing the role of a detective to find out the determinative evidence of a theft case.
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-king" aria-hidden="true"></span>
+                    <p class="secondboxtext">
+                        Changing the way of learning knowledge creates a lot of fun in playing and studying, enhancing student's logic skills, problem solving abilities and reading skills.
+                    </p>
                 </div>
             </div>
         </div>
+        <div class="container thirdbox shadow-top">
+            <div class="row feature">
+                <div class="col-md-6">
+                    <div class="feature-text-body">
+                        <h2 class="feature-heading feature-body-left">
+                            Have fun playing. Have fun learning.
+                        </h2>
+                        <p class="feature-body-left">
+                            The objective is that players need to complete three levels, discover the password of a hidden safe in order to find a featured piece of evidence in the mysterious house. Each level contains one question related to one specific aspect on the historical knowledge. Before entering the first level, users are given a question and they must search for clues inside the room. Once they collect all missing puzzles and answer the question correctly, the current level is completed and the room door opens for continuing to the next room.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 feature-img">
+                    <image src="resource/img/site/Q.png"></image>
+                </div>
+            </div>
+            <!--<hr class="half-rule">-->
+            <div class="row feature">
+                <div class="col-md-6 feature-img">
+                    <image src="resource/img/site/Q1.png"></image>
+                </div>
+                <div class="col-md-6 feature-text-body">
+                    <h2 class="feature-heading feature-body-right">
+                        Game play is easy
+                    </h2>
+                    <p class="feature-body-right">
+                        Players can gain historical knowledge, develop logical skills and improve problem-solving ability by reading articles, memorising keywords and solving puzzles inside the game. There is no time limitation to complete each level, but a timer will be set on the top of the game to record detection time. As players move to the next level, the game difficulty will increase, which means players are expected to explore more valuable clues from the room.
+                    </p>
+                </div>
+
+
+            </div>
+            <!--<hr class="half-rule">-->
+            <div class="row feature">
+
+                <div class="col-md-6 feature-text-body">
+                    <h2 class="feature-heading feature-body-left">
+                        We are a group of passionate developers with hearts full of dreams
+                    </h2>
+                    <p class="feature-body-left">
+                        Our UI designers delicate to deliver elegant illustrations to our users, and our smart programmers attempt to build a wonderful game which can gratefully facilitate the development and revolution of school educational resources. We are a mature web-game development team that are looking for investors to support our effort for making the dream comes true.
+                    </p>
+                </div>
+                <div class="col-md-6 feature-img">
+                    <image src="resource/img/site/avatar.png"></image>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="btnnav">
+            <div class="ui horizontal bulleted link list " id="btm-nav">
+                <a class="item">
+                    Home
+                </a>
+                <a class="item">
+                    About Us
+                </a>
+                <a class="item">
+                    Terms and Conditions
+                </a>
+                <a class="item">
+                    Privacy Policy
+                </a>
+            </div>
+            <div class="ui horizontal list">
+                <div class="item">
+                    <a href="#"><i class="large facebook square icon"></i></a>
+                </div>
+                <div class="item">
+                    <a href="#"><i class="large twitter square icon"></i></a>
+                </div>
+                <div class="item">
+                    <a href="#"><i class="large google plus square icon"></i></a>
+                </div>
+            </div>
+            <div class="ip">
+                <p>&#169;Copyright</p>
+            </div>
+
+
+        </div>
+    </div>
 
 
 
-        <!--Libs-->
-        <script src="../lib/jquery/jquery.min.js"></script>
-        <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
-        <script src="../lib/semantic/dist/semantic.js"></script>
-        <script src="../lib/semantic/dist/semantic.min.js"></script>
-
-        <!--Controller-->
-
-
-        <!--Directives-->
-
-
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/semantic-ui/semantic.js"></script>
+    <script src="lib/semantic-ui/semantic.min.js"></script>
 </body>
 </html>
