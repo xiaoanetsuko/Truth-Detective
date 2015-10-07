@@ -43,7 +43,7 @@ $(document).ready( function() {
         var id = $(this).attr("id");
         console.log(id);
 
-        var apiKey = "jsk1qqntnrj7qbvf";
+        var apiKey = "5ojt8mghlf9s8ahc";
 
         var requestUrl = "http://api.trove.nla.gov.au/work/" + id + "?encoding=json&key=" + apiKey + "&callback=?";
 
