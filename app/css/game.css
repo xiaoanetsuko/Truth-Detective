@@ -8,7 +8,17 @@
     padding-bottom: 0;
 }
 
-#canvas {
+.level1 {
+    position: fixed;
+    background-image: url("../resource/img/site/level1_copy.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+
+}
+
+.level2 {
     position: fixed;
     background-image: url("../resource/img/site/level1_copy.jpg");
     background-size: cover;
@@ -133,6 +143,13 @@
 }
 
 #mp3_1{
+    position:absolute;
+    top:95%;
+    left: 1%;
+    z-index: 3;
+}
+
+#mp3_T{
     position:absolute;
     top:95%;
     left: 1%;
