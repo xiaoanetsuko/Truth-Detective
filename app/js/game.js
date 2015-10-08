@@ -187,30 +187,59 @@ $(document).ready( function() {
     $("#submit").click(function(e) {
         e.preventDefault();
 
-        var arr = ["Louis XVI", "louis XVI", "Louis 16", "louis 16"];
 
-        var inputVal = $('#question1').val();
+        var arrT = ["a", "b", "c", "d"];
+        var arr1 = ["Louis XVI", "louis XVI", "Louis 16", "louis 16"];
 
-        if ($.inArray(inputVal, arr) > -1) {
-            switch (inputVal) {
-                case arr[0]:
+        var inputValT = $('#questionT').val();
+        var inputVal1 = $('#question1').val();
+
+        if ($.inArray(inputVal1, arr1) > -1) {
+            switch (inputVal1) {
+                case arr1[0]:
                     alert("Louis XVI correct");
                     break;
-                case arr[1]:
+                case arr1[1]:
                     alert("louis XVI correct");
                     break;
-                case arr[2]:
+                case arr1[2]:
                     alert("Louis 16 correct");
                     break;
-                case arr[3]:
+                case arr1[3]:
                     alert("louis 16 Correct");
                     break;
                 default:
                     alert("Incorrect Answer!");
                     break;
             }
-        } else {alert("Incorrect Answer!");}
+        }
+        else if ($.inArray(inputValT, arrT) > -1) {
+            switch (inputValT) {
+                case arrT[0]:
+                    alert("a correct");
+                    break;
+                case arrT[1]:
+                    alert("b correct");
+                    break;
+                case arrT[2]:
+                    alert("c correct");
+                    break;
+                case arrT[3]:
+                    alert("d Correct");
+                    break;
+                default:
+                    alert("Incorrect Answer!");
+                    break;
+            }
+        }
+
+
+
+        else {alert("Incorrect Answer!");}
     });
+
+
+
 
 
 });
