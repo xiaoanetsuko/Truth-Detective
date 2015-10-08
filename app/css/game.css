@@ -1,6 +1,13 @@
+
+/*@override*/
+.navbar {
+    border: none;
+}
+
 #game .game_row {
-    margin-left: 0;
-    margin-right: 0;
+    width: 1728px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #game .game_container {
@@ -8,13 +15,16 @@
     padding-bottom: 0;
 }
 
+#canvas{
+    width: 1728px;
+    height: 864px;
+}
+
 .level1 {
     position: fixed;
-    background-image: url("../resource/img/site/level1_copy.jpg");
+    background-image: url("../resource/img/site/level1_copy2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
 
 }
 
