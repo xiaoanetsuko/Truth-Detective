@@ -60,9 +60,6 @@ $(document).ready( function() {
             //image.style.margin = "1%";
             //image.style.verticalAlign = "top";
 
-            $('#game #canvas .showImage').append('<img ng-src="{{image}}">');
-            //image.style.backgound = src;
-            $('#game #canvas .showImage img').addClass("clueImage");
         }
 
 
@@ -90,7 +87,9 @@ $(document).ready( function() {
                 $("#window").hide(); // display: none
             });
         $(".mask").fadeOut(600); // mask-up level fadeout
-        $('#game #canvas .showImage').empty();
+        if (id){
+            $('#game #canvas .showImage img[style]').remove();
+        }
         $(".question").slideDown("slow")
     });
 
