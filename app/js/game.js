@@ -165,15 +165,14 @@ $(document).ready( function() {
         for (var i in loadedImages) {
             var image = new Image();
             image.src = loadedImages[i].url;
-            //console.log(src);
-            //image.style.display = "inline-block";
-            //image.style.width = 200px;
-            //image.style.margin = "1%";
-            //image.style.verticalAlign = "top";
+
+            image.style.width = "auto";
+
 
             $('#game #canvas .showImage').append(image);
             //image.style.backgound = src;
-            $('#game #canvas .showImage img').addClass("clueImage");
+            $('#game #canvas .showImage img[style]').addClass("clueImage");
+
         }
 
     }
