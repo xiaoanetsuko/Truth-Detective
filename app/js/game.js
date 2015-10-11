@@ -162,16 +162,12 @@ $(document).ready( function() {
         for (var i in loadedImages) {
             var image = new Image();
             image.src = loadedImages[i].url;
-            //console.log(src);
-            image.style.maxWidth = "100%";
-            image.style.height = "450px";
-            image.style.verticalAlign = "top";
-            image.style.overflow = "scroll";
+            image.style.width = "auto";
 
 
             $('#game #canvas .showImage').append(image);
             //image.style.backgound = src;
-            //$('#game #canvas .showImage img').addClass("clueImage");
+            $('#game #canvas .showImage img[style]').addClass("clueImage");
         }
 
     }
