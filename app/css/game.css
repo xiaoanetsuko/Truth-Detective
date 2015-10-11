@@ -145,6 +145,12 @@
     vertical-align: top;
 }
 
+.existClueImage {
+    vertical-align: top;
+    max-height: 450px;
+    max-width: 100%;
+}
+
 .introduction {
     float: right;
     width: auto;

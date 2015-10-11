@@ -56,9 +56,7 @@ $(document).ready( function() {
             //image.style.margin = "1%";
             //image.style.verticalAlign = "top";
 
-            $('#game #canvas .showImage').append('<img ng-src="{{image}}">');
             //image.style.backgound = src;
-            $('#game #canvas .showImage img').addClass("clueImage");
         }
 
 
@@ -88,7 +86,7 @@ $(document).ready( function() {
             });
         $(".mask").fadeOut(600); // mask-up level fadeout
         if (id) {
-            $('#game #canvas .showImage').empty();
+            $('#game #canvas .showImage img[style]').remove();
         }
         $(".question").slideDown("slow")
     });
@@ -165,14 +163,15 @@ $(document).ready( function() {
             var image = new Image();
             image.src = loadedImages[i].url;
             //console.log(src);
-            //image.style.display = "inline-block";
-            //image.style.width = 200px;
-            //image.style.margin = "1%";
-            //image.style.verticalAlign = "top";
+            image.style.maxWidth = "100%";
+            image.style.height = "450px";
+            image.style.verticalAlign = "top";
+            image.style.overflow = "scroll";
+
 
             $('#game #canvas .showImage').append(image);
             //image.style.backgound = src;
-            $('#game #canvas .showImage img').addClass("clueImage");
+            //$('#game #canvas .showImage img').addClass("clueImage");
         }
 
     }

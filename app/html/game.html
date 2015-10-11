@@ -149,19 +149,19 @@
 
                     </div>
 
-                    <div id="" class="checkpoint custom gongzhan" ng-mouseup="bastille()"> <!--gongzhan bashidiyu-->
+                    <div id="" class="checkpoint custom gongzhan" ng-mouseleave="bastille()"> <!--gongzhan bashidiyu-->
 
                     </div>
                     <!--<img src="../resource/img/site/level1.jpg">-->
 
 
-                    <!--<div class="mask"></div>-->
+                    <div class="mask"></div>
                     <div id="window">
                         <div class="close">
                             <div class="close-icon"></div>
                         </div>
                         <div class="clue">
-                            <div class="showImage"><img ng-src="{{image}}"></div>
+                            <div class="showImage"><img ng-src="{{image}}" class="existClueImage"></div>
 
                             <!--use angular.js load introduction dynamically-->
                             <div class="introduction"><p class="clueText">{{content}}</p></div>
