@@ -14,38 +14,66 @@ $(document).ready( function() {
     var urlPatterns = ["nla.gov.au", "artsearch.nga.gov.au", "recordsearch.naa.gov.au", "images.slsa.sa.gov.au"];
 
 
+    //if it is a Trove Data
+
 
     $("#canvas>div.checkpoint").click(function () {
-        loadedImages = [];
 
-        var id = $(this).attr("id");
-        console.log(id);
 
-        var apiKey = "5ojt8mghlf9s8ahc";
+        if ($(this).attr("id")){
 
-        var requestUrl = "http://api.trove.nla.gov.au/work/" + id + "?encoding=json&key=" + apiKey + "&callback=?";
+            loadedImages = [];
 
-        console.log(requestUrl);
+            var id = $(this).attr("id");
+            console.log(id);
 
-        console.log(requestUrl === "http://api.trove.nla.gov.au/work/22743028?encoding=json&key=jsk1qqntnrj7qbvf&callback=?");
+            var apiKey = "5ojt8mghlf9s8ahc";
 
-        clueWindow();
+            var requestUrl = "http://api.trove.nla.gov.au/work/" + id + "?encoding=json&key=" + apiKey + "&callback=?";
 
-        $.ajax({
-            type: "GET",
-            url:requestUrl,
-            dataType: "json",
-            contentType: "application/json; charset=utf-8",
+            console.log(requestUrl);
 
-            success: function(data) {
-                var imgUrl = data.work.identifier[0].value;
-                var troveObj = data.work;
+            console.log(requestUrl === "http://api.trove.nla.gov.au/work/22743028?encoding=json&key=jsk1qqntnrj7qbvf&callback=?");
 
-                processImages(imgUrl, troveObj);
-                printImages();
-            }
-        });
+            clueWindow();
+
+            $.ajax({
+                type: "GET",
+                url:requestUrl,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+
+                success: function(data) {
+                    var imgUrl = data.work.identifier[0].value;
+                    var troveObj = data.work;
+
+                    processImages(imgUrl, troveObj);
+                    printImages();
+                }
+            });
+
+        } else {
+
+            clueWindow();
+            //console.log(src);
+            //image.style.display = "inline-block";
+            //image.style.width = 200px;
+            //image.style.margin = "1%";
+            //image.style.verticalAlign = "top";
+
+            $('#game #canvas .showImage').append('<img ng-src="{{image}}">');
+            //image.style.backgound = src;
+            $('#game #canvas .showImage img').addClass("clueImage");
+        }
+
+
     });
+
+
+    //if it is not a Trove Data
+
+
+
 
     // create a pop-up form
 
