@@ -129,7 +129,7 @@
     height: 20px;
     /*background-image: url("../img/close.png");*/
     background-size: cover;
-    cursor: pointer;
+
 }
 
 .showImage {
@@ -196,6 +196,11 @@
     left: 45%;
     position: fixed;
     z-index: 99;
+
+}
+
+.custom{
+    cursor:url(../img/tools/magnifying_glass.png), auto;
 }
 
 input[type=text] {
@@ -231,7 +236,7 @@ input[type=text] {
     border-radius:3px;
     border:1px solid #54381e;
     display:inline-block;
-    cursor:pointer;
+    cursor:hand;
     color:#ffffff;
     font-family:Verdana;
     font-size:16px;
