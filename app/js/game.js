@@ -15,21 +15,25 @@ $(document).ready( function() {
 
 
     //if it is a Trove Data
-    var id;
+
 
     $("#canvas>div.checkpoint").mousedown(function () {
 
-        id = $(this).attr("id");
-        if (id) {
+
+        if ($(this).attr("id")){
 
             loadedImages = [];
 
+            var id = $(this).attr("id");
+            console.log(id);
 
             var apiKey = "5ojt8mghlf9s8ahc";
+
             var requestUrl = "http://api.trove.nla.gov.au/work/" + id + "?encoding=json&key=" + apiKey + "&callback=?";
-            console.log(id);
+
             console.log(requestUrl);
-            console.log(requestUrl === "http://api.trove.nla.gov.au/work/22743028?encoding=json&key=jsk1qqntnrj7qbvf&callback=?");
+
+
             clueWindow();
 
             $.ajax({
@@ -56,7 +60,9 @@ $(document).ready( function() {
             //image.style.margin = "1%";
             //image.style.verticalAlign = "top";
 
+            $('#game #canvas .showImage').append('<img ng-src="{{image}}">');
             //image.style.backgound = src;
+            $('#game #canvas .showImage img').addClass("clueImage");
         }
 
 
@@ -71,10 +77,9 @@ $(document).ready( function() {
     // create a pop-up form
 
     function clueWindow() { // when click register button, the form will pop up.
-
+        $(".mask").css("opacity", 0.8).fadeIn(600); // mask-up level shows up
         $("#window").show().animate({top: 128}, 500, "easeOutQuad"); // register form moves from the top of window.
         //printImages();
-        $(".mask").css("opacity", 0.8).fadeIn(600); // mask-up level shows up
         $(".question").hide()
     }
 
@@ -85,9 +90,7 @@ $(document).ready( function() {
                 $("#window").hide(); // display: none
             });
         $(".mask").fadeOut(600); // mask-up level fadeout
-        if (id) {
-            $('#game #canvas .showImage img[style]').remove();
-        }
+        $('#game #canvas .showImage').empty();
         $(".question").slideDown("slow")
     });
 
@@ -163,15 +166,14 @@ $(document).ready( function() {
             var image = new Image();
             image.src = loadedImages[i].url;
             //console.log(src);
-            image.style.maxWidth = "100%";
-            image.style.height = "450px";
-            image.style.verticalAlign = "top";
-            image.style.overflow = "scroll";
-
+            //image.style.display = "inline-block";
+            //image.style.width = 200px;
+            //image.style.margin = "1%";
+            //image.style.verticalAlign = "top";
 
             $('#game #canvas .showImage').append(image);
             //image.style.backgound = src;
-            //$('#game #canvas .showImage img').addClass("clueImage");
+            $('#game #canvas .showImage img').addClass("clueImage");
         }
 
     }

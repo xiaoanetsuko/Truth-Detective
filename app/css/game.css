@@ -54,23 +54,33 @@
 
 
 /*need to change the top and left here*/
-.Louis_XVI {
+.Louis_14 {
     position: absolute;
-    top:32%;
-    left:44%;
-    width: 218px;
-    height: 335px;
+    top: 41%;
+    left: 24%;
+    width: 132px;
+    height: 150px;
     background-color: rgba(255, 255, 255, 0);
     z-index: 2;
 }
 
 
-.gongzhan {
+.bastille {
     position: absolute;
     top:41%;
     left:69%;
     width: 132px;
     height: 150px;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 2;
+}
+
+.Louis_16 {
+    position: absolute;
+    top:32%;
+    left:44%;
+    width: 218px;
+    height: 335px;
     background-color: rgba(255, 255, 255, 0);
     z-index: 2;
 }
@@ -127,7 +137,7 @@
 .close-icon {
     width: 20px;
     height: 20px;
-    background-image: url("../img/tools/close.png");
+    /*background-image: url("../img/close.png");*/
     background-size: cover;
 
 }
@@ -143,12 +153,6 @@
     height: 450px;
     overflow: scroll;
     vertical-align: top;
-}
-
-.existClueImage {
-    vertical-align: top;
-    max-height: 450px;
-    max-width: 100%;
 }
 
 .introduction {
