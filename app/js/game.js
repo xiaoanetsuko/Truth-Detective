@@ -60,6 +60,7 @@ $(document).ready( function() {
             //image.style.margin = "1%";
             //image.style.verticalAlign = "top";
 
+
         }
 
 
