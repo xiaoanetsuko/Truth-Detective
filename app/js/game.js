@@ -87,11 +87,13 @@ $(document).ready( function() {
             function() { // form disappears by animation
                 $("#window").hide(); // display: none
             });
-        $(".mask").fadeOut(600); // mask-up level fadeout
-        if (id){
+        $(".mask").fadeOut(600);// mask-up level fadeout
+        $("#winmessage").fadeOut(600);
+        $(".question").slideDown("slow");
+        if ($(this).attr("id")){
             $('#game #canvas .showImage img[style]').remove();
         }
-        $(".question").slideDown("slow")
+
     });
 
     /*
@@ -223,16 +225,20 @@ $(document).ready( function() {
         if ($.inArray(inputVal1, arr1) > -1) {
             switch (inputVal1) {
                 case arr1[0]:
-                    alert("Louis XVI correct");
+                    console.log("Louis XVI correct");
+                    winmessage();
                     break;
                 case arr1[1]:
                     alert("louis XVI correct");
+                    winmessage();
                     break;
                 case arr1[2]:
                     alert("Louis 16 correct");
+                    winmessage();
                     break;
                 case arr1[3]:
                     alert("louis 16 Correct");
+                    winmessage();
                     break;
                 default:
                     alert("Incorrect Answer!");
@@ -266,6 +272,11 @@ $(document).ready( function() {
 
 
 
+    function winmessage(){
+        $(".mask").css("opacity", 0.8).fadeIn(600);
+        //stop counter
+        $('#winmessage').show();
+    }
 
 
 });
