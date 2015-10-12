@@ -64,36 +64,7 @@ $(document).ready( function() {
 
 
     function tutorialChapter(){
-        var images=[ "../img/char/chapterTutorial/jingya2.png", "../img/char/chapterTutorial/xiaoyihuo1.png", "../img/char/chapterTutorial/renzhen1.png", "../img/char/chapterTutorial/renzhen2.png", "../img/char/chapterTutorial/xiaoyihuo2.png", "../img/char/chapterTutorial/renzhen3.png", "../img/char/chapterTutorial/renzhen4.png","../img/char/chapterTutorial/weixiao1.png", "../img/char/chapterTutorial/yamao1.png", "../img/char/chapterTutorial/weixiao2.png", "../img/char/chapterTutorial/tutorial_tips_1.png", "../img/char/chapterTutorial/tutorial_tips_2.png", "../img/char/chapterTutorial/tutorial_tips_3.png", "../img/char/chapterTutorial/tutorial_tips_4.png"];
 
-        var max = images.length;
-
-        var num = 0;
-
-        $("#btn").click(function(){
-            if (num<max-1){
-
-                $(".imageswap").fadeOut(function(){
-                    $(this).attr("src", images[num]).fadeIn(800);
-                });
-                num++;
-                console.log(num);
-                if (num==10){
-                    $(".question").slideDown("slow");
-                    $("#checkinput").show();
-                }
-            } else {
-                $("#imagebox, #btn, #btnskip").fadeOut();
-            }
-        });
-
-
-        $("#btnskip").click(function(){
-            $("#imagebox, #btn, #btnskip").fadeOut();
-            $(".question").slideDown("slow");
-            $("#checkinput").show();
-
-        })
 
     }
 
@@ -291,7 +262,7 @@ $(function(){
         e.preventDefault();
 
 
-        var arrT = ["a", "b", "c", "d"];
+        var arrT = ["France", "france", "French", "french"];
         var arr1 = ["Louis XVI", "louis XVI", "Louis 16", "louis 16"];
 
         var inputValT = $('#questionT').val();
@@ -323,16 +294,16 @@ $(function(){
         else if ($.inArray(inputValT, arrT) > -1) {
             switch (inputValT) {
                 case arrT[0]:
-                    alert("a correct");
+                    winmessage();
                     break;
                 case arrT[1]:
-                    alert("b correct");
+                    winmessage();
                     break;
                 case arrT[2]:
-                    alert("c correct");
+                    winmessage();
                     break;
                 case arrT[3]:
-                    alert("d Correct");
+                    winmessage();
                     break;
                 default:
                     alert("Incorrect Answer!");

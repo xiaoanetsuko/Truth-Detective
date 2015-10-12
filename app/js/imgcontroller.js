@@ -5,6 +5,27 @@
 var myApp = angular.module('imgApp', []);
 
 myApp.controller('imagecontroller', ['$scope', function($scope) {
+
+    $scope.letterT = function() {
+        $scope.title="Eiffel Tower";
+        $scope.image = "../img/img_source/eiffel.jpg";
+        $scope.content = "The Eiffel Tower is tbe highest towein tbe world by several hundred feet From the earth's surface to tbe top of the tower is a distance of 984ft. thus being 429ft. higher than tbe Washington monument in tbe United States, which has hitherto been reckoned tbe tallest piece 01 worn in me woria, wim a neigoi ot 555ft."
+    };
+
+    $scope.newspaperT = function() {
+        $scope.title="The Most Famous Novel";
+        $scope.image = "../img/img_source/musketeers.jpg";
+        $scope.content = "(The Three Musketeers,) published in 1844-1845, is typical of Dumas's works: quick-witted heroes who fight and love unceasingly, fast-paced narrative, and entertaining dialogue. In its romantic subject matter, the book is typical of its time; what is not typical is the fact that it has survived and remains entertaining and accessible for modern readers.The story was drawn from a number of original historical sources, including memoirs of events from the period in which the novel takes place. Dumas's collaborator, Auguste Maquet, brought him a rough scenario for a book set during the reign of King Louis XIII and starring the King, Queen Anne, Cardinal Richelieu, and the Duke of Buckingham.Because Dumas's works have been so wildly popular, for a long time he was not considered a 'serious' writer. However, in recent years, more attention has been given to him because his work laid the foundations for bourgeois drama as he brought history alive for a broad segment of the population who otherwise would have had no interest in it and as he created a new kind of Romantic novel."
+    };
+
+    $scope.mapT = function() {
+        $scope.title="A Map of Europe";
+        $scope.image = "../img/img_source/europe_map.png";
+        $scope.content = "MAPPPPPPPPPPPPPPPPPPPPP"
+    };
+
+
+
     $scope.Louis_16 = function() {
         $scope.title="Portrait of the Diamond's Owner";
         $scope.image = "../img/img_source/louis16.jpg";
