@@ -15,25 +15,21 @@ $(document).ready( function() {
 
 
     //if it is a Trove Data
-
+    var id;
 
     $("#canvas>div.checkpoint").mousedown(function () {
 
-
-        if ($(this).attr("id")){
+        id = $(this).attr("id");
+        if (id) {
 
             loadedImages = [];
 
-            var id = $(this).attr("id");
-            console.log(id);
 
             var apiKey = "5ojt8mghlf9s8ahc";
-
             var requestUrl = "http://api.trove.nla.gov.au/work/" + id + "?encoding=json&key=" + apiKey + "&callback=?";
-
+            console.log(id);
             console.log(requestUrl);
-
-
+            console.log(requestUrl === "http://api.trove.nla.gov.au/work/22743028?encoding=json&key=jsk1qqntnrj7qbvf&callback=?");
             clueWindow();
 
             $.ajax({
