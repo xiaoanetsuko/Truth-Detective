@@ -269,6 +269,7 @@ $(document).ready( function() {
 
 
     function winmessage(){
+
         $(".mask").css("opacity", 0.8).fadeIn(600);
         //stop counter
         $('#winmessage').show();
