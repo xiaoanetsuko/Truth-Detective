@@ -276,12 +276,56 @@ $(function(){
         //stop counter
         $('#winmessage').append('<div id="stopClock"></div>').fadeIn(600);
 
-        //timeTranslator(gameTime);
+        timeTranslator(gameTime);
 
 
 
     }
 
+    function timeTranslator (second) {
+        var scale = 60;
+        var sec = 0;
+        var min = 0;
+        var hour = 0;
 
+        if ((second / scale) > 1 ) {
+            min = parseInt(second / scale);
+            sec = second % scale;
+            if ((min / scale) > 1 ) {
+                hour = parseInt(min / scale);
+                min %= scale;
+            }
+        }else{
+            sec = second
+        }
+
+        console.log(strTime(hour, min, sec));
+    }
+
+    function strTime(hour, min, sec) {
+        var strHour;
+        var strMin;
+        var strSec;
+
+        if (hour < 10) {
+            strHour = "0" + hour.toString();
+        }else{
+            strHour = hour.toString();
+        }
+
+        if (min < 10) {
+            strMin = "0" + min.toString();
+        }else{
+            strMin = min.toString();
+        }
+
+        if (sec < 10) {
+            strSec = "0" + sec.toString();
+        }else{
+            strSec = sec.toString();
+        }
+
+        return strHour + " : " + strMin + " : " + strSec;
+    }
 
 });
