@@ -27,7 +27,7 @@
 <body style="background-color: #333333" ng-app="imgApp">
 
     <script src="../assets/countup/jquery.countup.js" content="canBeDisabled"></script>
-    <script src="../assets/js/script.js"></script>
+
     <script src="../js/game.js"></script>
 
 
@@ -264,6 +264,7 @@
                     $("#imagebox, #btn, #btnskip").fadeOut();
                     $(".question").slideDown("slow");
                     $("#checkinput").show();
+                    $('#countdown').countup();
                 }
             });
 
@@ -272,6 +273,7 @@
                 $("#imagebox, #btn, #btnskip").fadeOut();
                 $(".question").slideDown("slow");
                 $("#checkinput").show();
+                $('#countdown').countup();
 
             })
 

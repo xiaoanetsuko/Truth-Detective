@@ -17,7 +17,6 @@
     <!--<script src="../lib/semantic-ui/semantic.min.js"></script>-->
     <script src="../js/game.js"></script>
     <script src="../assets/countup/jquery.countup.js"></script>
-    <script src="../assets/js/script.js"></script>
 
     <script src="../js/imgcontroller.js"></script>
 
@@ -237,9 +236,11 @@
                 if (num == 10) {
                     $(".question").slideDown("slow");
                     $("#checkinput").show();
+
                 }
             } else {
                 $("#imagebox, #btn, #btnskip").fadeOut();
+                $('#countdown').countup();
             }
         });
 
@@ -248,6 +249,7 @@
             $("#imagebox, #btn, #btnskip").fadeOut();
             $(".question").slideDown("slow");
             $("#checkinput").show();
+            $('#countdown').countup();
 
         })
 

@@ -7,7 +7,7 @@
 
 $(document).ready( function() {
 
-    tutorialChapter()
+
 
     var loadedImages = [];
     //var urlPatterns = ["flickr.com", "nla.gov.au", "artsearch.nga.gov.au", "recordsearch.naa.gov.au", "images.slsa.sa.gov.au"];
@@ -63,10 +63,7 @@ $(document).ready( function() {
     });
 
 
-    function tutorialChapter(){
 
-
-    }
 
     ////tutorial function
     //function tutorial(){
@@ -110,7 +107,6 @@ $(document).ready( function() {
     //    })
     //
     //}
-
 
 
 
