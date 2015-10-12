@@ -122,12 +122,13 @@
 
             </div>
 
+
             <div id="chap_1_imgbox">
 
                 <div id="dialog_box">
 
                     <div id="imagebox">
-                        <img class="imageswap" src="../img/char/chapter1/renzhen1.png">
+                        <img class="imageswap" src="../img/char/chapterTutorial/jingya1.png">
 
                     </div>
 
@@ -139,7 +140,7 @@
             <div id="canvas" class="tutorial" ng-controller="imagecontroller">
 
                 <div class="question">
-                    <img class="questionimg" src="../img/char/border.png">
+                    <img class="questionimg" src="../img/char/borderT.png">
                 </div>
 
 
@@ -213,45 +214,6 @@
 
 
 
-<script>
-    $(function(){
-
-        var images=[ "../img/char/chapterTutorial/jingya.png", "../img/char/chapterTutorial/xiaoyihuo.png", "../img/char/chapterTutorial/renzhen.png", "../img/char/chapterTutorial/renzhen.png", "../img/char/chapterTutorial/xiaoyihuo.png", "../img/char/chapterTutorial/renzhen.png", "../img/char/chapterTutorial/weixiao.png", "../img/char/chapterTutorial/yamao.png", "../img/char/chapterTutorial/jiaoao.png","../img/char/chapterTutorial/weixiao.png"];
-
-        var max = images.length;
-
-        var num = 0;
-
-        $("#btn").click(function(){
-
-
-            if (num<max){
-
-                $(".imageswap").fadeOut(function(){
-
-                    $(this).attr("src", images[num]).fadeIn();
-
-                    num++;
-                });
-
-            } else{
-                $("#imagebox, #btn, #btnskip").fadeOut();
-                $(".question").slideDown("slow");
-                $("#checkinput").show();
-            }
-        });
-
-
-        $("#btnskip").click(function(){
-            $("#imagebox, #btn, #btnskip").fadeOut();
-            $(".question").slideDown("slow");
-            $("#checkinput").show();
-
-        })
-
-    })
-
-</script>
 
 
 

@@ -7,7 +7,7 @@
 
 $(document).ready( function() {
 
-
+    tutorialChapter()
 
     var loadedImages = [];
     //var urlPatterns = ["flickr.com", "nla.gov.au", "artsearch.nga.gov.au", "recordsearch.naa.gov.au", "images.slsa.sa.gov.au"];
@@ -63,7 +63,84 @@ $(document).ready( function() {
     });
 
 
-    //if it is not a Trove Data
+    function tutorialChapter(){
+        var images=[ "../img/char/chapterTutorial/jingya2.png", "../img/char/chapterTutorial/xiaoyihuo1.png", "../img/char/chapterTutorial/renzhen1.png", "../img/char/chapterTutorial/renzhen2.png", "../img/char/chapterTutorial/xiaoyihuo2.png", "../img/char/chapterTutorial/renzhen3.png", "../img/char/chapterTutorial/renzhen4.png","../img/char/chapterTutorial/weixiao1.png", "../img/char/chapterTutorial/yamao1.png", "../img/char/chapterTutorial/weixiao2.png", "../img/char/chapterTutorial/tutorial_tips_1.png", "../img/char/chapterTutorial/tutorial_tips_2.png", "../img/char/chapterTutorial/tutorial_tips_3.png", "../img/char/chapterTutorial/tutorial_tips_4.png"];
+
+        var max = images.length;
+
+        var num = 0;
+
+        $("#btn").click(function(){
+            if (num<max-1){
+
+                $(".imageswap").fadeOut(function(){
+                    $(this).attr("src", images[num]).fadeIn(800);
+                });
+                num++;
+                console.log(num);
+                if (num==10){
+                    $(".question").slideDown("slow");
+                    $("#checkinput").show();
+                }
+            } else {
+                $("#imagebox, #btn, #btnskip").fadeOut();
+            }
+        });
+
+
+        $("#btnskip").click(function(){
+            $("#imagebox, #btn, #btnskip").fadeOut();
+            $(".question").slideDown("slow");
+            $("#checkinput").show();
+
+        })
+
+    }
+
+    ////tutorial function
+    //function tutorial(){
+    //
+    //    $("#imagebox").attr("src", "../img/char/chapterTutorial/tutorial_tips_1.png");
+    //
+    //
+    //    var tutorialImages=[  "../img/char/chapterTutorial/tutorial_tips_1.png", "../img/char/chapterTutorial/tutorial_tips_2.png", "../img/char/chapterTutorial/tutorial_tips_3.png", "../img/char/chapterTutorial/tutorial_tips_4.png"];
+    //
+    //    var max = tutorialImages.length;
+    //
+    //    var num = 0;
+    //
+    //    $("#imagebox").click(function(){
+    //
+    //
+    //        if (num<max){
+    //
+    //            $(".imageswap").fadeOut(function(){
+    //
+    //                $(this).attr("src", tutorialImages[num]).fadeIn();
+    //
+    //                num++;
+    //            });
+    //
+    //        } else{
+    //            $("#imagebox, #btn, #btnskip").fadeOut();
+    //            $(".question").slideDown("slow");
+    //            $("#checkinput").show();
+    //
+    //        }
+    //    });
+    //
+    //
+    //    $("#btnskip").click(function(){
+    //        $("#imagebox, #btn, #btnskip").fadeOut();
+    //        $(".question").slideDown("slow");
+    //        $("#checkinput").show();
+    //
+    //
+    //    })
+    //
+    //}
+
+
 
 
 
