@@ -86,7 +86,7 @@ $(document).ready( function() {
         $(".mask").fadeOut(600);// mask-up level fadeout
         $("#winmessage").fadeOut(600);
         $(".question").slideDown("slow");
-        if ($(this).attr("id")){
+        if (id) {
             $('#game #canvas .showImage img[style]').remove();
         }
 
@@ -163,7 +163,6 @@ $(document).ready( function() {
         for (var i in loadedImages) {
             var image = new Image();
             image.src = loadedImages[i].url;
-
             image.style.width = "auto";
 
 
@@ -272,7 +271,7 @@ $(document).ready( function() {
 
         $(".mask").css("opacity", 0.8).fadeIn(600);
         //stop counter
-        $('#winmessage').show();
+        $('#winmessage').fadeIn(600);
     }
 
 
