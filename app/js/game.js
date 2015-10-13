@@ -65,53 +65,6 @@ $(document).ready( function() {
 
 
 
-    ////tutorial function
-    //function tutorial(){
-    //
-    //    $("#imagebox").attr("src", "../img/char/chapterTutorial/tutorial_tips_1.png");
-    //
-    //
-    //    var tutorialImages=[  "../img/char/chapterTutorial/tutorial_tips_1.png", "../img/char/chapterTutorial/tutorial_tips_2.png", "../img/char/chapterTutorial/tutorial_tips_3.png", "../img/char/chapterTutorial/tutorial_tips_4.png"];
-    //
-    //    var max = tutorialImages.length;
-    //
-    //    var num = 0;
-    //
-    //    $("#imagebox").click(function(){
-    //
-    //
-    //        if (num<max){
-    //
-    //            $(".imageswap").fadeOut(function(){
-    //
-    //                $(this).attr("src", tutorialImages[num]).fadeIn();
-    //
-    //                num++;
-    //            });
-    //
-    //        } else{
-    //            $("#imagebox, #btn, #btnskip").fadeOut();
-    //            $(".question").slideDown("slow");
-    //            $("#checkinput").show();
-    //
-    //        }
-    //    });
-    //
-    //
-    //    $("#btnskip").click(function(){
-    //        $("#imagebox, #btn, #btnskip").fadeOut();
-    //        $(".question").slideDown("slow");
-    //        $("#checkinput").show();
-    //
-    //
-    //    })
-    //
-    //}
-
-
-
-
-
     // create a pop-up form
 
     function clueWindow() { // when click register button, the form will pop up.
@@ -343,6 +296,7 @@ $(function(){
             sec = second
         }
 
+        $("#content p").append(strTime(hour, min, sec));
         console.log(strTime(hour, min, sec));
     }
 

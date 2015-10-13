@@ -100,7 +100,7 @@ var gameTime = 0;
 	// Creates an animated transition between the two numbers
 	function switchDigit(position,number){
 		
-		var digit = position.find('.digit')
+		var digit = position.find('.digit');
 		
 		if(digit.is(':animated')){
 			return false;
