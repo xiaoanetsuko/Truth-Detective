@@ -1,6 +1,9 @@
 /**
  * Created by Christine on 10/8/2015.
  */
+    //  using js gets something from DOM as a tag. And this tag can be used as a filter to target corresponding data.
+    //  ex: $scope.tag.title
+
 
 var myApp = angular.module('imgApp', []);
 
