@@ -135,6 +135,13 @@
                 <div id="countdown"></div>
 
 
+                <div id="operationButtonBox">
+
+                    <input type="button" id="nextButton" class="operationButton" value="next">
+                    <input type="button" id="skipButton" class="operationButton" value="skip">
+
+                </div>
+
 
                 <div id="checkinput">
                     <form>
@@ -143,16 +150,6 @@
                     </form>
                 </div>
 
-
-                <div id="btnbox">
-
-                    <input type="button" id="btn" value="next">
-                    <input type="button" id="btnskip" value="skip">
-
-                </div>
-
-                <div id="chap_1_imgbox">
-
                     <div id="dialog_box">
 
                         <div id="imagebox">
@@ -160,9 +157,9 @@
 
                         </div>
 
+
                     </div>
 
-                </div>
 
 
                 <div id="canvas" class="level1" ng-controller="imagecontroller">
@@ -259,7 +256,7 @@
 
             var num = 0;
 
-            $("#btn").click(function(){
+            $("#nextButton").click(function(){
 
 
                 if (num<max){
@@ -272,7 +269,7 @@
                     });
 
                 } else{
-                    $("#imagebox, #btn, #btnskip").fadeOut();
+                    $("#imagebox, #nextButton, #skipButton").fadeOut();
                     $(".question").slideDown("slow");
                     $("#checkinput").show();
                     $('#countdown').countup();
@@ -280,8 +277,8 @@
             });
 
 
-            $("#btnskip").click(function(){
-                $("#imagebox, #btn, #btnskip").fadeOut();
+            $("#skipButton").click(function(){
+                $("#imagebox, #nextButton, #skipButton").fadeOut();
                 $(".question").slideDown("slow");
                 $("#checkinput").show();
                 $('#countdown').countup();

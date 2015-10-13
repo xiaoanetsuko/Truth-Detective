@@ -33,17 +33,26 @@
     background-image: url("../resource/img/site/tutorial.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-
-
 }
 
-
-
-#game>.game_row>.game_container>#btnbox{
-    position: absolute;
-    top: 90%;
-    left: 85%;
+#operationButtonBox {
+    position: relative;
+    top: 750px;
+    left: 80%;
     z-index: 4;
+
+    width: 64px;
+}
+
+.operationButton {
+    width: 64px;
+    margin-bottom: 32px;
+    float: left;
+}
+
+#imagebox {
+    position: relative;
+    left: -128px;
 }
 
 #canvas img {
