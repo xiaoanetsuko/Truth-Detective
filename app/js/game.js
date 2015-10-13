@@ -269,7 +269,7 @@ $(function(){
 
     function winmessage(){
 
-        $(".mask").css("opacity", 0.8).fadeIn(600);
+        $(".winmask").css("opacity", 0.8).fadeIn(600);
         //stop counter
         $('#winmessage').append('<div id="stopClock"></div>').fadeIn(600);
 

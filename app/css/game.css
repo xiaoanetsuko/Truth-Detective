@@ -163,6 +163,18 @@
 
 }
 
+.winmask {
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+
+}
+
 #winmessage {
     display: none;
     width:360px;
@@ -381,7 +393,7 @@
     top:93%;
     left: 45%;
     position: fixed;
-    z-index: 99;
+    z-index: 10;
 
 }
 
