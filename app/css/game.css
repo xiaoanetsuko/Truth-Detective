@@ -37,22 +37,41 @@
 
 #operationButtonBox {
     position: relative;
-    top: 750px;
-    left: 80%;
+    top: 720px;
+    left: 14%;
     z-index: 4;
 
-    width: 64px;
+    width: auto;
 }
 
 .operationButton {
-    width: 64px;
-    margin-bottom: 32px;
+    width: 80px;
+    height: 112px;
     float: left;
+    cursor: pointer;
+    background-size: contain;
+}
+
+#nextButton {
+
+}
+
+#backButton {
+    margin-right: 1090px;
+}
+
+#skipButton {
+    position:relative;
+    top: -32px;
+    left: -112px;
+    width: 32px;
+    height: 32px;
+
 }
 
 #imagebox {
     position: relative;
-    left: -128px;
+    /*left: -128px;*/
 }
 
 #canvas img {

@@ -135,12 +135,7 @@
                 <div id="countdown"></div>
 
 
-                <div id="operationButtonBox">
 
-                    <input type="button" id="nextButton" class="operationButton" value="next">
-                    <input type="button" id="skipButton" class="operationButton" value="skip">
-
-                </div>
 
 
                 <div id="checkinput">
@@ -156,6 +151,20 @@
                             <img class="imageswap" src="../img/char/chapter1/renzhen1.png">
 
                         </div>
+
+                        <div id="operationButtonBox">
+
+                            <!--<div id="backButton" class="operationButton"></div>-->
+                            <!--<div id="nextButton" class="operationButton"></div>-->
+                            <!--<div id="skipButton" class="operationButton"></div>-->id
+
+                            <img id="backButton" class="operationButton" src="../img/tools/back.png" alt="backButton" />
+                            <img id="nextButton" class="operationButton" src="../img/tools/next.png" alt="backButton" />
+                            <img id="skipButton" class="operationButton" src="../img/tools/skip.png" alt="backButton" />
+
+
+                        </div>
+
 
 
                     </div>
@@ -250,40 +259,54 @@
     <script>
         $(function(){
 
-            var images=[ "../img/char/chapter1/fanpai1.png", "../img/char/chapter1/xiaoyihuo1.png", "../img/char/chapter1/fanpai2.png", "../img/char/chapter1/jingya1.png", "../img/char/chapter1/fanpai3.png", "../img/char/chapter1/fanpai4.png", "../img/char/chapter1/xiaozhang1.png", "../img/char/chapter1/yamao1.png", "../img/char/chapter1/weixiao1.png", "../img/char/chapter1/weixiao2.png"];
+            var images = ["../img/char/chapter1/renzhen1.png", "../img/char/chapter1/fanpai1.png", "../img/char/chapter1/xiaoyihuo1.png", "../img/char/chapter1/fanpai2.png", "../img/char/chapter1/jingya1.png", "../img/char/chapter1/fanpai3.png", "../img/char/chapter1/fanpai4.png", "../img/char/chapter1/xiaozhang1.png", "../img/char/chapter1/yamao1.png", "../img/char/chapter1/weixiao1.png", "../img/char/chapter1/weixiao2.png"];
 
             var max = images.length;
 
             var num = 0;
 
-            $("#nextButton").click(function(){
+            $("#nextButton").click(function () {
 
 
-                if (num<max){
+                if (num < max) {
 
-                    $(".imageswap").fadeOut(function(){
-
-                        $(this).attr("src", images[num]).fadeIn(800);
-
+                    $(".imageswap").fadeOut(function () {
                         num++;
+                        $(this).attr("src", images[num]).fadeIn(600);
+                    });
+                    $("#backButton, #nextButton, #skipButton").fadeOut(function (){
+                        $(this).fadeIn(600)
                     });
 
-                } else{
-                    $("#imagebox, #nextButton, #skipButton").fadeOut();
-                    $(".question").slideDown("slow");
-                    $("#checkinput").show();
-                    $('#countdown').countup();
+                } else {
+                    skip()
                 }
             });
 
 
-            $("#skipButton").click(function(){
-                $("#imagebox, #nextButton, #skipButton").fadeOut();
+            $("#backButton").click(function () {
+                if (num > 0) {
+                    $(".imageswap").fadeOut(function () {
+                        num--;
+                        $(this).attr("src", images[num]).fadeIn(600);
+                    });
+                    $("#backButton, #nextButton, #skipButton").fadeOut(function (){
+                        $(this).fadeIn(600)
+                    });
+                }
+            });
+
+
+            $("#skipButton").click(function () {
+                skip()
+            });
+
+            function skip() {
+                $("#imagebox, #nextButton, #backButton, #skipButton").fadeOut();
                 $(".question").slideDown("slow");
                 $("#checkinput").show();
                 $('#countdown').countup();
-
-            })
+            }
 
         })
 
