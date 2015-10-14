@@ -1,4 +1,4 @@
-<md-dialog aria-label="login" style="background-color: #F5F5F5;">
+<md-dialog aria-label="login" style="background-color: #F5F5F5;" ng-controller="signupCtrl">
     <md-content layout-padding layout-margin class="login-content">
         <md-toolbar class="login-toolbar">
             <div class="close-button-container">
@@ -7,31 +7,27 @@
                 </md-button>
             </div>
         </md-toolbar>
-        <form name="login-form" id="login-form">
-            <md-dialog-content class="login-field">
+        <form name="signup-form" id="signup-form" ng-submit="register()">
+            <md-dialog-content class="signup-field">
                 <md-input-container flex>
-                    <label>Email</label>
-                    <input>
+                    <label>Username</label>
+                    <input type="text" name="username" ng-model="user.username" required>
+                    <span ng-show="username.$error.required">Username is required</span>
                 </md-input-container>
                 <md-input-container flex>
                     <label>Password</label>
-                    <input type="password">
-                </md-input-container>
-                <md-input-container flex>
-                    <label>First name</label>
-                    <input type="password">
-                </md-input-container>
-                <md-input-container flex>
-                    <label>Last name</label>
-                    <input type="password">
+                    <input type="password" name="password" ng-model="user.password" required>
                 </md-input-container>
             </md-dialog-content>
         </form>
         <div class="signup-redirect">
-            <p>Don't have an account? <a href="#">Sign up</a> now!</p>
+            <p>Already have an account? <span>Log in</span> and play!</p>
+        </div>
+        <div>
+          {{replace}}
         </div>
         <div class="center-btn">
-            <md-button class="md-raised  login-submit" ng-click=""><span class="login-submit-text">Log in</span></md-button>
+            <md-button class="md-raised signup-submit" ng-click="register()"><span class="signup-submit-text">sign up</span></md-button>
         </div>
     </md-content>
 </md-dialog>
