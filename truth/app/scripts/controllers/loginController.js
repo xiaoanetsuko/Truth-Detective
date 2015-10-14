@@ -40,7 +40,7 @@ function dialogCtrl($scope, $mdDialog, userService, $rootScope, flashService, $l
                 authenticationService.SetCredentials($scope.vm.username, $scope.vm.password);
                 console.log('login succeed');
                 $mdDialog.cancel();
-                $location.path('/');
+                $location.path('/dashboard');
 
             } else {
                 flashService.Error(response.message);

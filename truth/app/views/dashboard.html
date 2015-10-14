@@ -1,4 +1,4 @@
-<md-toolbar class="dash-topnav">
+<md-toolbar class="dash-topnav" ng-controller="dashboardCtrl">
     <div class="md-toolbar-tools">
         <span flex="5"></span>
         <h2>
@@ -6,7 +6,7 @@
         </h2>
         <span flex></span>
         <h5>
-            <span class="white-text">Test User</span>
+            <span class="white-text">{{username}}</span>
         </h5>
         <md-button class="md-icon-button" aria-label="Settings">
             <md-icon md-svg-icon="../images/icons/ic_account_circle_white_24px.svg"></md-icon>
