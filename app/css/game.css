@@ -21,7 +21,7 @@
 }
 
 .level1 {
-    position: absolute;
+    position: fixed;
     background-image: url("../resource/img/site/level1_copy2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
