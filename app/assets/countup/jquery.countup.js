@@ -6,6 +6,8 @@
  * @license		MIT License
  */
 
+var gameTime = 0;
+
 (function($){
 	
 	// Number of seconds in every time division
@@ -30,6 +32,8 @@
 		positions = this.find('.position');
 		
 		(function tick(){
+
+			gameTime ++;
 			
 			passed = Math.floor((new Date() - options.start) / 1000);
 
@@ -49,9 +53,15 @@
 			
 			// Calling an optional user supplied callback
 			options.callback(d, h, m, s);
-			
-			// Scheduling another call of this function in 1s
-			setTimeout(tick, 1000);
+
+			//justify whether stopping clock is triggered
+			if (stopClock()) {
+				// Scheduling another call of this function in 1s
+				setTimeout(tick, 9999999);
+			}else{
+				setTimeout(tick, 1000);
+			}
+
 		})();
 		
 		// This function updates two digit positions at once
@@ -66,6 +76,8 @@
 
 	function init(elem, options){
 		elem.addClass('countdownHolder');
+
+		gameTime = 0;
 
 		// Creating the markup inside the container
 		$.each(['Days','Hours','Minutes','Seconds'],function(i){
@@ -88,7 +100,7 @@
 	// Creates an animated transition between the two numbers
 	function switchDigit(position,number){
 		
-		var digit = position.find('.digit')
+		var digit = position.find('.digit');
 		
 		if(digit.is(':animated')){
 			return false;
@@ -118,12 +130,16 @@
 			.removeClass('static')
 			.animate({top:'2.5em',opacity:0},'fast',function(){
 				digit.remove();
-			})
+			});
 
 		replacement
 			.delay(100)
 			.animate({top:0,opacity:1},'fast',function(){
 				replacement.addClass('static');
 			});
+	}
+
+	function stopClock() {
+		return $("div#stopClock").is("div");
 	}
 })(jQuery);

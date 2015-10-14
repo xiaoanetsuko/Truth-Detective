@@ -63,9 +63,6 @@ $(document).ready( function() {
     });
 
 
-    //if it is not a Trove Data
-
-
 
 
     // create a pop-up form
@@ -83,11 +80,13 @@ $(document).ready( function() {
             function() { // form disappears by animation
                 $("#window").hide(); // display: none
             });
-        $(".mask").fadeOut(600); // mask-up level fadeout
-        if (id){
+        $(".mask").fadeOut(600);// mask-up level fadeout
+        $("#winmessage").fadeOut(600);
+        $(".question").slideDown("slow");
+        if (id) {
             $('#game #canvas .showImage img[style]').remove();
         }
-        $(".question").slideDown("slow")
+
     });
 
     /*
@@ -135,6 +134,25 @@ $(document).ready( function() {
         }
     }
 
+
+
+
+    function printImages() {
+
+
+        // If we want, we can also access the trove object with each image by using loadedImages[i].obj
+        for (var i in loadedImages) {
+            var image = new Image();
+            image.src = loadedImages[i].url;
+            image.style.width = "auto";
+
+
+            $('#game #canvas .showImage').append(image);
+            $('#game #canvas .showImage img[style]').addClass("clueImage");
+        }
+    }
+
+
     //function addFlickrItem(imgUrl, troveItem) {
     //    var flickr_key = "a4d0bf2f4bde0595521b7bd8317ec428";
     //    var flickr_secret = "efc7221b694ff55e";
@@ -154,43 +172,25 @@ $(document).ready( function() {
     //
     //}
 
-    function printImages() {
-
-
-        // If we want, we can also access the trove object with each image by using loadedImages[i].obj
-        for (var i in loadedImages) {
-            var image = new Image();
-            image.src = loadedImages[i].url;
-
-            image.style.width = "auto";
-
-
-            $('#game #canvas .showImage').append(image);
-            //image.style.backgound = src;
-            $('#game #canvas .showImage img[style]').addClass("clueImage");
-
-        }
-
-    }
 
     // from http://css-tricks.com/snippets/javascript/get-url-variables/
     // this function use to get image on artsearch / recordsearch
-    function getQueryVariable(variable, url) {
-        var query = url.split("?");
-        var vars = query[1].split("&");
-        for (var i = 0; i < vars.length; i++) {
-            var pair = vars[i].split("=");
-            if (pair[0] == variable) {
-                return pair[1];
-            }
-        }
-        return (false);
-    }
-
-    function setHalfVolume() {
-        var myAudio = document.getElementById("audio1");
-        myAudio.volume = 0.5; //Changed this to 0.5 or 50% volume since the function is called Set Half Volume ;)
-    }
+    //function getQueryVariable(variable, url) {
+    //    var query = url.split("?");
+    //    var vars = query[1].split("&");
+    //    for (var i = 0; i < vars.length; i++) {
+    //        var pair = vars[i].split("=");
+    //        if (pair[0] == variable) {
+    //            return pair[1];
+    //        }
+    //    }
+    //    return (false);
+    //}
+    //
+    //function setHalfVolume() {
+    //    var myAudio = document.getElementById("audio1");
+    //    myAudio.volume = 0.5; //Changed this to 0.5 or 50% volume since the function is called Set Half Volume ;)
+    //}
 
     //$( "#btnskip" ).click(function () {
     //    if ($(".question:first #checkinput:first").is(":hidden")) {
@@ -202,15 +202,16 @@ $(document).ready( function() {
     //});
 
 
+});
 
 
 
-
+$(function(){
     $("#submit").click(function(e) {
         e.preventDefault();
 
 
-        var arrT = ["a", "b", "c", "d"];
+        var arrT = ["France", "france", "French", "french"];
         var arr1 = ["Louis XVI", "louis XVI", "Louis 16", "louis 16"];
 
         var inputValT = $('#questionT').val();
@@ -219,35 +220,39 @@ $(document).ready( function() {
         if ($.inArray(inputVal1, arr1) > -1) {
             switch (inputVal1) {
                 case arr1[0]:
-                    alert("Louis XVI correct");
+                    console.log("Louis XVI correct");
+                    winmessage();
                     break;
                 case arr1[1]:
-                    alert("louis XVI correct");
+                    //alert("louis XVI correct");
+                    winmessage();
                     break;
                 case arr1[2]:
-                    alert("Louis 16 correct");
+                    //alert("Louis 16 correct");
+                    winmessage();
                     break;
                 case arr1[3]:
-                    alert("louis 16 Correct");
+                    //alert("louis 16 Correct");
+                    winmessage();
                     break;
                 default:
-                    alert("Incorrect Answer!");
+                    //alert("Incorrect Answer!");
                     break;
             }
         }
         else if ($.inArray(inputValT, arrT) > -1) {
             switch (inputValT) {
                 case arrT[0]:
-                    alert("a correct");
+                    winmessage();
                     break;
                 case arrT[1]:
-                    alert("b correct");
+                    winmessage();
                     break;
                 case arrT[2]:
-                    alert("c correct");
+                    winmessage();
                     break;
                 case arrT[3]:
-                    alert("d Correct");
+                    winmessage();
                     break;
                 default:
                     alert("Incorrect Answer!");
@@ -262,6 +267,63 @@ $(document).ready( function() {
 
 
 
+    function winmessage(){
 
+        $(".winmask").css("opacity", 0.8).fadeIn(600);
+        //stop counter
+        $('#winmessage').append('<div id="stopClock"></div>').fadeIn(600);
+
+        timeTranslator(gameTime);
+
+
+
+    }
+
+    function timeTranslator (second) {
+        var scale = 60;
+        var sec = 0;
+        var min = 0;
+        var hour = 0;
+
+        if ((second / scale) > 1 ) {
+            min = parseInt(second / scale);
+            sec = second % scale;
+            if ((min / scale) > 1 ) {
+                hour = parseInt(min / scale);
+                min %= scale;
+            }
+        }else{
+            sec = second
+        }
+
+        $("#content p").append(strTime(hour, min, sec));
+        console.log(strTime(hour, min, sec));
+    }
+
+    function strTime(hour, min, sec) {
+        var strHour;
+        var strMin;
+        var strSec;
+
+        if (hour < 10) {
+            strHour = "0" + hour.toString();
+        }else{
+            strHour = hour.toString();
+        }
+
+        if (min < 10) {
+            strMin = "0" + min.toString();
+        }else{
+            strMin = min.toString();
+        }
+
+        if (sec < 10) {
+            strSec = "0" + sec.toString();
+        }else{
+            strSec = sec.toString();
+        }
+
+        return strHour + " : " + strMin + " : " + strSec;
+    }
 
 });

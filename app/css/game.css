@@ -28,23 +28,51 @@
 
 }
 
-.level2 {
-    position: fixed;
-    background-image: url("../resource/img/site/level1_copy.jpg");
+.tutorial {
+    position: absolute;
+    background-image: url("../resource/img/site/tutorial.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+}
+
+#operationButtonBox {
+    position: relative;
+    top: 720px;
+    left: 14%;
+    z-index: 100;
+
+    width: auto;
+}
+
+.operationButton {
+    width: 80px;
+    height: 112px;
+    float: left;
+    cursor: pointer;
+    background-size: contain;
+}
+
+#nextButton {
 
 }
 
+#backButton {
+    margin-right: 1090px;
+}
 
+#skipButton {
+    position:relative;
+    top: -32px;
+    left: -112px;
+    width: 32px;
+    height: 32px;
 
-#game>.game_row>.game_container>#btnbox{
-    position: absolute;
-    top: 90%;
-    left: 85%;
-    z-index: 4;
+}
+
+#imagebox {
+    position: relative;
+    /*left: -128px;*/
+    z-index: 99;
 }
 
 #canvas img {
@@ -53,7 +81,39 @@
 }
 
 
-/*need to change the top and left here*/
+/*All the clues*/
+
+.letterT {
+    position: absolute;
+    top: 48%;
+    left: 47%;
+    width: 132px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 2;
+}
+
+.newspaperT {
+    position: absolute;
+    top: 75%;
+    left: 40%;
+    width: 132px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 2;
+}
+
+.mapT {
+    position: absolute;
+    top: 74%;
+    left: 88%;
+    width: 132px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 2;
+}
+
+
 .Louis_14 {
     position: absolute;
     top: 41%;
@@ -85,6 +145,40 @@
     z-index: 2;
 }
 
+.coin {
+    position: absolute;
+    top:72%;
+    left:10%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 2;
+}
+
+.frenchRevo {
+    position: absolute;
+    top:62%;
+    left:23%;
+    width: 150px;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 2;
+}
+
+.freedom {
+    position: absolute;
+    top:62%;
+    left:70%;
+    width: 120px;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 2;
+}
+
+
+
+/*Pop-ups*/
+
 
 .mask {
     width: 100%;
@@ -95,11 +189,123 @@
     top: 0;
     left: 0;
     display: none;
+
+}
+
+.winmask {
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+
+}
+
+#winmessage {
+    display: none;
+    width:360px;
+    height:360px;
+    padding:8px;
+
+    background: rgba(255, 147, 65, 0);
+
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+
+    position:absolute !important;
+    top:50% !important;
+    left:50% !important;
+    margin-top:-94px !important;
+    margin-left:-180px !important;
+    z-index:101;
+}
+
+#heading{
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    line-height:44px;
+
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-shadow:0px 1px 0px rgba(255, 255, 255, 0.22);
+}
+
+
+
+
+#winmessage>#content>p{
+    color:#fff;
+}
+
+.button{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btnB {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    float: left;
+}
+
+.btnB:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+.btnO {
+    background: #d98934;
+    background-image: -webkit-linear-gradient(top, #d98934, #c96800);
+    background-image: -moz-linear-gradient(top, #d98934, #c96800);
+    background-image: -ms-linear-gradient(top, #d98934, #c96800);
+    background-image: -o-linear-gradient(top, #d98934, #c96800);
+    background-image: linear-gradient(to bottom, #d98934, #c96800);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    float: right;
+}
+
+.btnO:hover {
+    background: #c7752e;
+    background-image: -webkit-linear-gradient(top, #c7752e, #ab440c);
+    background-image: -moz-linear-gradient(top, #c7752e, #ab440c);
+    background-image: -ms-linear-gradient(top, #c7752e, #ab440c);
+    background-image: -o-linear-gradient(top, #c7752e, #ab440c);
+    background-image: linear-gradient(to bottom, #c7752e, #ab440c);
+    text-decoration: none;
 }
 
 #window {
     width: 800px;
-    max-height: 500px;
+    max-height: 1000px;
     position: fixed;
     background-color: #FFFFFF;
     top: -864px;
@@ -148,10 +354,11 @@
 }
 
 .clueImage {
-    width: auto;
+    height: auto;
     max-width: 100%;
-    height: 450px;
-    overflow: scroll;
+    width: 340px;
+    overflow: hidden;
+
     vertical-align: top;
 }
 
@@ -159,7 +366,7 @@
     float: right;
     width: auto;
     max-width: 45%;
-    max-height: 450px;
+    max-height: 500px;
     margin-left: 40px;
     overflow-y: scroll;
 }
@@ -188,6 +395,16 @@
     z-index: 3;
 }
 
+#clues{
+    position: absolute;
+    background-image: url("../img/tools/clues.png");
+    background-size: cover;
+    right: 10%;
+    z-index: 4;
+}
+
+
+
 .question{
     display: none;
     position: absolute;
@@ -205,7 +422,7 @@
     top:93%;
     left: 45%;
     position: fixed;
-    z-index: 99;
+    z-index: 10;
 
 }
 
@@ -273,5 +490,5 @@ input[type=text] {
     position: absolute;
     width: 1728px;
     height: 864px;
-    z-index: 3;
+    z-index: 99;
 }
