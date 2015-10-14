@@ -39,7 +39,7 @@
     position: relative;
     top: 720px;
     left: 14%;
-    z-index: 4;
+    z-index: 100;
 
     width: auto;
 }
@@ -72,6 +72,7 @@
 #imagebox {
     position: relative;
     /*left: -128px;*/
+    z-index: 99;
 }
 
 #canvas img {
@@ -489,5 +490,5 @@ input[type=text] {
     position: absolute;
     width: 1728px;
     height: 864px;
-    z-index: 3;
+    z-index: 99;
 }

@@ -145,6 +145,12 @@
                     </form>
                 </div>
 
+
+
+
+
+                <div id="canvas" class="level1" ng-controller="imagecontroller">
+
                     <div id="dialog_box">
 
                         <div id="imagebox">
@@ -156,7 +162,7 @@
 
                             <!--<div id="backButton" class="operationButton"></div>-->
                             <!--<div id="nextButton" class="operationButton"></div>-->
-                            <!--<div id="skipButton" class="operationButton"></div>-->id
+                            <!--<div id="skipButton" class="operationButton"></div>-->
 
                             <img id="backButton" class="operationButton" src="../img/tools/back.png" alt="backButton" />
                             <img id="nextButton" class="operationButton" src="../img/tools/next.png" alt="backButton" />
@@ -168,10 +174,6 @@
 
 
                     </div>
-
-
-
-                <div id="canvas" class="level1" ng-controller="imagecontroller">
 
                     <div class="question">
 
@@ -268,7 +270,7 @@
             $("#nextButton").click(function () {
 
 
-                if (num < max) {
+                if (num < max-1) {
 
                     $(".imageswap").fadeOut(function () {
                         num++;
