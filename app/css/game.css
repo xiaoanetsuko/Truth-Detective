@@ -21,7 +21,7 @@
 }
 
 .level1 {
-    position: fixed;
+    position: absolute;
     background-image: url("../resource/img/site/level1_copy2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@
 }
 
 .tutorial {
-    position: fixed;
+    position: absolute;
     background-image: url("../resource/img/site/tutorial.jpg");
     background-size: cover;
     background-repeat: no-repeat;
