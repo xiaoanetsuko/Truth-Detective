@@ -7,12 +7,12 @@
                 </md-button>
             </div>
         </md-toolbar>
-        <form name="signup-form" id="signup-form" ng-submit="register()">
+        <form name="signupForm" id="signup-form" ng-submit="register()">
             <md-dialog-content class="signup-field">
                 <md-input-container flex>
                     <label>Username</label>
                     <input type="text" name="username" ng-model="user.username" required>
-                    <span ng-show="username.$error.required">Username is required</span>
+                  <span ng-show="form.username.$dirty && form.username.$error.required" class="signup-helper">Username is required</span>
                 </md-input-container>
                 <md-input-container flex>
                     <label>Password</label>
@@ -21,13 +21,15 @@
             </md-dialog-content>
         </form>
         <div class="signup-redirect">
-            <p>Already have an account? <span>Log in</span> and play!</p>
+            <p>Already have an account? <span class="linkInLogin" ng-click="showLogin()">Log in</span> and play!</p>
         </div>
         <div>
           {{replace}}
         </div>
         <div class="center-btn">
-            <md-button class="md-raised signup-submit" ng-click="register()"><span class="signup-submit-text">sign up</span></md-button>
+            <md-button class="md-raised signup-submit" ng-click="register()" ng-disabled="signupForm.$invalid">
+              <span class="signup-submit-text">sign up</span>
+            </md-button>
         </div>
     </md-content>
 </md-dialog>

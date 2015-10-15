@@ -39,6 +39,6 @@ md-input-container:not(.md-input-invalid).md-input-focused label {
     color: #BD7C2E;
 }
 
-/*.linkInLogin{*/
-  /*color: #BD7C2E;*/
-/*}*/
+.linkInLogin{
+  text-decoration: underline;
+}

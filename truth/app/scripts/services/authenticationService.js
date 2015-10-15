@@ -41,7 +41,11 @@ function authenticationService($http, $cookieStore, $rootScope, $timeout, userSe
         $rootScope.globals = {
             currentUser: {
                 username: username,
-                authdata: authdata
+                authdata: authdata,
+                //first: false,
+                //second: false,
+                //third: false,
+                //fourth: false
             }
         };
 

@@ -39,6 +39,13 @@ function userService($timeout, $filter, $q) {
         return deferred.promise;
     }
 
+    function GetUser(username) {
+        var filtered = $filter('filter')(getUsers(), { username: username });
+        var user = filtered.length ? filtered[0] : null;
+
+        return user;
+    }
+
     function Create(user) {
         var deferred = $q.defer();
 
@@ -101,6 +108,37 @@ function userService($timeout, $filter, $q) {
         return deferred.promise;
     }
 
+    function finishFirst(user) {
+        var deferred = $q.defer();
+        $timeout(function () {
+            GetByUsername(user.username)
+                .then(function () {
+
+                    var users = getUsers();
+                    var firstChInfo = getUserInfo();
+
+                    var curUser = GetUser(user.username);
+                    console.log(curUser);
+                    var userID = curUser.id;
+
+                    // assign id
+                    user.id = userID;
+                    user.chapter = 'first';
+                    user.complete = true;
+
+                    // save to local storage
+                    firstChInfo.push(user);
+                    setFirstCh(firstChInfo);
+                    console.log(firstChInfo);
+                    deferred.resolve({ success: true });
+
+                });
+        }, 1000);
+
+      return deferred.promise;
+
+    }
+
     // private functions
 
     function getUsers() {
@@ -108,12 +146,25 @@ function userService($timeout, $filter, $q) {
             localStorage.users = JSON.stringify([]);
 
         }
-        console.log(localStorage.users);
+
         return JSON.parse(localStorage.users);
     }
 
+    function getUserInfo() {
+         if(!localStorage.firstChInfo){
+            localStorage.firstChInfo = JSON.stringify([]);
+         }
+        return JSON.parse(localStorage.firstChInfo);
+    }
+
     function setUsers(users) {
-      localStorage.users = JSON.stringify(users);
+        localStorage.users = JSON.stringify(users);
+    }
+
+    function setFirstCh(userinfo) {
+        localStorage.firstChInfo = JSON.stringify(userinfo);
+
+        console.log(localStorage.firstChInfo);
     }
 
     var service = {};
@@ -124,6 +175,8 @@ function userService($timeout, $filter, $q) {
     service.Create = Create;
     service.Update = Update;
     service.Delete = Delete;
+    service.GetUser = GetUser;
+    service.finishFirst = finishFirst;
 
     return service;
 }

@@ -8,7 +8,7 @@
             </div>
         </md-toolbar>
 
-        <form name="form.login-form" id="login-form">
+        <form name="form.loginForm" id="login-form">
             <md-dialog-content class="login-field">
                 <md-input-container flex>
                     <label for="username">Username</label>
@@ -24,7 +24,7 @@
             <p>Don't have an account? <span class="linkInLogin" ng-click="showSignup()">Sign up</span> and start playing now!</p>
         </div>
         <div class="center-btn">
-            <md-button class="md-raised login-submit" ng-click="login()"><span class="login-submit-text">Log in</span></md-button>
+            <md-button class="md-raised login-submit" ng-click="login()" ng-disabled="form.loginForm.$invalid"><span class="login-submit-text">Log in</span></md-button>
         </div>
     </md-content>
 </md-dialog>

@@ -3,7 +3,9 @@
  */
 'use strict';
 
-function dialogCtrl($scope, $mdDialog, userService, $rootScope, flashService, $location, authenticationService) {
+function dialogCtrl($scope, $mdDialog, userService, $rootScope, flashService, $location, authenticationService, $localStorage) {
+    $rootScope.userInfo = [];
+
     $scope.cancel = function() {
         $mdDialog.cancel();
     };
@@ -27,13 +29,29 @@ function dialogCtrl($scope, $mdDialog, userService, $rootScope, flashService, $l
 
                 }
             });
+
+        var username = this.user.username;
+        $localStorage.$reset();
+        $scope.$storage = $localStorage.$default({
+            user: username,
+            first: false,
+            second: false,
+            third: false,
+            fourth: false
+        });
+
+
+        var temp = $localStorage;
+        $rootScope.userInfo.push($scope.$storage);
+        console.log("user info after sign up --> ");
+        console.log($rootScope.userInfo);
     };
 
     $scope.login = function () {
         var vm = this;
         console.log('in loginnnnnn');
         authenticationService.ClearCredentials();
-        console.log("globals ---- "+$rootScope.globals);
+
         console.log("username --- " + $scope.vm.username);
         authenticationService.Login($scope.vm.username, $scope.vm.password, function (response) {
             if (response.success) {
@@ -46,8 +64,27 @@ function dialogCtrl($scope, $mdDialog, userService, $rootScope, flashService, $l
                 flashService.Error(response.message);
                 console.log('login error')
             }
-        })
-    }
+        });
+        console.log("local storage after log in -->");
+        console.log($localStorage);
+
+        if ($scope.vm.username == $localStorage.user) {
+            console.log("first --> " + $localStorage.first);
+            console.log("second --> " + $localStorage.second);
+        }
+
+
+    };
+
+    $scope.showLogin = function(ev) {
+        $mdDialog.show({
+            controller: dialogCtrl,
+            templateUrl: 'views/login.html',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose:true
+        });
+    };
 }
 
 angular.module('truthDetectiveApp')
