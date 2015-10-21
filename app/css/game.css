@@ -28,6 +28,22 @@
 
 }
 
+.level2 {
+    position: fixed;
+    background-image: url("../resource/img/site/level2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.level3 {
+    position: fixed;
+    background-image: url("../resource/img/site/level3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
 .tutorial {
     position: absolute;
     background-image: url("../resource/img/site/tutorial.jpg");
