@@ -1,10 +1,10 @@
-.login-field{
+.login-field, .signup-field{
     max-width: 500px;
     max-height: 400px;
     padding: 0 50px;
 }
 
-#login-form{
+#login-form, #signup-form{
     max-width: 500px;
     padding: 0 25px;
     background-color: #F5F5F5;
@@ -26,10 +26,10 @@ md-toolbar:not(.md-menu-toolbar).login-toolbar, .login-content{
 .signup-redirect{
     text-align: center;
 }
-.md-button.login-submit{
+.md-button.login-submit, .md-button.signup-submit{
     background-color: #BD7C2E;
 }
-.login-submit-text{
+.login-submit-text, .signup-submit-text{
     color: #F5F5F5;
 }
 md-input-container:not(.md-input-invalid).md-input-focused .md-input {
@@ -37,4 +37,8 @@ md-input-container:not(.md-input-invalid).md-input-focused .md-input {
 }
 md-input-container:not(.md-input-invalid).md-input-focused label {
     color: #BD7C2E;
+}
+
+.linkInLogin{
+  text-decoration: underline;
 }

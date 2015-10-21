@@ -1,4 +1,4 @@
-<md-toolbar class="dash-topnav">
+<md-toolbar class="dash-topnav" ng-controller="dashboardCtrl">
     <div class="md-toolbar-tools">
         <span flex="5"></span>
         <h2>
@@ -6,14 +6,14 @@
         </h2>
         <span flex></span>
         <h5>
-            <span class="white-text">Test User</span>
+            <span class="white-text">{{username}}</span>
         </h5>
         <md-button class="md-icon-button" aria-label="Settings">
             <md-icon md-svg-icon="../images/icons/ic_account_circle_white_24px.svg"></md-icon>
         </md-button>
     </div>
 </md-toolbar>
-<div class="dash-content">
+<div class="dash-content" ng-controller="dashboardCtrl">
     <h3 class="pg-label">
         Current Progress
     </h3>
@@ -25,22 +25,22 @@
                       md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
                       md-row-height-gt-md="1:1" md-row-height="4:3"
                       md-gutter="40px" md-gutter-gt-sm="12px" >
-            <md-grid-tile class="chapter-tile" md-rowspan="2" md-colspan="3" md-colspan-sm="1">
+            <md-grid-tile class="chapter-tile" md-rowspan="2" md-colspan="2" md-colspan-sm="1" ng-click="completeFirst()">
                 <md-grid-tile-footer>
                     <h3 class="white-text">Chapter 1</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
-            <md-grid-tile class="chapter-tile" md-rowspan="2" md-colspan="3" md-colspan-sm="1">
+            <md-grid-tile class="chapter-tile" md-rowspan="2" md-colspan="2" md-colspan-sm="1">
                 <md-grid-tile-footer>
                     <h3 class="white-text">Chapter 2</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
-            <md-grid-tile class="chapter-tile" md-rowspan="2" md-colspan="3" md-colspan-sm="1">
+            <md-grid-tile class="chapter-tile" md-rowspan="2" md-colspan="2" md-colspan-sm="1">
                 <md-grid-tile-footer>
                     <h3 class="white-text">Chapter 3</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
-            <md-grid-tile class="chapter-tile" md-rowspan="2" md-colspan="3" md-colspan-sm="1">
+            <md-grid-tile class="chapter-tile" md-rowspan="2" md-colspan="2" md-colspan-sm="1">
                 <md-grid-tile-footer>
                     <h3 class="white-text">Chapter 4</h3>
                 </md-grid-tile-footer>

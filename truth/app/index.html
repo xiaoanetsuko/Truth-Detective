@@ -11,7 +11,6 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
-    <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -31,13 +30,6 @@
     <div class="wrapper">
 
       <div ng-view></div>
-
-      <div class="collection">
-        <a href="#!" class="collection-item">Alvin</a>
-        <a href="#!" class="collection-item active">Alvin</a>
-        <a href="#!" class="collection-item">Alvin</a>
-        <a href="#!" class="collection-item">Alvin</a>
-      </div>
 
       <div class="btnnav">
         <ul class="" id="btm-nav">
@@ -88,7 +80,7 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
-    <script src="bower_components/materialize/bin/materialize.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -96,7 +88,15 @@
         <script src="scripts/app.js"></script>
         <!--<script src="scripts/controllers/main.js"></script>-->
         <!--<script src="scripts/controllers/about.js"></script>-->
+
+        <script src="scripts/services/userService.js"></script>
+        <script src="scripts/services/authenticationService.js"></script>
+        <script src="scripts/services/flashService.js"></script>
+
         <script src="scripts/controllers/loginController.js"></script>
+        <script src="scripts/controllers/signupController.js"></script>
+        <script src="scripts/controllers/dashboardController.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>

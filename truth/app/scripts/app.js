@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngMaterial'
+    'ngMaterial',
+    'ngStorage'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -31,12 +32,15 @@ angular
         controllerAs: 'about'
       })
 
-
-        .when('/dashboard', {
+      .when('/dashboard', {
           templateUrl:'views/dashboard.html'
         })
 
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+
+.run(function ($rootScope, $location, $cookieStore) {
+  $rootScope.globals = $cookieStore.get('globals') || {};
+});

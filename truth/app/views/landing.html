@@ -1,8 +1,8 @@
 <div class="masthead shadow-btm">
   <div class="headbox container" ng-controller="loginCtrl">
-    <div class="btn-div container">
-      <md-button class="login-btn" ng-click="showLogin($event)"><span class="homelogin">Log in</span></md-button>
-    </div>
+    <!--<div class="btn-div container">-->
+      <!--<md-button class="login-btn" ng-click="showLogin($event)"><span class="homelogin">Log in</span></md-button>-->
+    <!--</div>-->
     <p class="lead headertext">
       Logo placeholder
     </p>
@@ -12,7 +12,7 @@
       </p>
     </div>
     <!--<a href="#" class="btn btn-outline btn-lg joingame">Join the game</a>-->
-    <md-button class="md-raised joingame"><span class="buttontext">Join the Game</span></md-button>
+    <md-button class="md-raised joingame" ng-click="showLogin($event)"><span class="buttontext">Join the Game</span></md-button>
   </div>
 </div>
 <div class="secondbox">

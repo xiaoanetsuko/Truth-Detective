@@ -8,23 +8,23 @@
             </div>
         </md-toolbar>
 
-        <form name="login-form" id="login-form">
+        <form name="form.loginForm" id="login-form">
             <md-dialog-content class="login-field">
                 <md-input-container flex>
-                    <label>Email</label>
-                    <input>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" ng-model="vm.username" required>
                 </md-input-container>
                 <md-input-container flex>
-                    <label>Password</label>
-                    <input type="password">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" ng-model="vm.password" required>
                 </md-input-container>
             </md-dialog-content>
         </form>
-        <div class="signup-redirect">
-            <p>Don't have an account? <a href="#">Sign up</a> and start playing now!</p>
+        <div class="signup-redirect" ng-controller="loginCtrl">
+            <p>Don't have an account? <span class="linkInLogin" ng-click="showSignup()">Sign up</span> and start playing now!</p>
         </div>
         <div class="center-btn">
-            <md-button class="md-raised  login-submit" ng-click=""><span class="login-submit-text">Log in</span></md-button>
+            <md-button class="md-raised login-submit" ng-click="login()" ng-disabled="form.loginForm.$invalid"><span class="login-submit-text">Log in</span></md-button>
         </div>
     </md-content>
 </md-dialog>
