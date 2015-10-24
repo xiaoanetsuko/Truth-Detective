@@ -1,79 +1,52 @@
 /**
- * Created by ры on 2015/9/21.
+ * Created by О©╫О©╫ on 2015/9/21.
  */
 
-
-
-
 $(document).ready( function() {
-
-
-
     var loadedImages = [];
     //var urlPatterns = ["flickr.com", "nla.gov.au", "artsearch.nga.gov.au", "recordsearch.naa.gov.au", "images.slsa.sa.gov.au"];
     var urlPatterns = ["nla.gov.au", "artsearch.nga.gov.au", "recordsearch.naa.gov.au", "images.slsa.sa.gov.au"];
-
-
-    //if it is a Trove Data
-    var id;
+    var id;  //if it is a Trove Data
 
     $("#canvas>div.checkpoint").mousedown(function () {
-
         id = $(this).attr("id");
         if (id) {
-
             loadedImages = [];
-
-
             var apiKey = "5ojt8mghlf9s8ahc";
             var requestUrl = "http://api.trove.nla.gov.au/work/" + id + "?encoding=json&key=" + apiKey + "&callback=?";
             console.log(id);
             console.log(requestUrl);
             console.log(requestUrl === "http://api.trove.nla.gov.au/work/22743028?encoding=json&key=jsk1qqntnrj7qbvf&callback=?");
             clueWindow();
-
             $.ajax({
                 type: "GET",
                 url:requestUrl,
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
-
                 success: function(data) {
                     var imgUrl = data.work.identifier[0].value;
                     var troveObj = data.work;
-
                     processImages(imgUrl, troveObj);
                     printImages();
                 }
             });
-
         } else {
-
             clueWindow();
             //console.log(src);
             //image.style.display = "inline-block";
             //image.style.width = 200px;
             //image.style.margin = "1%";
             //image.style.verticalAlign = "top";
-
-
         }
-
-
     });
 
-
-
-
     // create a pop-up form
-
     function clueWindow() { // when click register button, the form will pop up.
         $(".mask").css("opacity", 0.8).fadeIn(600); // mask-up level shows up
         $("#window").show().animate({top: 128}, 500, "easeOutQuad"); // register form moves from the top of window.
         //printImages();
         $(".question").hide()
     }
-
 
     $(".mask, .close").click(function() {
         $("#window").animate({top: -864}, 500, "easeOutQuad", // set move out animation of form
@@ -86,7 +59,6 @@ $(document).ready( function() {
         if (id) {
             $('#game #canvas .showImage img[style]').remove();
         }
-
     });
 
     /*
@@ -104,55 +76,38 @@ $(document).ready( function() {
         console.log("Haha");
 
         if (imgUrl.indexOf(urlPatterns[0]) >= 0) { // nla.gov
-
             loadedImages.push({
                 url: imgUrl + "/representativeImage?wid=900", // change ?wid=900 to scale the image
                 obj: troveObj
             });
-
         } else if (imgUrl.indexOf(urlPatterns[1]) >= 0) { //artsearch
-
             loadedImages.push({
                 url: "http://artsearch.nga.gov.au/IMAGES/LRG/" + getQueryVariable("IRN", imgUrl) + ".jpg",
                 obj: troveItem
             });
-
         } else if (imgUrl.indexOf(urlPatterns[2]) >= 0) { //recordsearch
-
             loadedImages.push({
                 url: "http://recordsearch.naa.gov.au/NAAMedia/ShowImage.asp?T=P&S=1&B=" + getQueryVariable("Number", imgUrl),
                 obj: troveItem
             });
-
         } else if (imgUrl.indexOf(urlPatterns[3]) >= 0) { //slsa
-
             loadedImages.push({
                 url:  imgUrl.slice(0, imgUrl.length - 3) + "jpg",
                 obj: troveItem
             });
-
         }
     }
 
-
-
-
     function printImages() {
-
-
         // If we want, we can also access the trove object with each image by using loadedImages[i].obj
         for (var i in loadedImages) {
             var image = new Image();
             image.src = loadedImages[i].url;
             image.style.width = "auto";
-
-
             $('#game #canvas .showImage').append(image);
             $('#game #canvas .showImage img[style]').addClass("clueImage");
         }
     }
-
-
     //function addFlickrItem(imgUrl, troveItem) {
     //    var flickr_key = "a4d0bf2f4bde0595521b7bd8317ec428";
     //    var flickr_secret = "efc7221b694ff55e";
@@ -169,9 +124,7 @@ $(document).ready( function() {
     //            });
     //        }
     //    });
-    //
     //}
-
 
     // from http://css-tricks.com/snippets/javascript/get-url-variables/
     // this function use to get image on artsearch / recordsearch
@@ -200,23 +153,19 @@ $(document).ready( function() {
     //
     //    }
     //});
-
-
 });
 
-
-
 $(function(){
+    var images = ["img/char/chapter1/2.png", "img/char/chapter1/3.png", "img/char/chapter1/4.png", "img/char/chapter1/5.png", "img/char/chapter1/6.png", "img/char/chapter1/7.png", "img/char/chapter1/8.png", "img/char/chapter1/9.png", "img/char/chapter1/10.png", "img/char/chapter1/11.png", "img/char/chapter1/12.png"];
+    var max = images.length;
+    var num = 0;
+
     $("#submit").click(function(e) {
         e.preventDefault();
-
-
         var arrT = ["France", "france", "French", "french"];
         var arr1 = ["Louis XVI", "louis XVI", "Louis 16", "louis 16"];
-
         var inputValT = $('#questionT').val();
         var inputVal1 = $('#question1').val();
-
         if ($.inArray(inputVal1, arr1) > -1) {
             switch (inputVal1) {
                 case arr1[0]:
@@ -259,24 +208,14 @@ $(function(){
                     break;
             }
         }
-
-
-
         else {alert("Incorrect Answer!");}
     });
 
-
-
     function winmessage(){
-
         $(".winmask").css("opacity", 0.8).fadeIn(600);
         //stop counter
         $('#winmessage').append('<div id="stopClock"></div>').fadeIn(600);
-
         timeTranslator(gameTime);
-
-
-
     }
 
     function timeTranslator (second) {
@@ -284,7 +223,6 @@ $(function(){
         var sec = 0;
         var min = 0;
         var hour = 0;
-
         if ((second / scale) > 1 ) {
             min = parseInt(second / scale);
             sec = second % scale;
@@ -292,10 +230,7 @@ $(function(){
                 hour = parseInt(min / scale);
                 min %= scale;
             }
-        }else{
-            sec = second
-        }
-
+        }else{ sec = second }
         $("#content p").append(strTime(hour, min, sec));
         console.log(strTime(hour, min, sec));
     }
@@ -304,26 +239,56 @@ $(function(){
         var strHour;
         var strMin;
         var strSec;
-
         if (hour < 10) {
             strHour = "0" + hour.toString();
         }else{
             strHour = hour.toString();
         }
-
         if (min < 10) {
             strMin = "0" + min.toString();
         }else{
             strMin = min.toString();
         }
-
         if (sec < 10) {
             strSec = "0" + sec.toString();
         }else{
             strSec = sec.toString();
         }
-
         return strHour + " : " + strMin + " : " + strSec;
     }
 
+    $("#nextButton").click(function () {
+        if (num < max-1) {
+            $(".imageswap").fadeOut(function () {
+                num++;
+                $(this).attr("src", images[num]).fadeIn(600);
+            });
+            $("#backButton, #nextButton, #skipButton").fadeOut(function (){
+                $(this).fadeIn(600)
+            });
+        } else { skip() }
+    });
+
+    $("#backButton").click(function () {
+        if (num > 0) {
+            $(".imageswap").fadeOut(function () {
+                num--;
+                $(this).attr("src", images[num]).fadeIn(600);
+            });
+            $("#backButton, #nextButton, #skipButton").fadeOut(function (){
+                $(this).fadeIn(600)
+            });
+        }
+    });
+
+    $("#skipButton").click(function () {
+        skip()
+    });
+
+    function skip() {
+        $("#imagebox, #nextButton, #backButton, #skipButton").fadeOut();
+        $(".question").slideDown("slow");
+        $("#checkinput").show();
+        $('#countdown').countup();
+    }
 });

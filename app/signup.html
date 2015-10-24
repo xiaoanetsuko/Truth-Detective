@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="lib/semantic-ui/semantic.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/angular-material/angular-material.css" />
+
+    <link href="css/home.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body ng-app="TruthDetective" id="signup-body">
+    <nav class="topnav navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Truth Detective</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Leaderboard</a></li>
+                    <!--<li><a href="#">Profile</a></li>-->
+                </ul>
+                <!--<ul class="nav navbar-nav navbar-right">-->
+                    <!--<li class="dropdown">-->
+                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>{{username}}</span><b class="caret"></b></a>-->
+                        <!--<ul class="dropdown-menu">-->
+                            <!--<li><a href="#">Account Setting</a></li>-->
+                            <!--<li><a href="#">Invite Friends</a></li>-->
+                            <!--<li><a href="#">Help</a></li>-->
+                            <!--<li><a href="../index.html">Log Out</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            </div>
+        </div>
+    </nav>
+
+    <div id="signup-form" layout-align="center center" ng-controller="loginCtrl">
+        <md-content layout-padding layout-margin class="login-content">
+            <!--<md-toolbar class="login-toolbar">-->
+            <!--<div class="close-button-container">-->
+            <!--<md-button class="md-icon-button close-button" ng-click="cancel()">-->
+            <!--<md-icon md-svg-src="../images/icons/ic_close_black_24px.svg" aria-label="Close dialog"></md-icon>-->
+            <!--</md-button>-->
+            <!--</div>-->
+            <!--</md-toolbar>-->
+            <form name="signupForm" ng-submit="register()">
+                <md-input-container flex>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" ng-model="user.username" required>
+                    <span ng-show="form.username.$dirty && form.username.$error.required" class="signup-helper">Username is required</span>
+                </md-input-container>
+                <md-input-container flex>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" ng-model="user.password" required>
+                </md-input-container>
+            </form>
+            <div class="signup-redirect">
+                <p>Already have an account? <span class="linkInLogin" ng-click="openLogin()">Log in</span> and play!</p>
+            </div>
+            <div class="center-btn">
+                <md-button class="md-raised signup-submit" ng-click="register()" ng-disabled="signupForm.$invalid">
+                    <span class="signup-submit-text">sign up</span>
+                </md-button>
+            </div>
+        </md-content>
+    </div>
+
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/angular-material/angular-material.js"></script>
+    <script src="lib/semantic-ui/semantic.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/angular-cookies/angular-cookies.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+    <script src="lib/angular-touch/angular-touch.js"></script>
+    <script src="lib/angular-aria/angular-aria.js"></script>
+    <script src="lib/ngstorage/ngStorage.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <script src="js/services/userService.js"></script>
+    <script src="js/services/authenticationService.js"></script>
+    <script src="js/services/flashService.js"></script>
+
+    <script src="js/Controller/loginController.js"></script>
+    <!--<script src="../js/Controller/dashboardController.js"></script>-->
+</body>
+</html>
+

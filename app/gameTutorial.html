@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Tutorial Chapter </title>
+
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="lib/semantic-ui/semantic.min.css" rel="stylesheet">
+
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/game.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
+    <link rel="stylesheet" href="assets/countup/jquery.countup.css" />
+</head>
+<body style="background-color: #333333" ng-app="TruthDetective">
+    <nav class="topnav navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Truth Detective</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Leaderboard</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Name<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Account Setting</a></li>
+                            <li><a href="#">Invite Friends</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- JavaScript includes -->
+
+    <div id="game">
+        <div class="game_row">
+            <div class="game_container">
+                <div class="mp3player">
+                    <!--<audio id="mp3_1" controls autoplay loop>-->
+                    <!--<source src="mp3/不思議な町.ogg" type="audio/ogg">-->
+                    <!--<source src="mp3/不思議な町.mp3" type="audio/mpeg">-->
+                    <!--Your browser does not support the audio element.-->
+                    <!--</audio>-->
+                    <audio id="mp3_1" src="../mp3/雷顿教授 - レイトン教授のテーマ.mp3" controls autoplay loop></audio>
+                </div>
+
+                <!--The following is win pop-up box-->
+                <div id="winmessage">
+                    <div id="heading">
+                        Congratulations! Your detection time is:
+                    </div>
+                    <div id="content" class="button">
+                        <p></p>
+                        <a href="game.html" class="btnB">Next Chapter</a>
+                        <a href="user.html" class="btnO">Go to Dashboard</a>
+                    </div>
+                </div>
+                <div class="winmask"></div>
+                <div id="countdown"></div>
+                <div id="checkinput">
+                    <form>
+                        <input class="game-input" type="text" value="" id="questionT">
+                        <input type="button" id="submit" value="Submit">
+                    </form>
+                </div>
+                <div id="canvas" class="tutorial" ng-controller="imagecontroller">
+                    <div id="dialog_box">
+                        <div id="imagebox">
+                            <img class="imageswap" src="../img/char/chapterTutorial/1.png">
+                        </div>
+                        <div id="operationButtonBox">
+                            <!--<div id="backButton" class="operationButton"></div>-->
+                            <!--<div id="nextButton" class="operationButton"></div>-->
+                            <!--<div id="skipButton" class="operationButton"></div>-->
+                            <img id="backButton" class="operationButton" src="../img/tools/back.png" alt="backButton" />
+                            <img id="nextButton" class="operationButton" src="../img/tools/next.png" alt="backButton" />
+                            <img id="skipButton" class="operationButton" src="../img/tools/skip.png" alt="backButton" />
+                        </div>
+                    </div>
+
+                    <div class="question"><img class="questionimg" src="../img/char/Q0.png">
+                    </div>
+
+                    <div id="" class="checkpoint custom letterT" ng-mouseleave="letterT()"> <!--Louis XIV--></div>
+                    <div id="" class="checkpoint custom newspaperT" ng-mouseleave="newspaperT()"> <!--gongzhan bashidiyu--></div>
+                    <!--<img src="../resource/img/site/level1.jpg">-->
+                    <div id="" class="checkpoint custom mapT" ng-mouseleave="mapT()"> <!--gongzhan bashidiyu--></div>
+                    <div class="mask"></div>
+                    <div id="window">
+                        <div class="close">
+                            <div class="close-icon"></div>
+                        </div>
+                        <div class="clue">
+                            <div class="showImage"><img ng-src="{{image}}" class="existClueImage"></div>
+                            <!--use angular.js load introduction dynamically-->
+                            <div class="introduction">
+                                <h2 class="header">{{title}}</h2>
+                                <p class="clueText">{{content}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="lib/jquery/jquery.plugin.min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <!--<script src="../lib/semantic-ui/semantic.min.js"></script>-->
+
+    <script src="js/game.js"></script>
+    <script src="js/gameTutorial.js"></script>
+    <script src="assets/countup/jquery.countup.js"></script>
+    <script src="js/imgcontroller.js"></script>
+
+    <!--<script>-->
+        <!--$(function() {-->
+            <!--var images = ["../img/char/chapterTutorial/2.png", "../img/char/chapterTutorial/3.png", "../img/char/chapterTutorial/4.png", "../img/char/chapterTutorial/5.png", "../img/char/chapterTutorial/6.png", "../img/char/chapterTutorial/7.png", "../img/char/chapterTutorial/8.png", "../img/char/chapterTutorial/9.png", "../img/char/chapterTutorial/10.png", "../img/char/chapterTutorial/11.png", "../img/char/chapterTutorial/tutorial_tips_1.png", "../img/char/chapterTutorial/tutorial_tips_2.png", "../img/char/chapterTutorial/tutorial_tips_3.png", "../img/char/chapterTutorial/tutorial_tips_4.png"];-->
+            <!--var max = images.length;-->
+            <!--var num = 0;-->
+
+            <!--$("#nextButton").click(function () {-->
+                <!--if (num < max-1) {-->
+                    <!--$(".imageswap").fadeOut(function () {-->
+                        <!--num++;-->
+                        <!--$(this).attr("src", images[num]).fadeIn(600);-->
+                    <!--});-->
+                    <!--$("#backButton, #nextButton, #skipButton").fadeOut(function (){-->
+                        <!--$(this).fadeIn(600)-->
+                    <!--});-->
+                    <!--if (num == 10){-->
+                        <!--$(".question").slideDown("slow");-->
+                        <!--$("#checkinput").show();-->
+                    <!--}-->
+                <!--} else {-->
+                    <!--skip()-->
+                <!--}-->
+            <!--});-->
+            <!--$("#backButton").click(function () {-->
+                <!--if (num > 0) {-->
+                    <!--$(".imageswap").fadeOut(function () {-->
+                        <!--num&#45;&#45;;-->
+                        <!--$(this).attr("src", images[num]).fadeIn(600);-->
+                    <!--});-->
+                    <!--$("#backButton, #nextButton, #skipButton").fadeOut(function (){-->
+                        <!--$(this).fadeIn(600)-->
+                    <!--});-->
+                <!--}-->
+            <!--});-->
+            <!--$("#skipButton").click(function () {-->
+                <!--skip()-->
+            <!--});-->
+
+            <!--function skip() {-->
+                <!--$("#imagebox, #nextButton, #backButton, #skipButton").fadeOut();-->
+                <!--$(".question").slideDown("slow");-->
+                <!--$("#checkinput").show();-->
+                <!--$('#countdown').countup();-->
+            <!--}-->
+        <!--});-->
+    <!--</script>-->
+
+</body>
+</html>

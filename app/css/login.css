@@ -1,0 +1,52 @@
+.login-field, .signup-field{
+    max-width: 500px;
+    max-height: 400px;
+    padding: 0 50px;
+}
+
+#login-body, #signup-body{
+    background-color: #F5F5F5;
+    height: 100%;
+}
+
+#login-form, #signup-form{
+    max-width: 500px;
+    padding: 0 25px;
+    background-color: #F5F5F5;
+    margin: 150px auto;
+
+}
+.close-button-container{
+    width: 450px;
+}
+.close-button{
+    float:right;
+}
+md-toolbar:not(.md-menu-toolbar).login-toolbar, .login-content{
+    background-color: #F5F5F5;
+}
+.center-btn{
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 16px;
+}
+.signup-redirect{
+    text-align: center;
+}
+.md-button.login-submit, .md-button.signup-submit{
+    background-color: #BD7C2E;
+}
+.login-submit-text, .signup-submit-text{
+    color: #F5F5F5;
+}
+md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+    border-color: #BD7C2E;
+}
+md-input-container:not(.md-input-invalid).md-input-focused label {
+    color: #BD7C2E;
+}
+
+.linkInLogin{
+  text-decoration: underline;
+}
+
