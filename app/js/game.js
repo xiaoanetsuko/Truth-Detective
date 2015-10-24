@@ -156,7 +156,7 @@ $(document).ready( function() {
 });
 
 $(function(){
-    var images = ["img/char/chapter1/2.png", "img/char/chapter1/3.png", "img/char/chapter1/4.png", "img/char/chapter1/5.png", "img/char/chapter1/6.png", "img/char/chapter1/7.png", "img/char/chapter1/8.png", "img/char/chapter1/9.png", "img/char/chapter1/10.png", "img/char/chapter1/11.png", "img/char/chapter1/12.png"];
+    var images = ["../img/char/chapter1/2.png", "../img/char/chapter1/3.png", "../img/char/chapter1/4.png", "../img/char/chapter1/5.png", "../img/char/chapter1/6.png", "../img/char/chapter1/7.png", "../img/char/chapter1/8.png", "../img/char/chapter1/9.png", "../img/char/chapter1/10.png", "../img/char/chapter1/11.png", "../img/char/chapter1/12.png"];
     var max = images.length;
     var num = 0;
 

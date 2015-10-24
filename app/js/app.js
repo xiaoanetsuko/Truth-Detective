@@ -21,10 +21,16 @@ angular
             templateUrl: 'index.html'
         })
         .when('/login.html', {
-            templateUrl: '../html/login.html'
+            templateUrl: 'login.html'
         })
         .when('/dashboard.html', {
-            templateUrl: '../html/user.html'
+            templateUrl: 'user.html'
+        })
+        .when('/tutorial.html', {
+            templateUrl: 'gameTutorial.html'
+        })
+        .when('/chapter1.html', {
+            templateUrl: 'game.html'
         })
         .otherwise({
             redirectTo: '/'
