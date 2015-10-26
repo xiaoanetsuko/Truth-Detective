@@ -25,7 +25,7 @@ function userService($timeout, $filter, $q) {
         var deferred = $q.defer();
         var filtered = $filter('filter')(getUsers(), { username: username });
         console.log("filtered result --- "+filtered);
-        var user = filtered.length ? filtered[0] : null;   //TODO PROBLEM HERE
+        var user = filtered.length ? filtered[0] : null;
         //for (var i=0; i<filtered.length; i++) {
         //    console.log(filtered[i].username);
         //

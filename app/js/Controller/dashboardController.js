@@ -4,7 +4,7 @@
 'use strict';
 
 angular.module('TruthDetective')
-        .controller('dashboardCtrl', function ($scope, $rootScope, $localStorage, $window, userService) {
+        .controller('dashboardCtrl', function ($scope, $rootScope, $localStorage, $window, userService, $mdDialog) {
             $scope.username = $rootScope.globals.currentUser.username;
             $scope.barWidth = 0;
             console.log("globals.....");
@@ -15,16 +15,15 @@ angular.module('TruthDetective')
             var allChInfo = userService.getInfo();
             var userChInfo = [];
             console.log(allChInfo);
-            if (allChInfo.length == 0) {
-                $scope.chTutImg = lockedImg;
-                $scope.chOneImg = lockedImg;
-                $scope.chTwoImg = lockedImg;
-                $scope.chThreeImg = lockedImg;
-                $scope.chTutName = lockedTitle;
-                $scope.chOneName = lockedTitle;
-                $scope.chTwoName = lockedTitle;
-                $scope.chThreeName = lockedTitle;
-            }
+
+            $scope.chTutImg = 'resource/img/site/t.jpg';
+            $scope.chOneImg = lockedImg;
+            $scope.chTwoImg = lockedImg;
+            $scope.chThreeImg = lockedImg;
+            $scope.chTutName = 'House Gate';
+            $scope.chOneName = lockedTitle;
+            $scope.chTwoName = lockedTitle;
+            $scope.chThreeName = lockedTitle;
 
             for (var i=0;i<allChInfo.length;i++){
                 if (allChInfo[i].username == $scope.username) {
@@ -32,22 +31,39 @@ angular.module('TruthDetective')
                 }
             }
 
-            if (userChInfo.indexOf('tutorial') > -1) {
-                $scope.chTutImg = 'resource/img/site/t.jpg';
-                $scope.chTutName = 'House Gate';
-                $scope.barWidth+=25;
-            } else {
-                $scope.chTutImg = lockedImg;
-                $scope.chTutName = lockedTitle;
-            }
+            console.log('chapter completed by this user ... ')
+            console.log(userChInfo);
 
-            if (userChInfo.indexOf('one') > -1) {
+            //if (userChInfo.indexOf('tutorial') > -1) {
+            //    $scope.chTutImg = 'resource/img/site/t.jpg';
+            //    $scope.chTutName = 'House Gate';
+            //    $scope.barWidth+=25;
+            //} else {
+            //    $scope.chTutImg = lockedImg;
+            //    $scope.chTutName = lockedTitle;
+            //}
+
+            if (userChInfo.length == 1) {
                 $scope.chOneImg = 'resource/img/site/1.jpg';
                 $scope.chOneName = 'Art Gallery';
                 $scope.barWidth+=25;
+                $scope.openChOne = function () {
+                    $window.location.href = "http://deco1800-g51.uqcloud.net/chapter1.html";
+                };
             } else {
-                $scope.chOneImg = lockedImg;
-                $scope.chOneName = lockedTitle;
+                console.log('in here')
+                $scope.openChOne = function (ev) {
+                    $mdDialog.show(
+                        $mdDialog.alert()
+                            .parent(angular.element(angular.element(document.body)))
+                            .clickOutsideToClose(true)
+                            .title('Chapter One is Locked')
+                            .content('Please complete Tutorial Chapter first.')
+                            .ariaLabel('Alert Dialog Demo')
+                            .ok('Got it!')
+                            .targetEvent(ev)
+                    );
+                }
             }
 
             if (userChInfo.indexOf('two') > -1) {
@@ -73,9 +89,23 @@ angular.module('TruthDetective')
             $scope.openTutorial = function () {
                 $window.location.href = "http://deco1800-g51.uqcloud.net/tutorial.html";
             };
-            $scope.openChOne = function () {
-                $window.location.href = "http://deco1800-g51.uqcloud.net/chapter1.html";
-            };
+            //$scope.openChOne = function () {
+            //    if (userChInfo.length == 1) {
+            //        $window.location.href = "http://deco1800-g51.uqcloud.net/chapter1.html";
+            //    } else {
+            //        $mdDialog.show(
+            //            $mdDialog.alert()
+            //                .parent(angular.element(angular.element(document.body)))
+            //                .clickOutsideToClose(true)
+            //                .title('Chapter One is Locked')
+            //                .content('Please complete Tutorial Chapter first.')
+            //                .ariaLabel('Alert Dialog Demo')
+            //                .ok('Got it!')
+            //                .targetEvent(ev)
+            //        );
+            //    }
+            //
+            //};
             $scope.openChTwo = function () {
                 $window.location.href = "http://deco1800-g51.uqcloud.net/chapter2.html";
             };
