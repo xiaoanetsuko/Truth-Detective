@@ -11,52 +11,61 @@ angular.module('TruthDetective')
             console.log($rootScope.globals);
             console.log($localStorage);
             var lockedImg = 'img/tools/lock%203.png';
+            var lockedTitle = 'Locked';
             var allChInfo = userService.getInfo();
+            var userChInfo = [];
             console.log(allChInfo);
             if (allChInfo.length == 0) {
                 $scope.chTutImg = lockedImg;
                 $scope.chOneImg = lockedImg;
                 $scope.chTwoImg = lockedImg;
                 $scope.chThreeImg = lockedImg;
-                $scope.chTutName = 'Locked';
-                $scope.chOneName = 'Locked';
-                $scope.chTwoName = 'Locked';
-                $scope.chThreeName = 'Locked';
+                $scope.chTutName = lockedTitle;
+                $scope.chOneName = lockedTitle;
+                $scope.chTwoName = lockedTitle;
+                $scope.chThreeName = lockedTitle;
             }
-            for (var i=0;i<allChInfo.length;i++){
-                if (allChInfo[i].username==$scope.username && allChInfo[i].chapter=='tutorial'){
-                    $scope.chTutImg = 'resource/img/site/t.jpg';
-                    $scope.chTutName = 'House Gate';
-                    $scope.barWidth+=25;
 
-                } else {
-                    $scope.chTutImg = lockedImg;
-                    $scope.chTutName = 'Locked';
+            for (var i=0;i<allChInfo.length;i++){
+                if (allChInfo[i].username == $scope.username) {
+                    userChInfo.push(allChInfo[i].chapter)
                 }
-                if (allChInfo[i].username==$scope.username && allChInfo[i].chapter=='one'){
-                    $scope.chOneImg = 'resource/img/site/1.jpg';
-                    $scope.chOneName = 'Art Gallery';
-                    $scope.barWidth+=25;
-                } else {
-                    $scope.chOneImg = lockedImg;
-                    $scope.chOneName = 'Locked';
-                }
-                if (allChInfo[i].username==$scope.username && allChInfo[i].chapter=='two'){
-                    $scope.chTwoImg = 'resource/img/site/1.jpg';
-                    $scope.chTwoName = '';
-                    $scope.barWidth+=25;
-                } else {
-                    $scope.chTwoImg = lockedImg;
-                    $scope.chTwoName = 'Locked';
-                }
-                if (allChInfo[i].username==$scope.username && allChInfo[i].chapter=='three'){
-                    $scope.chThreeImg = 'resource/img/site/1.jpg';
-                    $scope.chThreeName = '';
-                    $scope.barWidth+=25;
-                } else {
-                    $scope.chThreeImg = lockedImg;
-                    $scope.chThreeName = 'Locked';
-                }
+            }
+
+            if (userChInfo.indexOf('tutorial') > -1) {
+                $scope.chTutImg = 'resource/img/site/t.jpg';
+                $scope.chTutName = 'House Gate';
+                $scope.barWidth+=25;
+            } else {
+                $scope.chTutImg = lockedImg;
+                $scope.chTutName = lockedTitle;
+            }
+
+            if (userChInfo.indexOf('one') > -1) {
+                $scope.chOneImg = 'resource/img/site/1.jpg';
+                $scope.chOneName = 'Art Gallery';
+                $scope.barWidth+=25;
+            } else {
+                $scope.chOneImg = lockedImg;
+                $scope.chOneName = lockedTitle;
+            }
+
+            if (userChInfo.indexOf('two') > -1) {
+                $scope.chTwoImg = 'resource/img/site/1.jpg';
+                $scope.chTwoName = '';
+                $scope.barWidth+=25;
+            } else {
+                $scope.chTwoImg = lockedImg;
+                $scope.chTwoName = lockedTitle;
+            }
+
+            if (userChInfo.indexOf('three') > -1) {
+                $scope.chThreeImg = 'resource/img/site/1.jpg';
+                $scope.chThreeName = '';
+                $scope.barWidth+=25;
+            } else {
+                $scope.chThreeImg = lockedImg;
+                $scope.chThreeName = lockedTitle;
             }
 
             $scope.username = $rootScope.globals.currentUser.username;
