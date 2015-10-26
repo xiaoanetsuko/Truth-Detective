@@ -516,7 +516,7 @@
     max-width: 45%;
     max-height: 500px;
     margin-left: 40px;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 .clueText{
