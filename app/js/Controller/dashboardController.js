@@ -84,4 +84,12 @@ angular.module('TruthDetective')
             };
 
             $scope.progressPercentage = $scope.barWidth+'%';
+
+            $scope.toDash = function () {
+                $window.location.href = "http://deco1800-g51.uqcloud.net/user.html";
+            };
+
+            $scope.toIndex = function () {
+                $window.location.href = "http://deco1800-g51.uqcloud.net/index.html";
+            };
         });

@@ -7,6 +7,14 @@ angular.module('TruthDetective')
         $scope.username = $rootScope.globals.currentUser.username;
         var user = userService.GetUser($scope.username);
 
+        $scope.toDash = function () {
+            $window.location.href = "http://deco1800-g51.uqcloud.net/user.html";
+        };
+
+        $scope.toIndex = function () {
+            $window.location.href = "http://deco1800-g51.uqcloud.net/index.html";
+        };
+
         $scope.completeTut = function () {
             console.log("current user name ---- ");
             console.log($scope.username);

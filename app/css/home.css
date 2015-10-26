@@ -186,11 +186,16 @@ a.joingame:hover{
 }
 
 .navbar-brand,
-.navbar-nav li a {
+.navbar-nav li span, .navbar-nav li a{
     line-height: 70px;
     height: 70px;
     padding-top: 0;
     -webkit-text-fill-color: white;
+}
+
+.nav li span{
+    padding: 27px 15px;
+
 }
 
 .navbar-default .navbar-nav{
@@ -199,14 +204,15 @@ a.joingame:hover{
     padding-bottom: 30px;
 }
 
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li > span:hover {
     background-color: #172563;
     color: #fff;
+    cursor: pointer;
     /*border-radius: 2rem;*/
-
 }
 
-.navbar-default .navbar-nav > li > a:focus{
+
+.navbar-default .navbar-nav > li > span:focus{
     background-color: #172563;
     color: #fff;
     /*border-radius: 2rem;*/
