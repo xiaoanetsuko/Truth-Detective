@@ -54,8 +54,8 @@
                         <!-- <p class="gameIntro">Your progress of the game</p> -->
                 </div>
                     <div class="progressbar">
-                        <div class="percentagebar" style="transition-duration: 300ms; width: 50%;">
-                            <div class="bartext">50%</div>
+                        <div class="percentagebar" style="transition-duration: 300ms;" ng-style="{'width':barWidth+'%'}">
+                            <div class="bartext">{{progressPercentage}}</div>
                         </div>
                     </div>
                 </div>

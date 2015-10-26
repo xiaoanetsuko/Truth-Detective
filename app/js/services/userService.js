@@ -113,32 +113,6 @@ function userService($timeout, $filter, $q) {
         return deferred.promise;
     }
 
-    //function finishTut(user) {
-    //    var deferred = $q.defer();
-    //    $timeout(function () {
-    //        GetByUsername(user.username)
-    //            .then(function () {
-    //                var users = getUsers();
-    //                var firstChInfo = getUserInfo();
-    //                var curUser = GetUser(user.username);
-    //                console.log(curUser);
-    //                var userID = curUser.id;
-    //
-    //                // assign id
-    //                user.id = userID;
-    //                user.chapter = 'tutorial';
-    //                user.complete = true;
-    //
-    //                // save to local storage
-    //                firstChInfo.push(user);
-    //                setFirstCh(firstChInfo);
-    //                console.log(firstChInfo);
-    //                deferred.resolve({ success: true });
-    //            });
-    //    }, 1000);
-    //  return deferred.promise;
-    //}
-
     function finishTut(user) {
         GetByUsername(user.username)
             .then(function () {
@@ -147,23 +121,27 @@ function userService($timeout, $filter, $q) {
                 var curUser = GetUser(user.username);
                 console.log(curUser);
                 var userID = curUser.id;
-
+                var tmp = [];
                 //avoid adding info when the same user completes a chapter more than once
                 for (var i=0;i<chapterInfo.length;i++){
-                    if (chapterInfo[i].id==userID && chapterInfo.chapter=='tutorial'){
-                        return;
+                    if (chapterInfo[i].chapter == 'tutorial'){
+                        tmp.push(chapterInfo[i].id);
                     }
                 }
-                // assign id
-                user.id = userID;
-                user.chapter = 'tutorial';
-                user.complete = true;
+                console.log(tmp);
+                if (tmp.indexOf(userID) == -1) {
+                    // assign id
+                    user.id = userID;
+                    user.chapter = 'tutorial';
+                    user.complete = true;
 
-                // save to local storage
-                chapterInfo.push(user);
-                setChInfo(chapterInfo);
-                console.log(chapterInfo);
-                return JSON.parse(localStorage.chapterInfo);
+                    // save to local storage
+                    chapterInfo.push(user);
+                    setChInfo(chapterInfo);
+                    console.log('chapter info after .... ');
+                    console.log(chapterInfo);
+                    return JSON.parse(localStorage.chapterInfo);
+                }
             });
     }
 
@@ -175,23 +153,26 @@ function userService($timeout, $filter, $q) {
                 var curUser = GetUser(user.username);
                 console.log(curUser);
                 var userID = curUser.id;
-
+                var tmp = [];
                 //avoid adding info when the same user completes a chapter more than once
                 for (var i=0;i<chapterInfo.length;i++){
-                    if (chapterInfo[i].id==userID && chapterInfo.chapter=='one'){
-                        return;
+                    if (chapterInfo[i].chapter=='one'){
+                        tmp.push(chapterInfo[i].id);
                     }
                 }
-                // assign id
-                user.id = userID;
-                user.chapter = 'one';
-                user.complete = true;
 
-                // save to local storage
-                chapterInfo.push(user);
-                setChInfo(chapterInfo);
-                console.log(chapterInfo);
-                return JSON.parse(localStorage.chapterInfo);
+                if (tmp.indexOf(userID) == -1) {
+                    // assign additional info
+                    user.id = userID;
+                    user.chapter = 'one';
+                    user.complete = true;
+
+                    // save to local storage
+                    chapterInfo.push(user);
+                    setChInfo(chapterInfo);
+                    console.log(chapterInfo);
+                    return JSON.parse(localStorage.chapterInfo);
+                }
             });
     }
 
@@ -203,23 +184,26 @@ function userService($timeout, $filter, $q) {
                 var curUser = GetUser(user.username);
                 console.log(curUser);
                 var userID = curUser.id;
-
+                var tmp = [];
                 //avoid adding info when the same user completes a chapter more than once
                 for (var i=0;i<chapterInfo.length;i++){
-                    if (chapterInfo[i].id==userID && chapterInfo.chapter=='two'){
-                        return;
+                    if (chapterInfo[i].chapter == 'two'){
+                        tmp.push(chapterInfo[i].id);
                     }
                 }
-                // assign id
-                user.id = userID;
-                user.chapter = 'two';
-                user.complete = true;
 
-                // save to local storage
-                chapterInfo.push(user);
-                setChInfo(chapterInfo);
-                console.log(chapterInfo);
-                return JSON.parse(localStorage.chapterInfo);
+                if (tmp.indexOf(userID) == -1) {
+                    // assign id
+                    user.id = userID;
+                    user.chapter = 'two';
+                    user.complete = true;
+
+                    // save to local storage
+                    chapterInfo.push(user);
+                    setChInfo(chapterInfo);
+                    console.log(chapterInfo);
+                    return JSON.parse(localStorage.chapterInfo);
+                }
             });
     }
 
@@ -231,23 +215,26 @@ function userService($timeout, $filter, $q) {
                 var curUser = GetUser(user.username);
                 console.log(curUser);
                 var userID = curUser.id;
-
+                var tmp = [];
                 //avoid adding info when the same user completes a chapter more than once
                 for (var i=0;i<chapterInfo.length;i++){
-                    if (chapterInfo[i].id==userID && chapterInfo.chapter=='three'){
-                        return;
+                    if (chapterInfo[i].chapter == 'three'){
+                        tmp.push(chapterInfo[i].id);
                     }
                 }
-                // assign id
-                user.id = userID;
-                user.chapter = 'three';
-                user.complete = true;
 
-                // save to local storage
-                chapterInfo.push(user);
-                setChInfo(chapterInfo);
-                console.log(chapterInfo);
-                return JSON.parse(localStorage.chapterInfo);
+                 if (tmp.indexOf(userID) == -1) {
+                     // assign id
+                     user.id = userID;
+                     user.chapter = 'three';
+                     user.complete = true;
+
+                     // save to local storage
+                     chapterInfo.push(user);
+                     setChInfo(chapterInfo);
+                     console.log(chapterInfo);
+                     return JSON.parse(localStorage.chapterInfo);
+                 }
             });
     }
 
