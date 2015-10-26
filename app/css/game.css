@@ -53,19 +53,22 @@
 
 #operationButtonBox {
     position: relative;
-    top: 720px;
-    left: 14%;
+    top: 768px;
+    left: 15%;
     z-index: 100;
 
     width: auto;
 }
 
 .operationButton {
-    width: 80px;
-    height: 112px;
     float: left;
     cursor: pointer;
     background-size: contain;
+}
+
+#skipButton {
+    position:relative;
+    margin-right: 48%;
 }
 
 #nextButton {
@@ -73,16 +76,7 @@
 }
 
 #backButton {
-    margin-right: 1090px;
-}
-
-#skipButton {
-    position:relative;
-    top: -32px;
-    left: -112px;
-    width: 32px;
-    height: 32px;
-
+    margin-right: 4%;
 }
 
 #imagebox {
@@ -191,7 +185,55 @@
     z-index: 2;
 }
 
+.coins {
+    position: absolute;
+    top:48%;
+    left:86%;
+    width: 120px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 2;
+}
 
+.bridge1970 {
+    position: absolute;
+    top:49%;
+    left:55%;
+    width: 110px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 2;
+}
+
+.Buckingham_palace {
+    position: absolute;
+    top:28%;
+    left:37%;
+    width: 200px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 2;
+}
+
+.George_IV_1821_color {
+    position: absolute;
+    top:38%;
+    left:23%;
+    width: 70px;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 2;
+}
+
+.Industrial_Revolution {
+    position: absolute;
+    top:39%;
+    left:44%;
+    width: 85px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 2;
+}
 
 /*Pop-ups*/
 
