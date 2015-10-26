@@ -13,28 +13,70 @@ angular.module('TruthDetective')
             console.log("localstorage.user --- ");
             console.log($localStorage.user);
             userService.GetByUsername($rootScope.globals.currentUser.username);
-            //console.log(userService.GetByUsername($scope.username));
-            if ($scope.username == $localStorage.user) {
-                $localStorage.first = true;
-            }
             userService.finishTut(user);
 
-            console.log("FirstInfo as JSON ..... ");
+            console.log("chapterInfo as JSON ..... ");
             var tmp = userService.getInfo();
             console.log(tmp);
-            //console.log($localStorage.second);
+            $window.location.href = "http://deco1800-g51.uqcloud.net/chapter1.html";
         };
         $scope.completeTutGoBack = function () {
             userService.GetByUsername($rootScope.globals.currentUser.username);
             //console.log(userService.GetByUsername($scope.username));
-            if ($scope.username == $localStorage.user) {
-                $localStorage.first = true;
-            }
             userService.finishTut(user);
 
-            console.log($localStorage.first);
             $window.location.href = "http://deco1800-g51.uqcloud.net/user.html";
-            //console.log($localStorage.second);
         };
 
+        $scope.completeOne = function () {
+            console.log("current user name ---- ");
+            console.log($scope.username);
+            console.log("localstorage.user --- ");
+            console.log($localStorage.user);
+            userService.GetByUsername($rootScope.globals.currentUser.username);
+            //console.log(userService.GetByUsername($scope.username));
+            userService.finishOne(user);
+
+            console.log("chapterInfo as JSON ..... ");
+            var tmp = userService.getInfo();
+            console.log(tmp);
+            $window.location.href = "http://deco1800-g51.uqcloud.net/chapter2.html";
+        };
+        $scope.completeOneGoBack = function () {
+            userService.GetByUsername($rootScope.globals.currentUser.username);
+            //console.log(userService.GetByUsername($scope.username));
+            userService.finishOne(user);
+
+            $window.location.href = "http://deco1800-g51.uqcloud.net/user.html";
+        };
+
+        $scope.completeTwo = function () {
+            console.log("current user name ---- ");
+            console.log($scope.username);
+            console.log("localstorage.user --- ");
+            console.log($localStorage.user);
+            userService.GetByUsername($rootScope.globals.currentUser.username);
+            //console.log(userService.GetByUsername($scope.username));
+            userService.finishTwo(user);
+
+            console.log("chapterInfo as JSON ..... ");
+            var tmp = userService.getInfo();
+            console.log(tmp);
+            $window.location.href = "http://deco1800-g51.uqcloud.net/chapter3.html";
+        };
+        $scope.completeTwoGoBack = function () {
+            userService.GetByUsername($rootScope.globals.currentUser.username);
+            //console.log(userService.GetByUsername($scope.username));
+            userService.finishTwo(user);
+
+            $window.location.href = "http://deco1800-g51.uqcloud.net/user.html";
+        };
+
+        $scope.completeThreeGoBack = function () {
+            userService.GetByUsername($rootScope.globals.currentUser.username);
+            //console.log(userService.GetByUsername($scope.username));
+            userService.finishThree(user);
+
+            $window.location.href = "http://deco1800-g51.uqcloud.net/user.html";
+        };
     });

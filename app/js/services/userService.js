@@ -140,36 +140,118 @@ function userService($timeout, $filter, $q) {
     //}
 
     function finishTut(user) {
-            GetByUsername(user.username)
-                .then(function () {
-                    var users = getUsers();
-                    var firstChInfo = getUserInfo();
-                    var curUser = GetUser(user.username);
-                    console.log(curUser);
-                    var userID = curUser.id;
+        GetByUsername(user.username)
+            .then(function () {
+                var users = getUsers();
+                var chapterInfo = getUserInfo();
+                var curUser = GetUser(user.username);
+                console.log(curUser);
+                var userID = curUser.id;
 
-                    //avoid adding info when the same user completes a chapter more than once
-                    for (var i=0;i<firstChInfo.length;i++){
-                        if (firstChInfo[i].id==userID && firstChInfo.chapter=='tutorial'){
-                            return;
-                        }
+                //avoid adding info when the same user completes a chapter more than once
+                for (var i=0;i<chapterInfo.length;i++){
+                    if (chapterInfo[i].id==userID && chapterInfo.chapter=='tutorial'){
+                        return;
                     }
-                    // assign id
-                    user.id = userID;
-                    user.chapter = 'tutorial';
-                    user.complete = true;
+                }
+                // assign id
+                user.id = userID;
+                user.chapter = 'tutorial';
+                user.complete = true;
 
-                    // save to local storage
-                    firstChInfo.push(user);
-                    setFirstCh(firstChInfo);
-                    console.log(firstChInfo);
-                    return JSON.parse(localStorage.firstChInfo);
-                });
+                // save to local storage
+                chapterInfo.push(user);
+                setChInfo(chapterInfo);
+                console.log(chapterInfo);
+                return JSON.parse(localStorage.chapterInfo);
+            });
+    }
 
+    function finishOne(user) {
+        GetByUsername(user.username)
+            .then(function () {
+                var users = getUsers();
+                var chapterInfo = getUserInfo();
+                var curUser = GetUser(user.username);
+                console.log(curUser);
+                var userID = curUser.id;
+
+                //avoid adding info when the same user completes a chapter more than once
+                for (var i=0;i<chapterInfo.length;i++){
+                    if (chapterInfo[i].id==userID && chapterInfo.chapter=='one'){
+                        return;
+                    }
+                }
+                // assign id
+                user.id = userID;
+                user.chapter = 'one';
+                user.complete = true;
+
+                // save to local storage
+                chapterInfo.push(user);
+                setChInfo(chapterInfo);
+                console.log(chapterInfo);
+                return JSON.parse(localStorage.chapterInfo);
+            });
+    }
+
+    function finishTwo(user) {
+        GetByUsername(user.username)
+            .then(function () {
+                var users = getUsers();
+                var chapterInfo = getUserInfo();
+                var curUser = GetUser(user.username);
+                console.log(curUser);
+                var userID = curUser.id;
+
+                //avoid adding info when the same user completes a chapter more than once
+                for (var i=0;i<chapterInfo.length;i++){
+                    if (chapterInfo[i].id==userID && chapterInfo.chapter=='two'){
+                        return;
+                    }
+                }
+                // assign id
+                user.id = userID;
+                user.chapter = 'two';
+                user.complete = true;
+
+                // save to local storage
+                chapterInfo.push(user);
+                setChInfo(chapterInfo);
+                console.log(chapterInfo);
+                return JSON.parse(localStorage.chapterInfo);
+            });
+    }
+
+    function finishThree(user) {
+        GetByUsername(user.username)
+            .then(function () {
+                var users = getUsers();
+                var chapterInfo = getUserInfo();
+                var curUser = GetUser(user.username);
+                console.log(curUser);
+                var userID = curUser.id;
+
+                //avoid adding info when the same user completes a chapter more than once
+                for (var i=0;i<chapterInfo.length;i++){
+                    if (chapterInfo[i].id==userID && chapterInfo.chapter=='three'){
+                        return;
+                    }
+                }
+                // assign id
+                user.id = userID;
+                user.chapter = 'three';
+                user.complete = true;
+
+                // save to local storage
+                chapterInfo.push(user);
+                setChInfo(chapterInfo);
+                console.log(chapterInfo);
+                return JSON.parse(localStorage.chapterInfo);
+            });
     }
 
     // private functions
-
     function getUsers() {
         if(!localStorage.users){
             localStorage.users = JSON.stringify([]);
@@ -178,19 +260,19 @@ function userService($timeout, $filter, $q) {
     }
 
     function getUserInfo() {
-         if(!localStorage.firstChInfo){
-            localStorage.firstChInfo = JSON.stringify([]);
+         if(!localStorage.chapterInfo){
+            localStorage.chapterInfo = JSON.stringify([]);
          }
-        return JSON.parse(localStorage.firstChInfo);
+        return JSON.parse(localStorage.chapterInfo);
     }
 
     function setUsers(users) {
         localStorage.users = JSON.stringify(users);
     }
 
-    function setFirstCh(userinfo) {
-        localStorage.firstChInfo = JSON.stringify(userinfo);
-        console.log(localStorage.firstChInfo);
+    function setChInfo(userinfo) {
+        localStorage.chapterInfo = JSON.stringify(userinfo);
+        console.log(localStorage.chapterInfo);
     }
 
     var service = {};
@@ -203,6 +285,9 @@ function userService($timeout, $filter, $q) {
     service.Delete = Delete;
     service.GetUser = GetUser;
     service.finishTut = finishTut;
+    service.finishOne = finishOne;
+    service.finishTwo = finishTwo;
+    service.finishThree = finishThree;
     service.getInfo = getInfo;
 
     return service;

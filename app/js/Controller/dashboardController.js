@@ -12,6 +12,16 @@ angular.module('TruthDetective')
             var lockedImg = 'img/tools/lock%203.png';
             var allChInfo = userService.getInfo();
             console.log(allChInfo);
+            if (allChInfo.length == 0) {
+                $scope.chTutImg = lockedImg;
+                $scope.chOneImg = lockedImg;
+                $scope.chTwoImg = lockedImg;
+                $scope.chThreeImg = lockedImg;
+                $scope.chTutName = 'Locked';
+                $scope.chOneName = 'Locked';
+                $scope.chTwoName = 'Locked';
+                $scope.chThreeName = 'Locked';
+            }
             for (var i=0;i<allChInfo.length;i++){
                 if (allChInfo[i].username==$scope.username && allChInfo[i].chapter=='tutorial'){
                     $scope.chTutImg = 'resource/img/site/t.jpg';
@@ -49,7 +59,7 @@ angular.module('TruthDetective')
                 $window.location.href = "http://deco1800-g51.uqcloud.net/tutorial.html";
             };
             $scope.openChOne = function () {
-                $window.location.href = "http://deco1800-g51.uqcloud.net/tutorial.html";
+                $window.location.href = "http://deco1800-g51.uqcloud.net/chapter1.html";
             };
             $scope.openChTwo = function () {
                 $window.location.href = "http://deco1800-g51.uqcloud.net/chapter2.html";
