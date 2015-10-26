@@ -80,10 +80,10 @@
                         </div>
                         <div class="col-md-6 text-center">
                             <div class="box" ng-click="openChOne()">
-                                <img src="resource/img/site/1.jpg">
+                                <img ng-src="{{chOneImg}}">
                                 <div class="overbox">
                                     <div class="title overtext"><span>Chapter 1</span></div>
-                                    <div class="tagline overtext">Art Gallery</div>
+                                    <div class="tagline overtext">{{chOneName}}</div>
                                 </div>
                             </div>
                         </div>
@@ -91,22 +91,22 @@
                 <br /><br />
                 <div class="row">
                         <div class="col-md-6 text-center">
-                            <div class="box">
+                            <div class="box" ng-click="openChTwo()">
                                 <div class="lockTrial"><img src="img/tools/lock%203.png"></div>
                                 <div class="overbox">
-                                    <div class="title overtext"><a href="#">Chapter 2</a></div>
-                                    <div class="tagline overtext">Unknown</div>
+                                    <div class="title overtext"><span>Chapter 2</span></div>
+                                    <div class="tagline overtext">Locked</div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-md-6 text-center">
-                            <div class="box">
+                            <div class="box" ng-click="openChThree()">
                                 <!--<img src="../resource/img/site/unknown.jpg">-->
                                 <div class="lockTrial"><img src="img/tools/lock%203.png"></div>
                                 <div class="overbox">
-                                    <div class="title overtext"><a href="#">Chapter 3</a></div>
-                                    <div class="tagline overtext">Unknown</div>
+                                    <div class="title overtext"><span>Chapter 3</span></div>
+                                    <div class="tagline overtext">Locked</div>
                                 </div>
                             </div>
                         </div>

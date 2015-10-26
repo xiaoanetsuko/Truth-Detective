@@ -5,9 +5,9 @@
     //  ex: $scope.tag.title
 
 
-var myApp = angular.module('TruthDetective', []);
+angular.module('TruthDetective')
 
-myApp.controller('imagecontroller', ['$scope', function($scope) {
+ .controller('imageController', function($scope) {
 
     $scope.letterT = function() {
         $scope.title="A postcard of Eiffel Tower";
@@ -66,4 +66,4 @@ myApp.controller('imagecontroller', ['$scope', function($scope) {
     };
 
 
-}]);
+});

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="assets/countup/jquery.countup.css" />
 
 </head>
-<body style="background-color: #333333" ng-app="TruthDetective">
+<body style="background-color: #333333" ng-app="TruthDetective" ng-controller="gameCtrl">
     <nav class="topnav navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -25,7 +25,7 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="collapse navbar-collapse navHeaderCollapse" ng-controller="gameCtrl">
+            <div class="collapse navbar-collapse navHeaderCollapse">
                 <ul class="nav navbar-nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Leaderboard</a></li>
@@ -80,7 +80,7 @@
                     </form>
                 </div>
 
-                <div id="canvas" class="level1" ng-controller="imagecontroller">
+                <div id="canvas" class="level1">
                     <div id="dialog_box">
                         <div id="imagebox">
                             <img class="imageswap" src="img/char/chapter1/1.png">
