@@ -1,14 +1,36 @@
 /**
  * Created by MKRL on 9/20/15.
  */
-var app = angular.module('TruthDetective', ['ngRoute']);
-app.config(function ($routeProvider) {
+'use strict';
+
+angular
+    .module('TruthDetective', [
+        'ngAnimate',
+        'ngCookies',
+        'ngResource',
+        'ngRoute',
+        'ngSanitize',
+        'ngTouch',
+        'ngMaterial',
+        'ngStorage'
+    ])
+    .config(function ($routeProvider) {
     $routeProvider
-        .when('/', {
+        .when('/index.html', {
             //controller: 'HomeController',
-            templateUrl: 'html/home.html'
+            templateUrl: 'index.html'
+        })
+        .when('/login.html', {
+            templateUrl: '../html/login.html'
+        })
+        .when('/dashboard.html', {
+            templateUrl: '../html/user.html'
         })
         .otherwise({
             redirectTo: '/'
         });
+    })
+
+.run(function ($rootScope, $location, $cookieStore) {
+    $rootScope.globals = $cookieStore.get('globals') || {};
 });

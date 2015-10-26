@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head ng-app="TruthDetective">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="landing" content="truth-detective">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Truth Detective</title>
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="lib/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
-    <link href="lib/semantic-ui/semantic.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/angular-material/angular-material.css" />
     <link href="lib/semantic-ui/semantic.css" rel="stylesheet">
+
     <link href="css/home.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
-    <script src="lib/angular/angular.min.js"></script>
 </head>
-<body>
 
+<body ng-app="TruthDetective">
     <div class="wrapper">
         <div class="masthead shadow-btm">
-            <div class="headbox container">
-<!--
-                    <a href="#">
-                        <div class="homelogin">
-                            Log in
-                        </div>
-                    </a>
--->
+            <div class="headbox container" ng-controller="loginCtrl">
                 <p class="lead headertext">
-
                     <image src="resource/img/site/logo_linen.png"></image>
                 </p>
                 <div class="textbox">
@@ -36,14 +27,14 @@
                         "Play Truth Detective for the first time and it's impossible not to be drawn in." OPM AU
                     </p>
                 </div>
-                <a href="html/user.html" class="btn btn-outline btn-lg joingame">Join the game</a>
+                <!--<a href="html/login.html">-->
+                    <!--<md-button class="md-raised joingame"><span class="buttontext">Join the Game</span></md-button>-->
+                <!--</a>-->
+                <md-button class="md-raised joingame" ng-click="openLogin()"><span class="buttontext">Join the Game</span></md-button>
             </div>
         </div>
         <div class="secondbox">
-            <p class="lead secondboxheader">
-                Dare to challenge yourself?
-            </p>
-
+            <p class="lead secondboxheader">Dare to challenge yourself?</p>
             <div class="row secondboxrow">
                 <div class="col-sm-4">
                     <span class="glyphicon glyphicon-king" aria-hidden="true"></span>
@@ -94,8 +85,6 @@
                         Players can gain historical knowledge, develop logical skills and improve problem-solving ability by reading articles, memorising keywords and solving puzzles inside the game. There is no time limitation to complete each level, but a timer will be set on the top of the game to record detection time. As players move to the next level, the game difficulty will increase, which means players are expected to explore more valuable clues from the room.
                     </p>
                 </div>
-
-
             </div>
             <!--<hr class="half-rule">-->
             <div class="row feature">
@@ -111,24 +100,14 @@
                 <div class="col-md-6 feature-img">
                     <image src="resource/img/site/avatar.png"></image>
                 </div>
-
             </div>
-
         </div>
         <div class="btnnav">
             <div class="ui horizontal bulleted link list " id="btm-nav">
-                <a class="item">
-                    Home
-                </a>
-                <a class="item">
-                    About Us
-                </a>
-                <a class="item">
-                    Terms and Conditions
-                </a>
-                <a class="item">
-                    Privacy Policy
-                </a>
+                <a class="item">Home</a>
+                <a class="item">About Us</a>
+                <a class="item">Terms and Conditions</a>
+                <a class="item">Privacy Policy</a>
             </div>
             <div class="ui horizontal list">
                 <div class="item">
@@ -144,16 +123,30 @@
             <div class="ip">
                 <p>&#169;Copyright</p>
             </div>
-
-
         </div>
     </div>
 
-
-
-    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/angular/angular.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/angular-material/angular-material.js"></script>
     <script src="lib/semantic-ui/semantic.js"></script>
-    <script src="lib/semantic-ui/semantic.min.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/angular-cookies/angular-cookies.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+    <script src="lib/angular-touch/angular-touch.js"></script>
+    <script src="lib/angular-aria/angular-aria.js"></script>
+    <script src="lib/ngstorage/ngStorage.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <script src="js/services/userService.js"></script>
+    <script src="js/services/authenticationService.js"></script>
+    <script src="js/services/flashService.js"></script>
+
+
+    <script src="js/Controller/loginController.js"></script>
 </body>
 </html>

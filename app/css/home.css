@@ -186,11 +186,16 @@ a.joingame:hover{
 }
 
 .navbar-brand,
-.navbar-nav li a {
+.navbar-nav li span, .navbar-nav li a{
     line-height: 70px;
     height: 70px;
     padding-top: 0;
     -webkit-text-fill-color: white;
+}
+
+.nav li span{
+    padding: 27px 15px;
+
 }
 
 .navbar-default .navbar-nav{
@@ -199,14 +204,15 @@ a.joingame:hover{
     padding-bottom: 30px;
 }
 
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li > span:hover {
     background-color: #172563;
     color: #fff;
+    cursor: pointer;
     /*border-radius: 2rem;*/
-
 }
 
-.navbar-default .navbar-nav > li > a:focus{
+
+.navbar-default .navbar-nav > li > span:focus{
     background-color: #172563;
     color: #fff;
     /*border-radius: 2rem;*/
@@ -282,9 +288,12 @@ a.joingame:hover{
     position: relative;
     overflow: hidden;
     width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    margin: auto auto;
     border-radius: 4px;
+    background-color: #333;
+    vertical-align: middle;
 }
 
 .box img {
@@ -297,18 +306,14 @@ a.joingame:hover{
     transition: all 300ms ease-out;
 }
 
-.lockTrial {
-    background-color: #333333;
-    width: 400px;
-    height: 300px;
-    vertical-align: middle;
-}
-
-.lockTrial>img {
-    width: 128px;
-    vertical-align: middle;
-    margin-top: 80px;
-
+.chapter-img {
+    display: block;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
 }
 
 .box .overbox {
