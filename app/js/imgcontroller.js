@@ -67,5 +67,10 @@ myApp.controller('imagecontroller', ['$scope', function($scope) {
         $scope.content = "This is a painting by Eugène Delacroix commemorating the July Revolution of 1830, which toppled King Charles X of France after the reign of the diamond’s second owner. A woman personifying the concept and the goddess of Liberty leads the people forward over the bodies of the fallen, holding the flag of a historic event – the tricolour flag, which remains France's national flag – in one hand and brandishing a bayonetted musket with the other. The figure of Liberty is also viewed as a symbol of France and the French Republic known as Marianne.";
     };
 
+    $scope.coinsGeorge = function() {
+        $scope.title = "";
+        $scope.image = "../img/img_source/placeholder.png";
+        $scope.content = "Rex Nan Kivell Collection NK5378. Part of the collection: Eighteenth and nineteenth century commemorative medals. Condition: Good. Title devised by cataloguer from medal inscription. Inscriptions on medal: Obverse -- Georgius IIII D. G. Britanniarum Rex F. D.; Reverse -- Proprio Jam Jure Animo Paterno. Inauguratus Die. Julii. XIX Anno. MDCCCXXI."
+    }
 
 }]);
