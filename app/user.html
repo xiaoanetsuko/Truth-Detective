@@ -46,7 +46,7 @@
     </nav>
 
     <div class="row">
-        <div class="container">
+        <div class="container" id="mainBody">
             <div class="row" id="progressContainer">
                 <div class="col-md-12 text-center">
                     <div class="row gameText">
@@ -68,52 +68,54 @@
                 </div>
             </div>
 
-            <div class="row">
-                        <div class="col-md-6 text-center">
-                            <div class="box" ng-click="openTutorial()">
-                                <img ng-src="{{chTutImg}}" class="chapter-img">
-                                <div class="overbox">
-                                    <div class="title overtext"><span>Tutorial</span></div>
-                                    <div class="tagline overtext">{{chTutName}}</div>
-                                </div>
+            <div>
+                <br><br>
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <div class="box" ng-click="openTutorial()">
+                            <img ng-src="{{chTutImg}}" class="chapter-img">
+                            <div class="overbox">
+                                <div class="title overtext"><span>Tutorial</span></div>
+                                <div class="tagline overtext">{{chTutName}}</div>
                             </div>
                         </div>
-                        <div class="col-md-6 text-center">
-                            <div class="box" ng-click="openChOne()">
-                                <img ng-src="{{chOneImg}}" class="chapter-img">
-                                <div class="overbox">
-                                    <div class="title overtext"><span>Chapter 1</span></div>
-                                    <div class="tagline overtext">{{chOneName}}</div>
-                                </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="box" ng-click="openChOne()">
+                            <img ng-src="{{chOneImg}}" class="chapter-img">
+                            <div class="overbox">
+                                <div class="title overtext"><span>Chapter 1</span></div>
+                                <div class="tagline overtext">{{chOneName}}</div>
                             </div>
                         </div>
-            </div>
+                    </div>
+                </div>
                 <br /><br />
                 <div class="row">
-                        <div class="col-md-6 text-center">
-                            <div class="box" ng-click="openChTwo()">
-                                <img ng-src="{{chTwoImg}}" class="chapter-img">
-                                <div class="overbox">
-                                    <div class="title overtext"><span>Chapter 2</span></div>
-                                    <div class="tagline overtext">{{chTwoName}}</div>
-                                </div>
+                    <div class="col-md-6 text-center">
+                        <div class="box" ng-click="openChTwo()">
+                            <img ng-src="{{chTwoImg}}" class="chapter-img">
+                            <div class="overbox">
+                                <div class="title overtext"><span>Chapter 2</span></div>
+                                <div class="tagline overtext">{{chTwoName}}</div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-6 text-center">
-                            <div class="box" ng-click="openChThree()">
-                                <img ng-src="{{chThreeImg}}" class="chapter-img">
-                                <div class="overbox">
-                                    <div class="title overtext"><span>Chapter 3</span></div>
-                                    <div class="tagline overtext">{{chThreeName}}</div>
-                                </div>
+                    <div class="col-md-6 text-center">
+                        <div class="box" ng-click="openChThree()">
+                            <img ng-src="{{chThreeImg}}" class="chapter-img">
+                            <div class="overbox">
+                                <div class="title overtext"><span>Chapter 3</span></div>
+                                <div class="tagline overtext">{{chThreeName}}</div>
                             </div>
                         </div>
+                    </div>
                 </div>
-                <br/>
-                <br/>
             </div>
+            <br><br><br>
         </div>
+    </div>
 
     <div class="navbar navbar-default btnnav">
         <div class="ui horizontal bulleted link list" id="btm-nav">
