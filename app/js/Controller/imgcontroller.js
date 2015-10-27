@@ -11,19 +11,19 @@ angular.module('TruthDetective')
 
     $scope.letterT = function() {
         $scope.title="A postcard of Eiffel Tower";
-        $scope.image = "../img/img_source/eiffel.jpg";
+        $scope.image = "img/img_source/eiffel.jpg";
         $scope.content = "This is a postcard, but the whole text is already too vague to be read. Luckily, the picture in the back side is still clear. It is an old picture of Eiffel Tower. I heard The Eiffel Tower is a tall wrought-iron structure made by man. It is one of the most famous monuments of the world. Besides, it is the most famous landmark of Europe, held the record as the tallest man-made structure of the world from 1889 to 1930 with its height of 324 meters. The Eiffel Tower is named after the owner of the company who designed and built the tower, Engineer Gustave Eiffel. However, I am wondering where the tower located in?"
     };
 
     $scope.newspaperT = function() {
         $scope.title="The Most Famous Novel";
-        $scope.image = "../img/img_source/musketeers.jpg";
+        $scope.image = "img/img_source/musketeers.jpg";
         $scope.content = "This is an old newspaper. The headline for that day is a famous novel called the Three Musketeers. This book is typical of Dumas's works: quick-witted heroes who fight and love unceasingly, fast-paced narrative, and entertaining dialogue. In its romantic subject matter, the book is typical of its time; what is not typical is the fact that it has survived and remains entertaining and accessible for modern readers. The story was drawn from a number of original historical sources, including memoirs of events from the period in which the novel takes place. Dumas's collaborator, Auguste Maquet, brought him a rough scenario for a book set during the reign of King Louis XIII and starring the King, Queen Anne, Cardinal Richelieu, and the Duke of Buckingham. Because Dumas's works have been so wildly popular, for a long time he was not considered a 'serious' writer. However, in recent years, more attention has been given to him because his work laid the foundations for bourgeois drama as he brought history alive for a broad segment of the population who otherwise would have had no interest in it and as he created a new kind of Romantic novel."
     };
 
     $scope.mapT = function() {
         $scope.title="A Map of Europe";
-        $scope.image = "../img/img_source/europe_map.png";
+        $scope.image = "img/img_source/europe_map.png";
         $scope.content = "This is a map of Europe. It seems something missing on this map."
     };
 
