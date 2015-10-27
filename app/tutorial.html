@@ -40,7 +40,7 @@
                             <li><a href="#">Account Setting</a></li>
                             <li><a href="#">Invite Friends</a></li>
                             <li><a href="#">Help</a></li>
-                            <li><a href="../index.html">Log Out</a></li>
+                            <li><a href="index.html">Log Out</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -75,6 +75,7 @@
                     <form>
                         <input class="game-input" type="text" value="" id="questionT">
                         <input type="button" id="submit" value="Submit">
+                        <input type="button" id="clear" value="clear">
                     </form>
                 </div>
                 <div id="canvas" class="tutorial" ng-controller="imageController">
@@ -83,12 +84,9 @@
                             <img class="imageswap" src="img/char/chapterTutorial/1.png">
                         </div>
                         <div id="operationButtonBox">
-                            <!--<div id="backButton" class="operationButton"></div>-->
-                            <!--<div id="nextButton" class="operationButton"></div>-->
-                            <!--<div id="skipButton" class="operationButton"></div>-->
-                            <img id="backButton" class="operationButton" src="img/tools/back.png" alt="backButton" />
-                            <img id="nextButton" class="operationButton" src="img/tools/next.png" alt="backButton" />
-                            <img id="skipButton" class="operationButton" src="img/tools/skip.png" alt="backButton" />
+                            <img id="skipButton" class="operationButton" src="img/tools/skip_button.png" alt="skipButton" />
+                            <img id="backButton" class="operationButton" src="img/tools/prev_button.png" alt="backButton" />
+                            <img id="nextButton" class="operationButton" src="img/tools/next_button.png" alt="nextButton" />
                         </div>
                     </div>
 
@@ -144,6 +142,7 @@
 
     <script src="js/game.js"></script>
     <script src="js/gameTutorial.js"></script>
+    <script src="js/answer.js"></script>
     <script src="assets/countup/jquery.countup.js"></script>
 
 </body>

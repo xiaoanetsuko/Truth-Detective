@@ -3,84 +3,22 @@
  */
 $("#submit").click(function(e) {
     e.preventDefault();
-    var arrT = ["France", "france", "French", "french"];
-    var arr1 = ["Louis XVI", "louis XVI", "Louis 16", "louis 16"];
-    var arr2 = ["London", "london"];
-    var arr3 = ["Industrial Revolution", "industrial revolution", "Industrial revolution", "industrial Revolution" ];
-    var inputValT = $('#questionT').val();
-    var inputVal1 = $('#question1').val();
-    var inputVal2 = $('#question2').val();
-    var inputVal3 = $('#question3').val();
-    if ($.inArray(inputVal1, arr1) > -1) {
-        switch (inputVal1) {
-            case arr1[0]:
-                console.log("Louis XVI correct");
-                winmessage();
-                break;
-            case arr1[1]:
-                //alert("louis XVI correct");
-                winmessage();
-                break;
-            case arr1[2]:
-                //alert("Louis 16 correct");
-                winmessage();
-                break;
-            case arr1[3]:
-                //alert("louis 16 Correct");
-                winmessage();
-                break;
-            default:
-                //alert("Incorrect Answer!");
-                break;
-        }
+    var inputValT = $('#questionT').val().toLowerCase();
+    var inputVal1 = $('#question1').val().toLowerCase();
+    var inputVal2 = $('#question2').val().toLowerCase();
+    var inputVal3 = $('#question3').val().toLowerCase();
+
+    if (inputValT == "france" || inputValT =="franch") {
+        winmessage()
     }
-    else if ($.inArray(inputValT, arrT) > -1) {
-        switch (inputValT) {
-            case arrT[0]:
-                winmessage();
-                break;
-            case arrT[1]:
-                winmessage();
-                break;
-            case arrT[2]:
-                winmessage();
-                break;
-            case arrT[3]:
-                winmessage();
-                break;
-            default:
-                alert("Incorrect Answer!");
-                break;
-        }
+    if (inputVal1=="louis xvi" || inputVal1=="louis 16") {
+        winmessage()
     }
-    else if ($.inArray(inputVal2, arr2) > -1) {
-        switch (inputVal2) {
-            case arr2[0]:
-                winmessage();
-                break;
-            case arr2[1]:
-                winmessage();
-                break;
-            default:
-                alert("Incorrect Answer!");
-                break;
-        }
+    if (inputVal2=="london") {
+        winmessage()
     }
-    else if ($.inArray(inputVal3, arr3) > -1) {
-        switch (inputVal3) {
-            case arr3[0]:
-                winmessage();
-                break;
-            case arr3[1]:
-                winmessage();
-                break;
-            case arr3[2]:
-                winmessage();
-                break;
-            default:
-                alert("Incorrect Answer!");
-                break;
-        }
+    if (inputVal3=="industrial revolution") {
+        winmessage()
     }
     else {alert("Incorrect Answer!");}
 });
