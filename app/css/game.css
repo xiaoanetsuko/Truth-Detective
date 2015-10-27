@@ -1,4 +1,15 @@
 
+@font-face {
+    font-family:"Bookman";
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bookman Old Style Normal'), local('Bookman-Old-Style-Normal'),
+    url(../resource/font/BOOKOS.TTF),
+    url(../resource/font/BOOKOS.woff);
+}
+
+
+
 /*@override*/
 .navbar {
     border: none;
@@ -486,6 +497,10 @@
     z-index: 10;
     width: 624px;
     height: auto;
+    font-family: Bookman;
+    font-weight: 500;
+    font-size: 24px;
+    color: #ebd9a9;
 }
 
 .custom{
@@ -502,8 +517,87 @@ input.game-input {
     width: 624px;
     height: 85px;
     padding: 15px 150px;
+    margin-bottom: 10px;
     border: none;
     float: left;
+    text-align: center;
+}
+
+input.game-input::-webkit-input-placeholder {
+    font-weight: 500;
+    font-size: 24px;
+    font-family: Bookman;
+    color: #ebd9a9;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+input.game-input:-moz-placeholder {
+    font-weight: 500;
+    font-size: 24px;
+    font-family: Bookman;
+    color: #ebd9a9;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+input.game-input::-moz-placeholder {
+    font-weight: 500;
+    font-size: 24px;
+    font-family: Bookman;
+    color: #ebd9a9;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+input.game-input:-ms-input-placeholder {
+    font-weight: 500;
+    font-size: 24px;
+    font-family: Bookman;
+    color: #ebd9a9;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+input.game-input:focus::-webkit-input-placeholder {
+    color: transparent;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+input.game-input:focus:-moz-placeholder {
+    color: transparent;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+input.game-input:focus::-moz-placeholder {
+    color: transparent;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+input.game-input:focus:-ms-input-placeholder {
+    color: transparent;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
 
 #submit {
@@ -515,7 +609,7 @@ input.game-input {
     width: 170px;
     height: 54px;
     border: none;
-    margin: 20px 40px 10px 102px;
+    margin: 0 40px 10px 102px;
     text-indent: 999px;
     overflow: hidden;
     float: left;
@@ -533,7 +627,7 @@ input.game-input {
     background-color: rgba(0,0,0,0);
     width: 170px;
     height: 54px;
-    margin: 20px 102px 10px 40px;
+    margin: 0 102px 10px 40px;
     text-indent: 999px;
     overflow: hidden;
     border: none;
