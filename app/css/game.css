@@ -69,6 +69,7 @@
 #skipButton {
     position:relative;
     margin-right: 48%;
+    margin-top: 10px;
 }
 
 #nextButton {
