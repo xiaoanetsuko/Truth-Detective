@@ -160,7 +160,7 @@ a.joingame:hover{
     text-align: center;
     height: 150px;
     background: #BD7C2E;
-
+    margin-bottom: 0;
 }
 
 .btnnav-tab a{
@@ -182,7 +182,7 @@ a.joingame:hover{
 
 .topnav{
     background: #434E63;
-
+    margin-bottom: 0;
 }
 
 .navbar-brand,
@@ -322,7 +322,7 @@ a.joingame:hover{
     top: 0;
     left: 0;
     color: #fff;
-    z-index: 100;
+    /*z-index: 100;*/
     -webkit-transition: all 300ms ease-out;
     -moz-transition: all 300ms ease-out;
     -o-transition: all 300ms ease-out;
@@ -377,4 +377,11 @@ a.joingame:hover{
     -webkit-transform: translateX(0px);
 }
 
+#progressContainer{
+    margin-top: 55px;
+    margin-bottom: 40px;
+}
 
+md-backdrop{
+    position: fixed;
+}

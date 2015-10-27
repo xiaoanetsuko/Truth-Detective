@@ -51,16 +51,15 @@ angular.module('TruthDetective')
                     $window.location.href = "http://deco1800-g51.uqcloud.net/chapter1.html";
                 };
             } else {
-                console.log('in here')
                 $scope.openChOne = function (ev) {
                     $mdDialog.show(
                         $mdDialog.alert()
-                            .parent(angular.element(angular.element(document.body)))
+                            .parent(angular.element(document.querySelector('#mainBody')))
                             .clickOutsideToClose(true)
                             .title('Chapter One is Locked')
-                            .content('Please complete Tutorial Chapter first.')
-                            .ariaLabel('Alert Dialog Demo')
-                            .ok('Got it!')
+                            .content('To unlock, please complete the Tutorial Chapter.')
+                            //.ariaLabel('Alert Dialog Demo')
+                            .ok('Close')
                             .targetEvent(ev)
                     );
                 }
