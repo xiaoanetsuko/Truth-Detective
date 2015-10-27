@@ -607,16 +607,24 @@ input.game-input:focus:-ms-input-placeholder {
     background-size: contain;
     background-color: rgba(0,0,0,0);
     width: 170px;
-    height: 54px;
+    height: 48px;
     border: none;
     margin: 0 40px 10px 102px;
     text-indent: 999px;
     overflow: hidden;
     float: left;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
 
 #submit:hover {
-
+    background-image: url("../img/tools/submit_hover.png");
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
 
 #clear {
@@ -626,12 +634,23 @@ input.game-input:focus:-ms-input-placeholder {
     background-size: contain;
     background-color: rgba(0,0,0,0);
     width: 170px;
-    height: 54px;
+    height: 48px;
     margin: 0 102px 10px 40px;
     text-indent: 999px;
     overflow: hidden;
     border: none;
     float: left;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+#clear:hover {
+    background-image: url("../img/tools/clear_hover.png");
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
 
 .imageswap{
