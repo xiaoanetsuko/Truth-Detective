@@ -85,6 +85,10 @@ $("#submit").click(function(e) {
     else {alert("Incorrect Answer!");}
 });
 
+$("#clear").click(function () {
+    $("input.game-input").val("");
+});
+
 function winmessage(){
     $(".winmask").css("opacity", 0.8).fadeIn(600);
     //stop counter
