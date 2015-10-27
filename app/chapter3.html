@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title> Chapter 3 </title>
-    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../lib/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
     <!--<link href="../lib/semantic-ui/semantic.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
 
-    <link href="../css/home.css" rel="stylesheet">
-    <link href="../css/game.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/countup/jquery.countup.css" />
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/game.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/countup/jquery.countup.css" />
 
-    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../lib/jquery/jquery.plugin.min.js"></script>
+    <script type="text/javascript" src="lib/jquery/jquery.plugin.min.js"></script>
 </head>
 
 <body style="background-color: #333333" ng-app="TruthDetective">
@@ -54,12 +54,7 @@
         <div class="game_row">
             <div class="game_container">
                 <div class="mp3player">
-                    <!--<audio id="mp3_1" controls autoplay loop>-->
-                        <!--<source src="mp3/不思議な町.ogg" type="audio/ogg">-->
-                        <!--<source src="mp3/不思議な町.mp3" type="audio/mpeg">-->
-                        <!--Your browser does not support the audio element.-->
-                    <!--</audio>-->
-                    <audio id="mp3_1" src="mp3/不思議な町.mp3" controls autoplay loop></audio>
+                    <audio id="mp3_1" src="mp3/The Professor's Reasonings.mp3" controls autoplay loop></audio>
                 </div>
                 <div id="winmessage" ng-controller="testCtrl">
                     <div id="heading">
@@ -75,7 +70,7 @@
                 <div id="countdown"></div>
                 <div id="checkinput">
                     <form>
-                        <input type="text" value="" id="question1">
+                        <input type="text" value="" id="question3">
                         <input type="button" id="submit" value="Submit">
                         <input type="button" id="clear" value="clear">
                     </form>
@@ -83,7 +78,7 @@
 
                 <div id="canvas" class="level3" ng-controller="imagecontroller">
                     <div id="dialog_box">
-                        <div id="imagebox"><img class="imageswap" src="img/char/chapter1/renzhen1.png"></div>
+                        <div id="imagebox"><img class="imageswap" src="img/char/chapter3/1.png"></div>
                         <div id="operationButtonBox">
                             <img id="skipButton" class="operationButton" src="img/tools/skip_button.png" alt="backButton" />
                             <img id="backButton" class="operationButton" src="img/tools/prev_button.png" alt="backButton" />
@@ -91,16 +86,15 @@
                         </div>
                     </div>
                     <div class="question">
-                        <img class="questionimg" src="img/char/border.png">
+                        <img class="questionimg" src="img/char/Q3.png">
                     </div>
 
-                    <div class="checkpoint custom Louis_16" ng-mouseleave="Louis_16()"> <!--Louis XIV--></div>
-                    <div class="checkpoint custom bastille" ng-mouseleave="bastille()"> <!--gongzhan bashidiyu--></div>
-                    <!--<img src="../resource/img/site/level1.jpg">-->
-                    <div class="checkpoint custom freedom" ng-mouseleave="freedom()"> <!--gongzhan bashidiyu--></div>
-                    <div id="22743028" class="checkpoint custom Louis_14" ng-mouseleave="Louis_14()"> <!--gongzhan bashidiyu--></div>
-                    <div id="32985669" class="checkpoint custom coin" ng-mouseleave="coin()"> <!--gongzhan bashidiyu--></div>
-                    <div id="25950372" class="checkpoint custom frenchRevo" ng-mouseleave="frenchRevo()"> <!--gongzhan bashidiyu--></div>
+                    <div class="checkpoint custom Great_Exhibition" ng-mouseleave="Great_Exhibition()"> <!--Great Exhibition--></div>
+                    <div class="checkpoint custom Urban_Working" ng-mouseleave="Urban_Working()"> <!--Urban working class--></div>
+                    <div class="checkpoint custom Population_Explosion" ng-mouseleave="Population_Explosion()"> <!--Population explosion in England--></div>
+                    <div id="22743028" class="checkpoint custom Political_Changes" ng-mouseleave="Political_Changes()"> <!--Political_Changes in England--></div>
+                    <div id="32985669" class="checkpoint custom development" ng-mouseleave="development()"> <!--The Booming Development of Urban Areas--></div>
+                    <div id="25950372" class="checkpoint custom steam" ng-mouseleave="steam()"> <!--Steam Replacing water poweru--></div>
                     <!--The following is win pop-up box-->
                     <div class="mask"></div>
                     <div id="window">
@@ -138,6 +132,8 @@
     <script src="lib/ngstorage/ngStorage.js"></script>
 
     <script src="js/app.js"></script>
+    <script src="js/chapter3.js"></script>
+    <script src="js/answer.js"></script>
     <script src="js/services/userService.js"></script>
     <script src="js/services/authenticationService.js"></script>
     <script src="js/services/flashService.js"></script>
@@ -148,50 +144,6 @@
     <script src="assets/countup/jquery.countup.js" content="canBeDisabled"></script>
     <script src="js/game.js"></script>
 
-    <!-- conversation-->
-    <script>
-        $(function(){
-            var images = ["../img/char/chapter1/renzhen1.png", "../img/char/chapter1/fanpai1.png", "../img/char/chapter1/xiaoyihuo1.png", "../img/char/chapter1/fanpai2.png", "../img/char/chapter1/jingya1.png", "../img/char/chapter1/fanpai3.png", "../img/char/chapter1/fanpai4.png", "../img/char/chapter1/xiaozhang1.png", "../img/char/chapter1/yamao1.png", "../img/char/chapter1/weixiao1.png", "../img/char/chapter1/weixiao2.png"];
-            var max = images.length;
-            var num = 0;
 
-            $("#nextButton").click(function () {
-                if (num < max-1) {
-                    $(".imageswap").fadeOut(function () {
-                        num++;
-                        $(this).attr("src", images[num]).fadeIn(600);
-                    });
-                    $("#backButton, #nextButton, #skipButton").fadeOut(function (){
-                        $(this).fadeIn(600)
-                    });
-                } else {
-                    skip()
-                }
-            });
-
-            $("#backButton").click(function () {
-                if (num > 0) {
-                    $(".imageswap").fadeOut(function () {
-                        num--;
-                        $(this).attr("src", images[num]).fadeIn(600);
-                    });
-                    $("#backButton, #nextButton, #skipButton").fadeOut(function (){
-                        $(this).fadeIn(600)
-                    });
-                }
-            });
-
-            $("#skipButton").click(function () {
-                skip()
-            });
-
-            function skip() {
-                $("#imagebox, #nextButton, #backButton, #skipButton").fadeOut();
-                $(".question").slideDown("slow");
-                $("#checkinput").show();
-                $('#countdown').countup();
-            }
-        })
-    </script>
 </body>
 </html>

@@ -6,9 +6,11 @@ $("#submit").click(function(e) {
     var arrT = ["France", "france", "French", "french"];
     var arr1 = ["Louis XVI", "louis XVI", "Louis 16", "louis 16"];
     var arr2 = ["London", "london"];
+    var arr3 = ["Industrial Revolution", "industrial revolution", "Industrial revolution", "industrial Revolution" ];
     var inputValT = $('#questionT').val();
     var inputVal1 = $('#question1').val();
     var inputVal2 = $('#question2').val();
+    var inputVal3 = $('#question3').val();
     if ($.inArray(inputVal1, arr1) > -1) {
         switch (inputVal1) {
             case arr1[0]:
@@ -57,6 +59,22 @@ $("#submit").click(function(e) {
                 winmessage();
                 break;
             case arr2[1]:
+                winmessage();
+                break;
+            default:
+                alert("Incorrect Answer!");
+                break;
+        }
+    }
+    else if ($.inArray(inputVal3, arr3) > -1) {
+        switch (inputVal3) {
+            case arr3[0]:
+                winmessage();
+                break;
+            case arr3[1]:
+                winmessage();
+                break;
+            case arr3[2]:
                 winmessage();
                 break;
             default:
