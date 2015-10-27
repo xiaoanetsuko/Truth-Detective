@@ -105,6 +105,7 @@
 
 /*All the clues*/
 
+/*-----Chapter Tutorial------*/
 .letterT {
     position: absolute;
     top: 48%;
@@ -135,6 +136,7 @@
     z-index: 2;
 }
 
+/*-----Chapter 1------*/
 
 .Louis_14 {
     position: absolute;
@@ -197,6 +199,8 @@
     z-index: 2;
 }
 
+/*-----Chapter 2------*/
+
 .coinsGeorge {
     position: absolute;
     top:48%;
@@ -246,6 +250,8 @@
     background-color: rgba(255, 255, 255, 0);
     z-index: 2;
 }
+
+/*-----Chapter 3------*/
 
 .Great_Exhibition {
     position: absolute;
