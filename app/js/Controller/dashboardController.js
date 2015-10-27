@@ -9,12 +9,10 @@ angular.module('TruthDetective')
             $scope.barWidth = 0;
             console.log("globals.....");
             console.log($rootScope.globals);
-            console.log($localStorage);
             var lockedImg = 'img/tools/lock%203.png';
             var lockedTitle = 'Locked';
             var allChInfo = userService.getInfo();
             var userChInfo = [];
-            console.log(allChInfo);
 
             $scope.chTutImg = 'resource/img/site/t.jpg';
             $scope.chOneImg = lockedImg;
@@ -30,9 +28,8 @@ angular.module('TruthDetective')
                     $mdDialog.alert()
                         .parent(angular.element(document.querySelector('#mainBody')))
                         .clickOutsideToClose(true)
-                        .title('Chapter One is Locked')
+                        .title('Chapter 1 is Locked')
                         .content('To unlock, please complete the Tutorial Chapter.')
-                        //.ariaLabel('Alert Dialog Demo')
                         .ok('Close')
                         .targetEvent(ev)
                 );
@@ -43,9 +40,8 @@ angular.module('TruthDetective')
                     $mdDialog.alert()
                         .parent(angular.element(document.querySelector('#mainBody')))
                         .clickOutsideToClose(true)
-                        .title('Chapter Two is Locked')
-                        .content('To unlock, please complete Chapter One.')
-                        //.ariaLabel('Alert Dialog Demo')
+                        .title('Chapter 2 is Locked')
+                        .content('To unlock, please complete Chapter 1.')
                         .ok('Close')
                         .targetEvent(ev)
                 );
@@ -56,9 +52,8 @@ angular.module('TruthDetective')
                     $mdDialog.alert()
                         .parent(angular.element(document.querySelector('#mainBody')))
                         .clickOutsideToClose(true)
-                        .title('Chapter Three is Locked')
-                        .content('To unlock, please complete Chapter Two.')
-                        //.ariaLabel('Alert Dialog Demo')
+                        .title('Chapter 3 is Locked')
+                        .content('To unlock, please complete Chapter 2.')
                         .ok('Close')
                         .targetEvent(ev)
                 );
@@ -72,15 +67,6 @@ angular.module('TruthDetective')
 
             console.log('chapter completed by this user ... ')
             console.log(userChInfo);
-
-            //if (userChInfo.indexOf('tutorial') > -1) {
-            //    $scope.chTutImg = 'resource/img/site/t.jpg';
-            //    $scope.chTutName = 'House Gate';
-            //    $scope.barWidth+=25;
-            //} else {
-            //    $scope.chTutImg = lockedImg;
-            //    $scope.chTutName = lockedTitle;
-            //}
 
             if (userChInfo.length == 1) {
                 $scope.chOneImg = 'resource/img/site/1.jpg';
@@ -142,8 +128,6 @@ angular.module('TruthDetective')
                     $window.location.href = "http://deco1800-g51.uqcloud.net/chapter3.html";
                 };
             }
-
-            $scope.username = $rootScope.globals.currentUser.username;
 
             $scope.openTutorial = function () {
                 $window.location.href = "http://deco1800-g51.uqcloud.net/tutorial.html";
