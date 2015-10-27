@@ -53,11 +53,6 @@
         <div class="game_row">
             <div class="game_container">
                 <div class="mp3player">
-                    <!--<audio id="mp3_1" controls autoplay loop>-->
-                    <!--<source src="mp3/不思議な町.ogg" type="audio/ogg">-->
-                    <!--<source src="mp3/不思議な町.mp3" type="audio/mpeg">-->
-                    <!--Your browser does not support the audio element.-->
-                    <!--</audio>-->
                     <audio id="mp3_1" src="mp3/雷顿教授 - レイトン教授のテーマ.mp3" controls autoplay loop></audio>
                 </div>
 
@@ -86,9 +81,6 @@
                             <img class="imageswap" src="img/char/chapterTutorial/1.png">
                         </div>
                         <div id="operationButtonBox">
-                            <!--<div id="backButton" class="operationButton"></div>-->
-                            <!--<div id="nextButton" class="operationButton"></div>-->
-                            <!--<div id="skipButton" class="operationButton"></div>-->
                             <img id="skipButton" class="operationButton" src="img/tools/skip_button.png" alt="skipButton" />
                             <img id="backButton" class="operationButton" src="img/tools/prev_button.png" alt="backButton" />
                             <img id="nextButton" class="operationButton" src="img/tools/next_button.png" alt="nextButton" />
@@ -123,7 +115,7 @@
 
     <script src="lib/jquery/jquery.js"></script>
     <!--<script type="text/javascript" src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>-->
-    <!--<script type="text/javascript" src="lib/jquery/jquery.plugin.min.js"></script>-->
+    <script type="text/javascript" src="lib/jquery/jquery.plugin.min.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/angular-material/angular-material.js"></script>
@@ -143,60 +135,14 @@
 
     <script src="js/game.js"></script>
     <script src="js/gameTutorial.js"></script>
-    <!--<script src="assets/countup/jquery.countup.js"></script>-->
+    <script src="js/answer.js"></script>
+    <script src="assets/countup/jquery.countup.js"></script>
 
     <script src="js/Controller/imgcontroller.js"></script>
     <script src="js/Controller/gameController.js"></script>
     <script src="js/Controller/dashboardController.js"></script>
 
 
-
-    <!--<script>-->
-        <!--$(function() {-->
-            <!--var images = ["../img/char/chapterTutorial/2.png", "../img/char/chapterTutorial/3.png", "../img/char/chapterTutorial/4.png", "../img/char/chapterTutorial/5.png", "../img/char/chapterTutorial/6.png", "../img/char/chapterTutorial/7.png", "../img/char/chapterTutorial/8.png", "../img/char/chapterTutorial/9.png", "../img/char/chapterTutorial/10.png", "../img/char/chapterTutorial/11.png", "../img/char/chapterTutorial/tutorial_tips_1.png", "../img/char/chapterTutorial/tutorial_tips_2.png", "../img/char/chapterTutorial/tutorial_tips_3.png", "../img/char/chapterTutorial/tutorial_tips_4.png"];-->
-            <!--var max = images.length;-->
-            <!--var num = 0;-->
-
-            <!--$("#nextButton").click(function () {-->
-                <!--if (num < max-1) {-->
-                    <!--$(".imageswap").fadeOut(function () {-->
-                        <!--num++;-->
-                        <!--$(this).attr("src", images[num]).fadeIn(600);-->
-                    <!--});-->
-                    <!--$("#backButton, #nextButton, #skipButton").fadeOut(function (){-->
-                        <!--$(this).fadeIn(600)-->
-                    <!--});-->
-                    <!--if (num == 10){-->
-                        <!--$(".question").slideDown("slow");-->
-                        <!--$("#checkinput").show();-->
-                    <!--}-->
-                <!--} else {-->
-                    <!--skip()-->
-                <!--}-->
-            <!--});-->
-            <!--$("#backButton").click(function () {-->
-                <!--if (num > 0) {-->
-                    <!--$(".imageswap").fadeOut(function () {-->
-                        <!--num&#45;&#45;;-->
-                        <!--$(this).attr("src", images[num]).fadeIn(600);-->
-                    <!--});-->
-                    <!--$("#backButton, #nextButton, #skipButton").fadeOut(function (){-->
-                        <!--$(this).fadeIn(600)-->
-                    <!--});-->
-                <!--}-->
-            <!--});-->
-            <!--$("#skipButton").click(function () {-->
-                <!--skip()-->
-            <!--});-->
-
-            <!--function skip() {-->
-                <!--$("#imagebox, #nextButton, #backButton, #skipButton").fadeOut();-->
-                <!--$(".question").slideDown("slow");-->
-                <!--$("#checkinput").show();-->
-                <!--$('#countdown').countup();-->
-            <!--}-->
-        <!--});-->
-    <!--</script>-->
 
 </body>
 </html>
