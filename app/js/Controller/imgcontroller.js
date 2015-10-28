@@ -59,11 +59,52 @@ angular.module('TruthDetective')
 
     };
 
-    $scope.freedom = function() {
-        $scope.title = "Liberty Leading the People";
-        $scope.image = "../img/img_source/freedom.jpg";
-        $scope.content = "This is a painting by Eugène Delacroix commemorating the July Revolution of 1830, which toppled King Charles X of France after the reign of the diamond’s second owner. A woman personifying the concept and the goddess of Liberty leads the people forward over the bodies of the fallen, holding the flag of a historic event – the tricolour flag, which remains France's national flag – in one hand and brandishing a bayonetted musket with the other. The figure of Liberty is also viewed as a symbol of France and the French Republic known as Marianne.";
-    };
+        $scope.freedom = function () {
+            $scope.title = "Liberty Leading the People";
+            $scope.image = "../img/img_source/freedom.jpg";
+            $scope.content = "This is a painting by Eugène Delacroix commemorating the July Revolution of 1830, which toppled King Charles X of France after the reign of the diamond’s second owner. A woman personifying the concept and the goddess of Liberty leads the people forward over the bodies of the fallen, holding the flag of a historic event – the tricolour flag, which remains France's national flag – in one hand and brandishing a bayonetted musket with the other. The figure of Liberty is also viewed as a symbol of France and the French Republic known as Marianne.";
+        };
 
+        $scope.Great_Exhibition = function () {
+            $scope.title = "Great Exhibition";
+            $scope.image = "../img/img_source/freedom.jpg";
+            $scope.content = "1";
+        };
 
-});
+        $scope.Urban_Working = function() {
+            $scope.title = "An urban working class";
+            $scope.image = "../img/img_source/freedom.jpg";
+            $scope.content = "2";
+        };
+
+        $scope.Population_Explosion = function() {
+            $scope.title = "Population explosion in England";
+            $scope.image = "../img/img_source/freedom.jpg";
+            $scope.content = "3";
+        };
+
+        $scope.Political_Changes = function() {
+            $scope.title = "Led to political changes";
+            $scope.image = "../img/img_source/freedom.jpg";
+            $scope.content = "4";
+        };
+
+        $scope.development = function() {
+            $scope.title = "The Booming Development of Urban Areas";
+            $scope.image = "../img/img_source/freedom.jpg";
+            $scope.content = "5";
+        };
+
+        $scope.steam = function() {
+            $scope.title = "Steam Replacing Water Power";
+            $scope.image = "../img/img_source/freedom.jpg";
+            $scope.content = "6";
+        };
+
+        $scope.devMap = function() {
+            $scope.title = "Map of the Effect of This Historical Event";
+            $scope.image = "../img/img_source/freedom.jpg";
+            $scope.content = "7";
+        };
+
+    });
