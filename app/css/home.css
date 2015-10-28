@@ -369,11 +369,18 @@ p.feature-body-right{
 }
 
 .gameIntro{
-    font-size: 17px;
+    font-size: 16px;
+    color: #333;
 }
 
+#congrats{
+    color: #BD7C2E;
+    font-size: 22px;
+}
 
-
+.percentagebar {
+    background: #5E6A6E;
+}
 
 .box {
     cursor: pointer;

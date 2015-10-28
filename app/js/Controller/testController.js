@@ -68,7 +68,7 @@ angular.module('TruthDetective')
             console.log(timeUsed);
             userService.recordFinishTime(timeUsed, $scope.username, 'two');
             userService.finishTwo(user);
-            
+
             $window.location.href = "http://deco1800-g51.uqcloud.net/chapter3.html";
         };
         $scope.completeTwoGoBack = function () {
