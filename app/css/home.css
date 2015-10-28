@@ -1,7 +1,25 @@
+@font-face {
+    font-family:"Bookman";
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bookman Old Style Normal'), local('Bookman-Old-Style-Normal'),
+    url(../resource/font/BOOKOS.TTF),
+    url(../resource/font/BOOKOS.woff);
+}
+
+@font-face {
+    font-family:"Bookman";
+    font-style: normal;
+    font-weight: 800;
+    src: local('Bookman Old Style Bold'), local('Bookman-Old-Style-Bold'),
+    url(../resource/font/BOOKOSB.TTF),
+    url(../resource/font/BookmanOldStyle-Bold.woff);
+}
+
 .wrapper{
     text-align: center;
     width: 100%;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Bookman, Helvetica, Arial, sans-serif;
     background: #F5F5F5;
 }
 
@@ -81,12 +99,16 @@
 
 .joingame{
     font-size: 2em;
-    padding: 15px 30px;
-    margin-top: 70px;
-    margin-bottom: 50px;
-    transition: all 0.4s ease;
+    padding: 16px 32px;
+    margin-top: 64px;
+    margin-bottom: 96px;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
     color: #FFFFFF;
 }
+
 a.joingame:link{
     color: #FFFFFF;
 }
@@ -102,8 +124,13 @@ a.joingame:hover{
     transition: all 0.4s ease;
 }
 
+.buttontext {
+    font-family: Bookman;
+    font-weight: 800;
+}
+
 .textbox{
-    margin-top: 260px;
+    margin-top: 128px;
     margin-left: 90px;
     margin-right: 90px;
     color: #ffffff;
@@ -113,9 +140,19 @@ a.joingame:hover{
     font-size: 28px;
     color: #FFFFFF;
     display: block;
+    font-family: Bookman;
     text-align: center;
 }
 
+.lead {
+    text-align: center;
+    display: block;
+    padding-top: 128px;
+}
+
+.lead img {
+    height: 448px;
+}
 
 .thirdbox{
     width: 100%;
@@ -124,8 +161,11 @@ a.joingame:hover{
 
 }
 .feature-heading{
-    line-height: 1;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 48px;
+    font-size: 32px;
+    word-wrap: break-word;
+    font-weight: 800;
+    font-family: Bookman, Helvetica, Arial, sans-serif;
 }
 
 .feature-body-right{
@@ -149,8 +189,21 @@ p.feature-body-right{
     color: #CCCCCC;
 }
 .feature-text-body{
-    padding: 190px 70px;
+    padding: 190px 70px 32px 128px;
+    font-family: Bookman;
+    font-size: 24px;
+    line-height: 32px;
+    word-wrap: break-word;
 }
+
+.feature-text-body-2{
+    padding: 96px 70px 128px 128px;
+    font-family: Bookman;
+    font-size: 24px;
+    line-height: 32px;
+    word-wrap: break-word;
+}
+
 .feature-img{
     max-height: 580px;
     height: auto;
@@ -159,6 +212,32 @@ p.feature-body-right{
     padding-left: 0;
     padding-right: 0;
 }
+
+.feature-img img {
+    padding: 64px;
+    max-height: 628px;
+}
+
+#feature1 {
+    background-image: url("../resource/img/site/Q1.png");
+    background-position: top left;
+    height: 500px;
+    max-width: 40%;
+    margin: 64px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#feature2 {
+    background-image: url("../resource/img/site/Q3.png");
+    background-position: top right;
+    height: 500px;
+    max-width: 40%;
+    margin: 64px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .half-rule{
     width: 400px;
     background-color: #DB9186;
