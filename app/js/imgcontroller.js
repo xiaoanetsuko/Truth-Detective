@@ -67,5 +67,34 @@ myApp.controller('imagecontroller', ['$scope', function($scope) {
         $scope.content = "This is a painting by Eugène Delacroix commemorating the July Revolution of 1830, which toppled King Charles X of France after the reign of the diamond’s second owner. A woman personifying the concept and the goddess of Liberty leads the people forward over the bodies of the fallen, holding the flag of a historic event – the tricolour flag, which remains France's national flag – in one hand and brandishing a bayonetted musket with the other. The figure of Liberty is also viewed as a symbol of France and the French Republic known as Marianne.";
     };
 
+    $scope.coinsGeorge = function() {
+        $scope.title = "";
+        $scope.image = "../img/img_source/coins.png";
+        $scope.content = "Rex Nan Kivell Collection NK5378. Part of the collection: Eighteenth and nineteenth century commemorative medals. Condition: Good. Title devised by cataloguer from medal inscription. Inscriptions on medal: Obverse -- Georgius IIII D. G. Britanniarum Rex F. D.; Reverse -- Proprio Jam Jure Animo Paterno. Inauguratus Die. Julii. XIX Anno. MDCCCXXI."
+    };
+
+    $scope.bridge1760 = function() {
+        $scope.title = "A old Bridge in 1760s";
+        $scope.image = "../img/img_source/bridge1970.jpg";
+        $scope.content = "This is an old painting. The title is burnt because of some reason. This painting is painted by 1760s. At the back, it says: in 1760s, the author of Gephyralogia: An Historical Account of Bridges, Antient and Modern described this bridge as a curiosity “admired by foreigners, and, in most respects, as remarkable as any in Europe”. From 1758 to 1762, there were numeous houses has been built on the bridge.The whole is covered on each side with houses so disposed as to have the appearance of a continued street, not at all of a bridge. However, due to the potential fire issue, all houses and shops on the bridge were demolished through Act of Parliament. The two centre arches were replaced by a single wider span to improve navigation on the river. What is this bridge?"
+    };
+
+    $scope.Buckingham_palace = function() {
+        $scope.title = "Buckingham Palace";
+        $scope.image = "../img/img_source/Buckingham_palace.jpg";
+        $scope.content = "This is an old photo of the Buckingham Palace. Buckingham Palace is the residence and principal workplace of the reigning monarch of the United Kingdom. I’m wondering which city it has been located in."
+    };
+
+    $scope.George_IV_1821_color = function() {
+        $scope.title = "George IV";
+        $scope.image = "../img/img_source/George_IV_1821_color.jpg";
+        $scope.content = "A portrait card for George IV, the third owner of the Hope Diamond. He was King of the United Kingdom of Great Britain and Ireland and of Hanover following the death of his father, George III. George IV led an extravagant lifestyle that contributed to the fashions of the Regency era. He was a patron of new forms of leisure, style and taste. He commissioned John Nash to build the Royal Pavilion inBrighton and remodel Buckingham Palace, and Sir Jeffry Wyattville to rebuild Windsor Castle. He was instrumental in the foundation of theNational Gallery and King's College London. Does he have any relationship with the city from our question?"
+    };
+
+    $scope.Industrial_Revolution = function() {
+        $scope.title = "Industrial Revolution";
+        $scope.image = "../img/img_source/Industrial_Revolution.jpg";
+        $scope.content = "This is an photo taken in 1765. As a major tuning point in history, the Industrial Revolution was the transition to new manufacturing processes in the period from about 1760 to sometime between 1820 and 1840. This transition included going from hand production methods to machines, new chemical manufacturing and iron production processes, improved efficiency of water power, the increasing use of steam power, the development of machine tools and the rise of the factory system. It also included the change from wood and other bio-fuels to coal. Textiles were the dominant industry of the Industrial Revolution in terms of employment, value of output and capital invested; the textile industry was also the first to use modern production methods. Where did the industrial revolution occur?"
+    }
 
 }]);

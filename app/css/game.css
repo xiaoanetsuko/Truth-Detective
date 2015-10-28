@@ -105,6 +105,7 @@
 
 /*All the clues*/
 
+/*-----Chapter Tutorial------*/
 .letterT {
     position: absolute;
     top: 48%;
@@ -135,6 +136,7 @@
     z-index: 2;
 }
 
+/*-----Chapter 1------*/
 
 .Louis_14 {
     position: absolute;
@@ -197,22 +199,24 @@
     z-index: 2;
 }
 
+/*-----Chapter 2------*/
+
 .coinsGeorge {
     position: absolute;
-    top:48%;
-    left:86%;
-    width: 120px;
-    height: 60px;
+    top:49%;
+    left:55%;
+    width: 110px;
+    height: 100px;
     background-color: rgba(255, 255, 255, 0);
     z-index: 2;
 }
 
 .bridge1760 {
     position: absolute;
-    top:49%;
-    left:55%;
-    width: 110px;
-    height: 100px;
+    top:48%;
+    left:86%;
+    width: 120px;
+    height: 60px;
     background-color: rgba(255, 255, 255, 0);
     z-index: 2;
 }
@@ -239,50 +243,53 @@
 
 .Industrial_Revolution {
     position: absolute;
-    top:39%;
-    left:44%;
-    width: 85px;
+    top: 86%;
+    left: 26%;
+    width: 40px;
     height: 40px;
     background-color: rgba(255, 255, 255, 0);
     z-index: 2;
+    border-radius: 20px;
 }
+
+/*-----Chapter 3------*/
 
 .Great_Exhibition {
     position: absolute;
-    top:39%;
-    left:44%;
-    width: 85px;
-    height: 40px;
+    top:25%;
+    left:22%;
+    width: 130px;
+    height: 130px;
     background-color: rgba(255, 255, 255, 1);
     z-index: 2;
 }
 
 .Urban_Working{
     position: absolute;
-    top:39%;
-    left:44%;
-    width: 85px;
-    height: 40px;
+    top:10%;
+    left:10%;
+    width: 120px;
+    height: 470px;
     background-color: rgba(255, 255, 255, 1);
     z-index: 2;
 }
 
 .Population_Explosion{
     position: absolute;
-    top:39%;
-    left:44%;
-    width: 85px;
-    height: 40px;
+    top:60%;
+    left:47%;
+    width: 200px;
+    height: 115px;
     background-color: rgba(255, 255, 255, 1);
     z-index: 2;
 }
 
 .Political_Changes{
     position: absolute;
-    top:39%;
-    left:44%;
-    width: 85px;
-    height: 40px;
+    top:60%;
+    left:36%;
+    width: 100px;
+    height: 80px;
     background-color: rgba(255, 255, 255, 1);
     z-index: 2;
 }
@@ -290,20 +297,30 @@
 .development{
 
     position: absolute;
-    top:39%;
-    left:44%;
-    width: 85px;
-    height: 40px;
+    top:35%;
+    left:64%;
+    width: 115px;
+    height: 115px;
     background-color: rgba(255, 255, 255, 1);
     z-index: 2;
 }
 
 .steam{
     position: absolute;
-    top:39%;
-    left:44%;
+    top:35%;
+    left:80%;
     width: 85px;
-    height: 40px;
+    height: 210px;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 2;
+}
+
+.devMap{
+    position: absolute;
+    top:52%;
+    left:21%;
+    width: 120px;
+    height: 120px;
     background-color: rgba(255, 255, 255, 1);
     z-index: 2;
 }
@@ -500,7 +517,7 @@
     max-width: 45%;
     max-height: 500px;
     margin-left: 40px;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 .clueText{

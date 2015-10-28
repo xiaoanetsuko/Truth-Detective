@@ -129,11 +129,21 @@ a.joingame:hover{
 }
 
 .feature-body-right{
-    text-align: right;
+    text-align: left;
 }
 .feature-body-left{
     text-align: left;
 }
+
+p.feature-body-left{
+    color: #ABA9A9;
+}
+
+p.feature-body-right{
+    color: #ABA9A9;
+}
+
+
 .feature {
     background: #222222;
     color: #CCCCCC;
@@ -158,7 +168,7 @@ a.joingame:hover{
 
 .btnnav{
     text-align: center;
-    height: 150px;
+    height: 170px;
     background: #BD7C2E;
     margin-bottom: 0;
 }
@@ -176,8 +186,8 @@ a.joingame:hover{
     width: 100%;
 }
 .ip{
-    padding-top: 30px;
-    padding-bottom: 6px;
+    padding-top: 10px;
+    padding-bottom: 16px;
 }
 
 .topnav{
