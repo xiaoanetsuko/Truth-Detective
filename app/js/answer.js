@@ -7,7 +7,7 @@ $("#submit").click(function(e) {
 
     if($('#questionT').val()) {
         inputValT = $('#questionT').val().toLowerCase();
-        if (inputValT == "france" || inputValT =="franch") {
+        if (inputValT == "france" || inputValT =="french") {
             winmessage()
         }
         else {alert("Incorrect Answer!")}
