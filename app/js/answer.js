@@ -42,6 +42,7 @@ function wrongAnswer() {
 
 $("#continueButton").click(function () {
     $("#wrongMask").fadeOut(200);
+    $("input.game-input").val("");
     $("#checkinput").delay(100).fadeIn(100)
 });
 
