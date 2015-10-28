@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse navHeaderCollapse">
                 <ul class="nav navbar-nav">
                     <li><span ng-click="toDash()">Home</span></li>
-                    <li><span>Leaderboard</span></li>
+                    <li><span ng-click="toLB()">Leaderboard</span></li>
                     <li><span>Profile</span></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -56,9 +56,9 @@
                         Congratulations! Your detection time is:
                     </div>
                     <div id="content" class="button">
-                        <p></p>
+                        <p id="recordTime"></p>
                         <a href="#" class="btnB" ng-click="completeTwo()">Next Chapter</a>
-                        <a href="user.html" class="btnO" ng-click="completeTwoGoBack()">Go to Dashboard</a>
+                        <span class="btnO" ng-click="completeTwoGoBack()">Go to Dashboard</span>
                     </div>
                 </div>
                 <div class="winmask"></div>
@@ -75,10 +75,14 @@
                         <div id="imagebox">
                             <img class="imageswap" src="img/char/chapter2/1.png">
                         </div>
+                        <div id="wrongMask">
+                            <img src="img/char/wrong.png" >
+                            <div id="continueButton" class="operationButton"></div>
+                        </div>
                         <div id="operationButtonBox">
-                            <img id="skipButton" class="operationButton" src="img/tools/skip_button.png" alt="backButton" />
-                            <img id="backButton" class="operationButton" src="img/tools/prev_button.png" alt="backButton" />
-                            <img id="nextButton" class="operationButton" src="img/tools/next_button.png" alt="backButton" />
+                            <div id="skipButton" class="operationButton"></div>
+                            <div id="backButton" class="operationButton"></div>
+                            <div id="nextButton" class="operationButton"></div>
                         </div>
                     </div>
                     <div class="question">
@@ -127,19 +131,16 @@
     <script src="lib/ngstorage/ngStorage.js"></script>
 
     <script src="js/app.js"></script>
-    <script src="js/game.js"></script>
-    <script src="js/chapter2.js"></script>
-    <script src="js/answer.js"></script>
     <script src="js/services/userService.js"></script>
     <script src="js/services/authenticationService.js"></script>
     <script src="js/services/flashService.js"></script>
 
     <script src="js/Controller/imgcontroller.js"></script>
     <script src="js/Controller/testController.js"></script>
-
+    <script src="js/game.js"></script>
+    <script src="js/chapter2.js"></script>
+    <script src="js/answer.js"></script>
     <script src="assets/countup/jquery.countup.js" content="canBeDisabled"></script>
-
-
 
 </body>
 </html>

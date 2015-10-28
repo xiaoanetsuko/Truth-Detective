@@ -7,6 +7,7 @@ angular.module('TruthDetective')
         .controller('dashboardCtrl', function ($scope, $rootScope, $localStorage, $window, userService, $mdDialog) {
             $scope.username = $rootScope.globals.currentUser.username;
             $scope.barWidth = 0;
+            $scope.completed = false;
             console.log("globals.....");
             console.log($rootScope.globals);
             var lockedImg = 'img/tools/lock%203.png';
@@ -147,4 +148,12 @@ angular.module('TruthDetective')
             $scope.toIndex = function () {
                 $window.location.href = "http://deco1800-g51.uqcloud.net/index.html";
             };
+
+            $scope.toLB = function () {
+                $window.location.href = "http://deco1800-g51.uqcloud.net/leaderboard.html";
+            };
+
+            if ($scope.barWidth == 100) {
+                $scope.completed = true;
+            }
         });

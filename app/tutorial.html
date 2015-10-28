@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse navHeaderCollapse">
                 <ul class="nav navbar-nav">
                     <li><span ng-click="toDash()">Home</span></li>
-                    <li><span>Leaderboard</span></li>
+                    <li><span ng-click="toLB()">Leaderboard</span></li>
                     <li><span>Profile</span></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -51,13 +51,14 @@
     <div id="game">
         <div class="game_row">
             <div class="game_container">
-                <div class="mp3player">
-                    <!--<audio id="mp3_1" controls autoplay loop>-->
-                    <!--<source src="mp3/不思議な町.ogg" type="audio/ogg">-->
-                    <!--<source src="mp3/不思議な町.mp3" type="audio/mpeg">-->
-                    <!--Your browser does not support the audio element.-->
-                    <!--</audio>-->
-                    <audio id="mp3_1" src="mp3/雷顿教授 - レイトン教授のテーマ.mp3" controls autoplay loop></audio>
+
+                <video width="1728" height="800" controls autoplay id="video">
+                    <source src="video/truth%20detective.webm" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <div class="mp3player_T">
+                    <audio id="mp3_T" src="mp3/雷顿教授 - レイトン教授のテーマ.mp3" controls loop></audio>
                 </div>
                 <div id="winmessage" ng-controller="testCtrl">
                     <div id="heading">
@@ -83,10 +84,14 @@
                         <div id="imagebox">
                             <img class="imageswap" src="img/char/beforeT/1.png">
                         </div>
+                        <div id="wrongMask">
+                            <img src="img/char/wrong.png" >
+                            <div id="continueButton" class="operationButton"></div>
+                        </div>
                         <div id="operationButtonBox">
-                            <img id="skipButton" class="operationButton" src="img/tools/skip_button.png" alt="skipButton" />
-                            <img id="backButton" class="operationButton" src="img/tools/prev_button.png" alt="backButton" />
-                            <img id="nextButton" class="operationButton" src="img/tools/next_button.png" alt="nextButton" />
+                            <div id="skipButton" class="operationButton"></div>
+                            <div id="backButton" class="operationButton"></div>
+                            <div id="nextButton" class="operationButton"></div>
                         </div>
                     </div>
 
@@ -115,6 +120,15 @@
             </div>
         </div>
     </div>
+
+    <script type='text/javascript'>
+        document.getElementById('video').addEventListener('ended',myHandler,false);
+        function myHandler(e) {
+            // What you want to do after the event
+            $('#video').fadeOut(1500);
+            $("#mp3_T").trigger('play')
+        }
+    </script>
 
     <script src="lib/jquery/jquery.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>

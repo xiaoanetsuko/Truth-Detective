@@ -7,32 +7,45 @@ $("#submit").click(function(e) {
 
     if($('#questionT').val()) {
         inputValT = $('#questionT').val().toLowerCase();
-        if (inputValT == "france" || inputValT =="franch") {
+        if (inputValT == "france" || inputValT =="french") {
             winmessage()
         }
-        else {alert("Incorrect Answer!")}
+        else {wrongAnswer()}
     }
     if($('#question1').val()) {
         inputVal1 = $('#question1').val().toLowerCase();
         if (inputVal1=="louis xvi" || inputVal1=="louis 16") {
             winmessage()
         }
-        else {alert("Incorrect Answer!")}
+        else {wrongAnswer()}
     }
     if($('#question2').val()) {
         inputVal2 = $('#question2').val().toLowerCase();
         if (inputVal2=="london") {
             winmessage()
         }
-        else {alert("Incorrect Answer!")}
+        else {wrongAnswer()}
     }
     if($('#question3').val()) {
         inputVal3 = $('#question3').val().toLowerCase();
         if (inputVal3=="industrial revolution") {
-            winmessage()
+            showLastDialog();
+            //winmessage()
+
         }
-        else {alert("Incorrect Answer!")}
+        else {wrongAnswer()}
     }
+});
+
+function wrongAnswer() {
+    $("#wrongMask").fadeIn(200);
+    $("#checkinput").fadeOut(100);
+}
+
+$("#continueButton").click(function () {
+    $("#wrongMask").fadeOut(200);
+    $("input.game-input").val("");
+    $("#checkinput").delay(100).fadeIn(100)
 });
 
 $("#clear").click(function () {

@@ -8,7 +8,9 @@
     url(../resource/font/BOOKOS.woff);
 }
 
-
+body{
+    background-color: rgba(0, 0, 0, 0.76);
+}
 
 /*@override*/
 .navbar {
@@ -71,24 +73,96 @@
     width: auto;
 }
 
+#operationButtonBoxLast {
+    display: none;
+    position: relative;
+    top: 768px;
+    left: 15%;
+    z-index: 100;
+    width: auto;
+}
+
 .operationButton {
     float: left;
     cursor: pointer;
     background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+    height: 35px;
 }
 
 #skipButton {
+    background-image: url("../img/tools/skip_button.png");
+    width: 94px;
     position:relative;
     margin-right: 48%;
     margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+#skipButtonLast {
+    background-image: url("../img/tools/skip_button.png");
+    width: 94px;
+    position:relative;
+    margin-right: 48%;
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+#skipButton:hover {
+    background-image: url("../img/tools/skip_button_hover.png");
+    transition: all 0.2s ease-in-out;
+}
+
+#skipButtonLast:hover {
+    background-image: url("../img/tools/skip_button_hover.png");
+    transition: all 0.2s ease-in-out;
 }
 
 #nextButton {
+    background-image: url("../img/tools/next_button.png");
+    width: 118px;
+    transition: all 0.2s ease-in-out;
+}
 
+#nextButtonLast {
+    background-image: url("../img/tools/next_button.png");
+    width: 118px;
+    transition: all 0.2s ease-in-out;
+}
+
+#nextButton:hover {
+    background-image: url("../img/tools/next_button_hover.png");
+    transition: all 0.2s ease-in-out;
+}
+
+#nextButtonLast:hover {
+    background-image: url("../img/tools/next_button_hover.png");
+    transition: all 0.2s ease-in-out;
 }
 
 #backButton {
+    background-image: url("../img/tools/prev_button.png");
+    width: 118px;
     margin-right: 4%;
+    transition: all 0.2s ease-in-out;
+}
+
+#backButtonLast {
+    background-image: url("../img/tools/prev_button.png");
+    width: 118px;
+    margin-right: 4%;
+    transition: all 0.2s ease-in-out;
+}
+
+#backButton:hover {
+     background-image: url("../img/tools/prev_button_hover.png");
+     transition: all 0.2s ease-in-out;
+ }
+
+#backButtonLast:hover {
+    background-image: url("../img/tools/prev_button_hover.png");
+    transition: all 0.2s ease-in-out;
 }
 
 #imagebox {
@@ -97,8 +171,28 @@
     z-index: 99;
 }
 
+.imageswap{
+    position: absolute;
+    width: 1728px;
+    height: 864px;
+    z-index: 99;
+}
+
+#lastDialog {
+    position: relative;
+    display: none;
+    /*left: -128px;*/
+    z-index: 99;
+}
+
+.last{
+    position: absolute;
+    width: 1728px;
+    height: 864px;
+    z-index: 99;
+}
+
 #canvas img {
-    z-index: -1;
     align-content: center;
 }
 
@@ -243,13 +337,12 @@
 
 .Industrial_Revolution {
     position: absolute;
-    top: 86%;
-    left: 26%;
-    width: 40px;
-    height: 40px;
+    top: 58%;
+    left: 11%;
+    width: 270px;
+    height: 120px;
     background-color: rgba(255, 255, 255, 0);
     z-index: 2;
-    border-radius: 20px;
 }
 
 /*-----Chapter 3------*/
@@ -371,6 +464,31 @@
     margin-top:-94px !important;
     margin-left:-180px !important;
     z-index:101;
+}
+
+
+#wrongMask {
+    position: absolute;
+    top: -100px;
+    width: 1728px;
+    height: 864px;
+    z-index: 99;
+    display: none;
+}
+
+#continueButton {
+    background-image: url("../img/tools/continue_button.png");
+    width: 191px;
+    position: absolute;
+    top: 100%;
+    left: 74%;
+    z-index: 12;
+    transition: all 0.2s ease-in-out;
+}
+
+#continueButton:hover {
+    background-image: url("../img/tools/continue_button_hover.png");
+    transition: all 0.2s ease-in-out;
 }
 
 #heading{
@@ -547,6 +665,15 @@
     color: #222222;
 }
 
+
+#mp3_T{
+
+    position:absolute;
+    top:95%;
+    left: 1%;
+    z-index: 3;
+}
+
 #mp3_1{
     position:absolute;
     top:95%;
@@ -554,11 +681,10 @@
     z-index: 3;
 }
 
-#mp3_T{
+#video {
     position:absolute;
-    top:95%;
-    left: 1%;
-    z-index: 3;
+    top: 12%;
+    z-index: 999;
 }
 
 #countdown{
@@ -584,8 +710,8 @@
 }
 
 .questionimg{
-    height: 200px;
-    width: 847px;
+    height: 100%;
+    width: 100%;
 }
 
 #checkinput{
@@ -754,9 +880,3 @@ input.game-input:focus:-ms-input-placeholder {
     -o-transition: all 0.2s ease-in-out;
 }
 
-.imageswap{
-    position: absolute;
-    width: 1728px;
-    height: 864px;
-    z-index: 99;
-}

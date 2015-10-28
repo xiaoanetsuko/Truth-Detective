@@ -24,7 +24,6 @@ function userService($timeout, $filter, $q) {
     function GetByUsername(username) {
         var deferred = $q.defer();
         var filtered = $filter('filter')(getUsers(), { username: username });
-        console.log("filtered result --- "+filtered);
         var user = filtered.length ? filtered[0] : null;
         //for (var i=0; i<filtered.length; i++) {
         //    console.log(filtered[i].username);
@@ -48,6 +47,11 @@ function userService($timeout, $filter, $q) {
 
     function getInfo() {
         var tmp = getUserInfo();
+        return tmp;
+    }
+
+    function getRecord() {
+        var tmp = getFinishTime();
         return tmp;
     }
 
@@ -119,7 +123,6 @@ function userService($timeout, $filter, $q) {
                 var users = getUsers();
                 var chapterInfo = getUserInfo();
                 var curUser = GetUser(user.username);
-                console.log(curUser);
                 var userID = curUser.id;
                 var tmp = [];
                 //avoid adding info when the same user completes a chapter more than once
@@ -151,7 +154,6 @@ function userService($timeout, $filter, $q) {
                 var users = getUsers();
                 var chapterInfo = getUserInfo();
                 var curUser = GetUser(user.username);
-                console.log(curUser);
                 var userID = curUser.id;
                 var tmp = [];
                 //avoid adding info when the same user completes a chapter more than once
@@ -182,7 +184,6 @@ function userService($timeout, $filter, $q) {
                 var users = getUsers();
                 var chapterInfo = getUserInfo();
                 var curUser = GetUser(user.username);
-                console.log(curUser);
                 var userID = curUser.id;
                 var tmp = [];
                 //avoid adding info when the same user completes a chapter more than once
@@ -213,7 +214,6 @@ function userService($timeout, $filter, $q) {
                 var users = getUsers();
                 var chapterInfo = getUserInfo();
                 var curUser = GetUser(user.username);
-                console.log(curUser);
                 var userID = curUser.id;
                 var tmp = [];
                 //avoid adding info when the same user completes a chapter more than once
@@ -239,7 +239,7 @@ function userService($timeout, $filter, $q) {
     }
 
     function recordFinishTime(duration, username, chapter) {
-        var finishTime = {};
+        var finishTime = new Object();
         var timeInfo = getFinishTime();
         var completed = [];
         var timeInfoBeforeUpdate;
@@ -253,17 +253,25 @@ function userService($timeout, $filter, $q) {
                 }
             }
         }
-        //if (completed.indexOf(chapter) == -1){
-        //    finishTime.duration = duration;
-        //    finishTime.username = username;
-        //    finishTime.chapter = chapter;
-        //    timeInfo.push(finishTime);
-        //    setFinishTime(timeInfo);
-        //    console.log(timeInfo);
-        //} else {
-        //
-        //
-        //}
+        console.log("current best ..... ")
+        console.log(currentRecord)
+        if (completed.indexOf(chapter) == -1) {
+            finishTime.duration = duration;
+            finishTime.username = username;
+            finishTime.chapter = chapter;
+            timeInfo.push(finishTime);
+            setFinishTime(timeInfo);
+            console.log(timeInfo);
+        } else {
+            var currentBest = parseInt(currentRecord.replace(/ /g, '').split(':').join(''),10);
+            var latest = parseInt(duration.replace(/ /g, '').split(':').join(''),10);
+            if (latest < currentBest) {
+                timeInfoBeforeUpdate.duration = duration;
+                setFinishTime(timeInfo);
+            } else{
+                console.log('notttt gonna happen')
+            }
+        }
     }
 
     // private functions
@@ -294,12 +302,10 @@ function userService($timeout, $filter, $q) {
 
     function setChInfo(userinfo) {
         localStorage.chapterInfo = JSON.stringify(userinfo);
-        console.log(localStorage.chapterInfo);
     }
 
     function setFinishTime(timeinfo) {
         localStorage.finishTime = JSON.stringify(timeinfo);
-        console.log(localStorage.finishTime);
     }
 
     var service = {};
@@ -316,6 +322,8 @@ function userService($timeout, $filter, $q) {
     service.finishTwo = finishTwo;
     service.finishThree = finishThree;
     service.getInfo = getInfo;
+    service.recordFinishTime = recordFinishTime;
+    service.getRecord = getRecord;
 
     return service;
 }
