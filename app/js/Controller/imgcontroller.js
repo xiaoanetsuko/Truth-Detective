@@ -67,44 +67,44 @@ angular.module('TruthDetective')
 
         $scope.Great_Exhibition = function () {
             $scope.title = "Great Exhibition";
-            $scope.image = "../img/img_source/freedom.jpg";
-            $scope.content = "1";
+            $scope.image = "../img/img_source/placeholder.png";
+            $scope.content = "The exhibition was held during a period of economic boom and social change. Britain was expanding, the population had grown from twenty seven million in 1851 to thirty two million in 1871. Britain supplied the railways to the world. In 1869 three hundred thousand tonnes of iron went to the USA alone. The Great Exhibition was partly held to show this prosperity. It was an extension of the trade show idea manufactures in France had used to gain custom. The Great Exhibition also held exhibits from other countries with the intention of showing a dominance, it stated in no uncertain terms that Great Britain was the centre of the world in terms of industry. The Queen, Victoria, recognised how well the Great Exhibition did this 'God bless my dear country which has shown itself so great today.' The exhibtion showed the exact state of British industry and was the meant to display the influence the British industries had on the world. How Britain was described was as the 'Workshop of the World.' ";
         };
 
         $scope.Urban_Working = function() {
             $scope.title = "An urban working class";
-            $scope.image = "../img/img_source/freedom.jpg";
-            $scope.content = "2";
+            $scope.image = "../img/img_source/placeholder.png";
+            $scope.content = "This event raised the quality of life for workers and their families. It also increased the real wage for workers. As one can imagine, the increase in real wages resulted in significant improvements in the standard of living.";
         };
 
         $scope.Population_Explosion = function() {
             $scope.title = "Population explosion in England";
-            $scope.image = "../img/img_source/freedom.jpg";
-            $scope.content = "3";
+            $scope.image = "../img/img_source/population_growth.jpg";
+            $scope.content = "The most prolific evidence of the Industrial Revolution’s impact on the modern world is seen in the worldwide human population growth. Human population growth is indelibly tied together with increased use of natural and man-made resources, energy, land for growing food and for living, and waste by-products that are disposed of, to decompose, pollute or be recycled. This exponential population growth led to the exponential requirements for resources, energy, food, housing and land, as well as the exponential increase in waste by-products.";
         };
 
         $scope.Political_Changes = function() {
             $scope.title = "Led to political changes";
-            $scope.image = "../img/img_source/freedom.jpg";
-            $scope.content = "4";
+            $scope.image = "../img/img_source/political_changes.jpg";
+            $scope.content = "By 1830, this event had created a new source of social and economic power: ownership of factories. So it was not surprising that wealthy business owners wanted to share in political power as well. The major landmark of political change brought about by this event was the Reform Bill of 1832.";
         };
 
         $scope.development = function() {
             $scope.title = "The Booming Development of Urban Areas";
-            $scope.image = "../img/img_source/freedom.jpg";
-            $scope.content = "5";
+            $scope.image = "../img/img_source/development.jpg";
+            $scope.content = "The growth of industries and factories in some areas during the 18th and the 19th centuries led to the generation of more jobs in the manufacturing sector. Owing to the huge discrepancies in the agricultural sector, the common peasants and working classes found it more feasible to seek employment in the newly created sector, as it also seemed more promising. The manufacturing sector, owing to the low production costs and eventually the affordable prices of consumer goods, helped people to save more money for posterity, and also increased their purchasing power. All this eventually led to a growth in their standard of living. This elevation in the people's standard of living led to the growth of a number of subsidiary industries in these areas, which included entertainment and service, alongside others. Thus, these areas became the 'hotspots' for generation of enormous amounts of money, and the seemingly unending opportunities for people. All these factors (and many others), collectively resulted in the creation of a wave of large-scale migration from the rural areas to be the newly established commercial settlements which, in just a few years, went on to become fully urbanized, with all the necessary amenities and facilities. In such areas, owing to the migration of the people, population seemed to explode suddenly, in a rather short span of time.";
         };
 
         $scope.steam = function() {
             $scope.title = "Steam Replacing Water Power";
-            $scope.image = "../img/img_source/freedom.jpg";
-            $scope.content = "6";
+            $scope.image = "../img/img_source/steam.jpg";
+            $scope.content = "The steam engine was one of the most important technologies of the Industrial Revolution, although steam did not replace water power in importance in Britain until after the Industrial Revolution. From Englishman Thomas Newcomen's atmospheric engine, of 1712, through major developments by Scottish inventor and mechanical engineer James Watt, the steam engine began to be used in many industrial settings, not just in mining, where the first engines had been used to pump water from deep workings. Early mills had run successfully with water power, but by using a steam engine a factory could be located anywhere, not just close to water. The development of the stationary steam engine was an essential early element of the Industrial Revolution, however it should be remembered that for most of the period of the Industrial Revolution the majority of industries still relied on wind and water power as well as horse and man-power for driving small machines.";
         };
 
         $scope.devMap = function() {
             $scope.title = "Map of the Effect of This Historical Event";
-            $scope.image = "../img/img_source/freedom.jpg";
-            $scope.content = "7";
+            $scope.image = "../img/img_source/development_map.png";
+            $scope.content = "This map shows an expansion of this historical event. The whole Europe was developing during the period of the event.";
         };
 
     });
