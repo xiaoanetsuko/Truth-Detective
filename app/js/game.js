@@ -92,7 +92,7 @@ $(document).ready( function() {
             });
         } else if (imgUrl.indexOf(urlPatterns[3]) >= 0) { //slsa
             loadedImages.push({
-                url:  imgUrl.slice(0, imgUrl.length - 3) + "jpg",
+                url:  imgUrl.slice(0, imgUrl.length - 3) + ".jpg",
                 obj: troveItem
             });
         }

@@ -6,7 +6,7 @@ $(function(){
     var max = images.length;
     var num = 0;
     $("#nextButton").click(function () {
-        if (num < max-1) {
+        if (num < max) {
             $(".imageswap").fadeOut(function () {
                 $(this).attr("src", images[num]).fadeIn(600);
                 num++;
