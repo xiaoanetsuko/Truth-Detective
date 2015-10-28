@@ -5,21 +5,27 @@ $("#submit").click(function(e) {
     e.preventDefault();
     var inputValT = $('#questionT').val().toLowerCase();
     var inputVal1 = $('#question1').val().toLowerCase();
-    var inputVal2 = $('#question2').val().toLowerCase();
-    var inputVal3 = $('#question3').val().toLowerCase();
+    //var inputVal2 = $('#question2').val().toLowerCase();
+    //var inputVal3 = $('#question3').val().toLowerCase();
 
-    if (inputValT == "france" || inputValT =="franch") {
-        winmessage()
+
+    if (inputValT) {
+        if (inputValT == "france" || inputValT =="franch") {
+            winmessage()
+        }
     }
-    else if (inputVal1=="louis xvi" || inputVal1=="louis 16") {
-        winmessage()
+    else if (inputVal1) {
+        if (inputVal1=="louis xvi" || inputVal1=="louis 16") {
+            winmessage()
+        }
     }
-    else if (inputVal2=="london") {
-        winmessage()
-    }
-    else if (inputVal3=="industrial revolution") {
-        winmessage()
-    }
+
+    //else if (inputVal2=="london") {
+    //    winmessage()
+    //}
+    //else if (inputVal3=="industrial revolution") {
+    //    winmessage()
+    //}
     else {alert("Incorrect Answer!");}
 });
 
