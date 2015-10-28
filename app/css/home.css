@@ -378,6 +378,7 @@ p.feature-body-right{
 }
 
 .box .tagline {
+    padding-top: 16px;
     font-size: 0.8em;
     opacity: 0;
     transition-delay: 0.2s;
