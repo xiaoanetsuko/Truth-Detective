@@ -260,7 +260,7 @@
     left:22%;
     width: 130px;
     height: 130px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0);
     z-index: 2;
 }
 
@@ -270,7 +270,7 @@
     left:10%;
     width: 120px;
     height: 470px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0);
     z-index: 2;
 }
 
@@ -280,7 +280,7 @@
     left:47%;
     width: 200px;
     height: 115px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0);
     z-index: 2;
 }
 
@@ -290,7 +290,7 @@
     left:36%;
     width: 100px;
     height: 80px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0);
     z-index: 2;
 }
 
@@ -301,7 +301,7 @@
     left:64%;
     width: 115px;
     height: 115px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0);
     z-index: 2;
 }
 
@@ -311,7 +311,7 @@
     left:80%;
     width: 85px;
     height: 210px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0);
     z-index: 2;
 }
 
@@ -321,7 +321,7 @@
     left:21%;
     width: 120px;
     height: 120px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0);
     z-index: 2;
 }
 /*Clues end here*/
