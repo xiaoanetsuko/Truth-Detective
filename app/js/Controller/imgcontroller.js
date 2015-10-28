@@ -65,7 +65,7 @@ angular.module('TruthDetective')
 
         $scope.coinsGeorge = function () {
             $scope.title = "";
-            $scope.image = "../img/img_source/coins.png";
+            $scope.image = "../img/img_source/placeholder.png";
             $scope.content = "Rex Nan Kivell Collection NK5378. Part of the collection: Eighteenth and nineteenth century commemorative medals. Condition: Good. Title devised by cataloguer from medal inscription. Inscriptions on medal: Obverse -- Georgius IIII D. G. Britanniarum Rex F. D.; Reverse -- Proprio Jam Jure Animo Paterno. Inauguratus Die. Julii. XIX Anno. MDCCCXXI."
         };
 
@@ -91,7 +91,7 @@ angular.module('TruthDetective')
             $scope.title = "Industrial Revolution";
             $scope.image = "../img/img_source/Industrial_Revolution.jpg";
             $scope.content = "This is an photo taken in 1765. As a major tuning point in history, the Industrial Revolution was the transition to new manufacturing processes in the period from about 1760 to sometime between 1820 and 1840. This transition included going from hand production methods to machines, new chemical manufacturing and iron production processes, improved efficiency of water power, the increasing use of steam power, the development of machine tools and the rise of the factory system. It also included the change from wood and other bio-fuels to coal. Textiles were the dominant industry of the Industrial Revolution in terms of employment, value of output and capital invested; the textile industry was also the first to use modern production methods. Where did the industrial revolution occur?"
-        }
+        };
 
         $scope.Great_Exhibition = function () {
             $scope.title = "Great Exhibition";
@@ -133,6 +133,6 @@ angular.module('TruthDetective')
             $scope.title = "Map of the Effect of This Historical Event";
             $scope.image = "../img/img_source/freedom.jpg";
             $scope.content = "7";
-        };
+        }
 
     });
