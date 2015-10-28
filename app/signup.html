@@ -45,7 +45,7 @@
                 </div>
                 <md-input-container flex class="signup-input">
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="username" ng-model="user.username" required ng-required="true" ng-maxlength="15" ng-pattern="/^[a-zA-Z0-9]*$/" md-maxlength="20">
+                    <input type="text" name="username" id="username" ng-model="user.username" required ng-required="true" ng-maxlength="15" ng-pattern="/^[a-zA-Z0-9]*$/" md-maxlength="15">
                     <div ng-messages="signupForm.username.$error" multiple>
                         <div ng-message="maxlength">Username should not be longer than 15 characters and should only contain alphanumerics.</div>
                     </div>
