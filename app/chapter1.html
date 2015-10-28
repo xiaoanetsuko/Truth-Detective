@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse navHeaderCollapse">
                 <ul class="nav navbar-nav">
                     <li><span ng-click="toDash()">Home</span></li>
-                    <li><span>Leaderboard</span></li>
+                    <li><span ng-click="toLB()">Leaderboard</span></li>
                     <li><span>Profile</span></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -61,7 +61,7 @@
                     <div id="content" class="button">
                         <p id="recordTime"></p>
                         <a href="#" class="btnB" ng-click="completeOne()">Next Chapter</a>
-                        <a href="user.html" class="btnO" ng-click="completeOneGoBack()">Go to Dashboard</a>
+                        <span class="btnO" ng-click="completeOneGoBack()">Go to Dashboard</span>
                     </div>
                 </div>
                 <div class="winmask"></div>
