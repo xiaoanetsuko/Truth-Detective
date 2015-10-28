@@ -253,6 +253,7 @@ p.feature-body-right{
     position: relative;
     display: block;
     max-width: 100%;
+    height: auto;
     border: none;
     margin: 1em 0em 2.5em;
     box-shadow: none;
@@ -267,17 +268,20 @@ p.feature-body-right{
     position: relative;
     display: block;
     max-width: 100%;
+    height: auto;
     border: none;
     margin: 1em 0em 2.5em;
     box-shadow: none;
     background: rgba(74, 91, 183, 0.86);
-    padding: 0em;
+    padding: 4px 6px;
     border-radius: 0.28571429rem;
 }
 
 .bartext{
-    padding-right: 5px;
+    padding: 4px 6px;
     -webkit-text-fill-color: #fff;
+    font-size: 18px;
+    color: #fff;
 }
 
 .gameText{
@@ -374,6 +378,7 @@ p.feature-body-right{
 }
 
 .box .tagline {
+    padding-top: 16px;
     font-size: 0.8em;
     opacity: 0;
     transition-delay: 0.2s;

@@ -3,30 +3,36 @@
  */
 $("#submit").click(function(e) {
     e.preventDefault();
-    var inputValT = $('#questionT').val().toLowerCase();
-    var inputVal1 = $('#question1').val().toLowerCase();
-    //var inputVal2 = $('#question2').val().toLowerCase();
-    //var inputVal3 = $('#question3').val().toLowerCase();
+    var inputValT, inputVal1, inputVal2, inputVal3;
 
-
-    if (inputValT) {
+    if($('#questionT').val()) {
+        inputValT = $('#questionT').val().toLowerCase();
         if (inputValT == "france" || inputValT =="franch") {
             winmessage()
         }
+        else {alert("Incorrect Answer!")}
     }
-    else if (inputVal1) {
+    if($('#question1').val()) {
+        inputVal1 = $('#question1').val().toLowerCase();
         if (inputVal1=="louis xvi" || inputVal1=="louis 16") {
             winmessage()
         }
+        else {alert("Incorrect Answer!")}
     }
-
-    //else if (inputVal2=="london") {
-    //    winmessage()
-    //}
-    //else if (inputVal3=="industrial revolution") {
-    //    winmessage()
-    //}
-    else {alert("Incorrect Answer!");}
+    if($('#question2').val()) {
+        inputVal2 = $('#question2').val().toLowerCase();
+        if (inputVal2=="london") {
+            winmessage()
+        }
+        else {alert("Incorrect Answer!")}
+    }
+    if($('#question3').val()) {
+        inputVal3 = $('#question3').val().toLowerCase();
+        if (inputVal3=="industrial revolution") {
+            winmessage()
+        }
+        else {alert("Incorrect Answer!")}
+    }
 });
 
 $("#clear").click(function () {
