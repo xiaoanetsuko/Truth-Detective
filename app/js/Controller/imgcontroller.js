@@ -48,7 +48,7 @@ angular.module('TruthDetective')
     $scope.coin = function() {
         $scope.title = "Commemorative Medal";
         $scope.image = "../img/img_source/placeholder.png";
-        $scope.content = "This was one of the first medals produced by Conrad Heinrich Kuchler for Matthew Boulton at the Soho Mint. It was intended to exploit the popular feeling of revulsion in Britain caused by the French Revolution. Since the diamond’s second owner was overthrown at his The reverse of this medal depicts the poignant scene of the diamond’s owner saying farewell to his family.";
+        $scope.content = "A coin called Commemorative Coin for Louis XVI, on which was the head of Louis 16 who was the second owner of the Hope Diamond. This was one of the first medals produced by Conrad Heinrich Kuchler for Matthew Boulton at the Soho Mint. It was intended to exploit the popular feeling of revulsion in Britain caused by the French Revolution. Since the diamond’s second owner was overthrown at his The reverse of this medal depicts the poignant scene of the diamond’s owner saying farewell to his family.";
     };
 
     $scope.frenchRevo = function() {
