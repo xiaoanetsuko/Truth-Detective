@@ -238,6 +238,34 @@ function userService($timeout, $filter, $q) {
             });
     }
 
+    function recordFinishTime(duration, username, chapter) {
+        var finishTime = {};
+        var timeInfo = getFinishTime();
+        var completed = [];
+        var timeInfoBeforeUpdate;
+        var currentRecord;
+        for (var i=0; i<timeInfo.length; i++){
+            if (timeInfo[i].username == username){
+                completed.push(timeInfo[i].chapter);
+                if (timeInfo[i].chapter == chapter) {
+                    currentRecord = timeInfo[i].duration;
+                    timeInfoBeforeUpdate = timeInfo[i];
+                }
+            }
+        }
+        //if (completed.indexOf(chapter) == -1){
+        //    finishTime.duration = duration;
+        //    finishTime.username = username;
+        //    finishTime.chapter = chapter;
+        //    timeInfo.push(finishTime);
+        //    setFinishTime(timeInfo);
+        //    console.log(timeInfo);
+        //} else {
+        //
+        //
+        //}
+    }
+
     // private functions
     function getUsers() {
         if(!localStorage.users){
@@ -253,6 +281,13 @@ function userService($timeout, $filter, $q) {
         return JSON.parse(localStorage.chapterInfo);
     }
 
+    function getFinishTime() {
+        if(!localStorage.finishTime){
+            localStorage.finishTime = JSON.stringify([]);
+        }
+        return JSON.parse(localStorage.finishTime);
+    }
+
     function setUsers(users) {
         localStorage.users = JSON.stringify(users);
     }
@@ -260,6 +295,11 @@ function userService($timeout, $filter, $q) {
     function setChInfo(userinfo) {
         localStorage.chapterInfo = JSON.stringify(userinfo);
         console.log(localStorage.chapterInfo);
+    }
+
+    function setFinishTime(timeinfo) {
+        localStorage.finishTime = JSON.stringify(timeinfo);
+        console.log(localStorage.finishTime);
     }
 
     var service = {};

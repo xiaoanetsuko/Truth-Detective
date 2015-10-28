@@ -20,12 +20,18 @@ angular.module('TruthDetective')
             console.log($scope.username);
             console.log("localstorage.user --- ");
             console.log($localStorage.user);
-            userService.GetByUsername($rootScope.globals.currentUser.username);
+            //userService.GetByUsername($rootScope.globals.currentUser.username);
+            var timeUsed = angular.element(document.querySelector('#recordTime'));
+            console.log('time gotten from div....');
+            console.log(timeUsed);
+
             userService.finishTut(user);
 
             console.log("chapterInfo as JSON ..... ");
             var tmp = userService.getInfo();
             console.log(tmp);
+
+
             $window.location.href = "http://deco1800-g51.uqcloud.net/chapter1.html";
         };
         $scope.completeTutGoBack = function () {

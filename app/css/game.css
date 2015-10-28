@@ -203,20 +203,20 @@
 
 .coinsGeorge {
     position: absolute;
-    top:48%;
-    left:86%;
-    width: 120px;
-    height: 60px;
+    top:49%;
+    left:55%;
+    width: 110px;
+    height: 100px;
     background-color: rgba(255, 255, 255, 0);
     z-index: 2;
 }
 
 .bridge1760 {
     position: absolute;
-    top:49%;
-    left:55%;
-    width: 110px;
-    height: 100px;
+    top:48%;
+    left:86%;
+    width: 120px;
+    height: 60px;
     background-color: rgba(255, 255, 255, 0);
     z-index: 2;
 }
@@ -243,12 +243,13 @@
 
 .Industrial_Revolution {
     position: absolute;
-    top:39%;
-    left:44%;
-    width: 85px;
+    top: 86%;
+    left: 26%;
+    width: 40px;
     height: 40px;
     background-color: rgba(255, 255, 255, 0);
     z-index: 2;
+    border-radius: 20px;
 }
 
 /*-----Chapter 3------*/
@@ -501,7 +502,11 @@
     max-width: 45%;
 }
 
-.clueImage {
+.showImage img {
+    width: auto;
+}
+
+.existClueImage {
     height: auto;
     max-width: 100%;
     width: 340px;
@@ -516,7 +521,7 @@
     max-width: 45%;
     max-height: 500px;
     margin-left: 40px;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 .clueText{
