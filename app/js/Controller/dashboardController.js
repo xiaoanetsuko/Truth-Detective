@@ -65,7 +65,7 @@ angular.module('TruthDetective')
                 }
             }
 
-            console.log('chapter completed by this user ... ')
+            console.log('chapter completed by this user ... ');
             console.log(userChInfo);
 
             if (userChInfo.length == 1) {
@@ -80,7 +80,7 @@ angular.module('TruthDetective')
             if (userChInfo.length == 2) {
                 $scope.chOneImg = 'resource/img/site/1.jpg';
                 $scope.chOneName = 'Art Gallery';
-                $scope.chTwoImg = 'resource/img/site/1.jpg';
+                $scope.chTwoImg = 'resource/img/site/2.jpg';
                 $scope.chTwoName = '';
                 $scope.barWidth+=50;
                 $scope.openChOne = function () {
@@ -94,9 +94,9 @@ angular.module('TruthDetective')
             if (userChInfo.length == 3) {
                 $scope.chOneImg = 'resource/img/site/1.jpg';
                 $scope.chOneName = 'Art Gallery';
-                $scope.chTwoImg = 'resource/img/site/1.jpg';
+                $scope.chTwoImg = 'resource/img/site/2.jpg';
                 $scope.chTwoName = '';
-                $scope.chThreeImg = 'resource/img/site/1.jpg';
+                $scope.chThreeImg = 'resource/img/site/3.jpg';
                 $scope.chThreeName = '';
                 $scope.barWidth+=75;
                 $scope.openChOne = function () {
@@ -113,9 +113,9 @@ angular.module('TruthDetective')
             if (userChInfo.length == 4) {
                 $scope.chOneImg = 'resource/img/site/1.jpg';
                 $scope.chOneName = 'Art Gallery';
-                $scope.chTwoImg = 'resource/img/site/1.jpg';
+                $scope.chTwoImg = 'resource/img/site/2.jpg';
                 $scope.chTwoName = '';
-                $scope.chThreeImg = 'resource/img/site/1.jpg';
+                $scope.chThreeImg = 'resource/img/site/3.jpg';
                 $scope.chThreeName = '';
                 $scope.barWidth+=100;
                 $scope.openChOne = function () {
