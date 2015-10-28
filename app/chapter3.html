@@ -62,7 +62,7 @@
                     </div>
                     <div id="content" class="button">
                         <p id="recordTime"></p>
-                        <!--<a href="#" class="btnB" ng-click="completeThree()">Next Chapter</a>-->
+                        <a href="leaderboard.html" class="btnB">View Results</a>
                         <span class="btnO" ng-click="completeThreeGoBack()">Go to Dashboard</span>
                     </div>
                 </div>
@@ -81,6 +81,9 @@
                         <div id="imagebox">
                             <img class="imageswap" src="img/char/chapter3/1.png">
                         </div>
+                        <div id="lastDialog">
+                            <img class="last" src="img/char/after4/1.png">
+                        </div>
                         <div id="wrongMask">
                             <img src="img/char/wrong.png" >
                             <div id="continueButton" class="operationButton"></div>
@@ -90,6 +93,13 @@
                             <div id="backButton" class="operationButton"></div>
                             <div id="nextButton" class="operationButton"></div>
                         </div>
+
+                        <div id="operationButtonBoxLast">
+                            <div id="skipButtonLast" class="operationButton"></div>
+                            <div id="backButtonLast" class="operationButton"></div>
+                            <div id="nextButtonLast" class="operationButton"></div>
+                        </div>
+
                     </div>
                     <div class="question">
                         <img class="questionimg" src="img/char/Q3.png">
@@ -142,13 +152,13 @@
     <script src="js/services/userService.js"></script>
     <script src="js/services/authenticationService.js"></script>
     <script src="js/services/flashService.js"></script>
-
+    <script src="assets/countup/jquery.countup.js" content="canBeDisabled"></script>
     <script src="js/Controller/imgcontroller.js"></script>
     <script src="js/Controller/testController.js"></script>
     <script src="js/game.js"></script>
     <script src="js/chapter3.js"></script>
     <script src="js/answer.js"></script>
-    <script src="assets/countup/jquery.countup.js" content="canBeDisabled"></script>
+
 
 </body>
 </html>

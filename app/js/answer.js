@@ -29,7 +29,9 @@ $("#submit").click(function(e) {
     if($('#question3').val()) {
         inputVal3 = $('#question3').val().toLowerCase();
         if (inputVal3=="industrial revolution") {
-            winmessage()
+            showLastDialog();
+            //winmessage()
+
         }
         else {wrongAnswer()}
     }
