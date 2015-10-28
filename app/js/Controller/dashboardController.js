@@ -133,7 +133,12 @@ angular.module('TruthDetective')
                 $window.location.href = "http://deco1800-g51.uqcloud.net/tutorial.html";
             };
 
-            $scope.progressPercentage = $scope.barWidth+'%';
+            if($scope.barWidth == 0 ) {
+                $scope.progressPercentage = $scope.barWidth+'%';
+            }
+            if($scope.barWidth > 20 ) {
+                $scope.progressPercentage = 'Your Progress: ' + $scope.barWidth +'%';
+            }
 
             $scope.toDash = function () {
                 $window.location.href = "http://deco1800-g51.uqcloud.net/user.html";
