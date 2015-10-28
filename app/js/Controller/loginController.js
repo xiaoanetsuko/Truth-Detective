@@ -6,6 +6,7 @@
 angular.module('TruthDetective')
     .controller('loginCtrl', function($scope, userService, $rootScope, flashService, $location, authenticationService, $localStorage, $window) {
         $rootScope.userInfo = [];
+        $scope.loginVerify = false;
 
         $scope.openLogin = function () {
             $window.location.href = "http://deco1800-g51.uqcloud.net/login.html";
@@ -13,6 +14,14 @@ angular.module('TruthDetective')
 
         $scope.openSignup = function () {
             $window.location.href = "http://deco1800-g51.uqcloud.net/signup.html";
+        };
+
+        $scope.toIndex = function() {
+            $window.location.href = "http://deco1800-g51.uqcloud.net/index.html";
+        };
+
+        $scope.toLB = function () {
+            $window.location.href = "http://deco1800-g51.uqcloud.net/leaderboard.html";
         };
 
         $scope.register = function () {
@@ -56,6 +65,7 @@ angular.module('TruthDetective')
                     console.log('login succeed');
                     $window.location.href = "http://deco1800-g51.uqcloud.net/user.html";
                 } else {
+                    $scope.loginVerify = true;
                     flashService.Error(response.message);
                     console.log('login error')
                 }
