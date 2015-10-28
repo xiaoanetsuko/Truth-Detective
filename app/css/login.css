@@ -10,7 +10,7 @@
 }
 
 #login-form, #signup-form{
-    max-width: 500px;
+    max-width: 600px;
     padding: 0 25px;
     background-color: #F5F5F5;
     margin: 150px auto;
@@ -48,5 +48,21 @@ md-input-container:not(.md-input-invalid).md-input-focused label {
 
 .linkInLogin{
   text-decoration: underline;
+}
+
+.signup-input, .login-input{
+    margin: 0 0 45px 0;
+}
+
+.warning{
+    text-align: center;
+    color: #F25138;
+}
+.warning-container{
+    margin-top: 15px;
+    height: 30px;
+}
+.formTitle{
+    text-align: center;
 }
 

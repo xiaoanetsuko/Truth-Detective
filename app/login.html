@@ -30,43 +30,36 @@
             </div>
             <div class="collapse navbar-collapse navHeaderCollapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Leaderboard</a></li>
-                    <!--<li ng-show="showDash || showTut"><a href="#">Profile</a></li>-->
+                    <li><span ng-click="toIndex()">Home</span></li>
+                    <li><span ng-click="toLB()">Leaderboard</span></li>
                 </ul>
-                <!--<ul class="nav navbar-nav navbar-right" ng-show="showDash || showTut">-->
-                    <!--<li class="dropdown">-->
-                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{username}}<b class="caret"></b></a>-->
-                        <!--<ul class="dropdown-menu">-->
-                            <!--<li><a href="#">Account Setting</a></li>-->
-                            <!--<li><a href="#">Invite Friends</a></li>-->
-                            <!--<li><a href="#">Help</a></li>-->
-                            <!--<li><a href="../index.html">Log Out</a></li>-->
-                        <!--</ul>-->
-                    <!--</li>-->
-                <!--</ul>-->
             </div>
         </div>
     </nav>
 
     <div id="login-form" layout-align="center center">
         <md-content layout-padding layout-margin class="login-content">
-            <!--<md-toolbar class="login-toolbar">-->
-                <!--<div class="close-button-container">-->
-                    <!--<md-button class="md-icon-button close-button" ng-click="cancel()">-->
-                        <!--<md-icon md-svg-src="../images/icons/ic_close_black_24px.svg" aria-label="Close dialog"></md-icon>-->
-                    <!--</md-button>-->
-                <!--</div>-->
-            <!--</md-toolbar>-->
             <form name="form.loginForm" >
-                <md-input-container flex>
+                <h3 class="formTitle">Log in</h3>
+                <div class="warning-container">
+                    <!--<div ng-show="form.loginForm.$submitted">-->
+                        <!-- -->
+                    <!--</div>-->
+                    <div ng-show="loginVerify" class="warning">Please check your username and password.</div>
+                </div>
+                <md-input-container flex class="login-input">
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" ng-model="vm.username" required>
-                    <span ng-show="form.loginForm.username.$dirty && form.loginForm.username.$error.required" class="signup-helper">Username is required</span>
+                    <div ng-messages="form.loginForm.username.$error">
+                        <div ng-message="requried">This is required.</div>
+                    </div>
                 </md-input-container>
-                <md-input-container flex>
+                <md-input-container flex class="login-input">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" ng-model="vm.password" required>
+                    <div ng-messages="form.loginForm.password.$error">
+                        <div ng-message="requried">This is required.</div>
+                    </div>
                 </md-input-container>
             </form>
             <div class="signup-redirect">
@@ -79,154 +72,6 @@
             </div>
         </md-content>
     </div>
-
-    <!--<div ng-show="showDash">-->
-        <!--<a href="user.html">click here</a>-->
-    <!--</div>-->
-
-    <!--<div class="row" ng-show="showDash">-->
-        <!--<div class="container">-->
-            <!--<div class="row">-->
-                <!--<div class="col-md-12 text-center">-->
-                    <!--<div class="row gameText">-->
-                        <!--<h1>Your Progress</h1>-->
-                        <!--&lt;!&ndash; <p class="gameIntro">Your progress of the game</p> &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<div class="progressbar">-->
-                        <!--<div class="percentagebar" style="transition-duration: 300ms; width: 50%;">-->
-                            <!--<div class="bartext">50%</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="container text-center">-->
-                <!--<div class="row gameText">-->
-                    <!--<h1>Games</h1>-->
-                    <!--<p class="gameIntro">Please select one chapter from the following to start with:</p>-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="row">-->
-                <!--<div class="col-md-6 text-center">-->
-                    <!--<div class="box">-->
-                        <!--<img src="../resource/img/site/t.jpg">-->
-                        <!--<div class="overbox" ng-click="showTutorial()">-->
-                            <!--<div class="title overtext"><a href="#">Tutorial</a></div>-->
-                            <!--<div class="tagline overtext">House Gate</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="col-md-6 text-center">-->
-                    <!--<div class="box">-->
-                        <!--<img src="../resource/img/site/1.jpg">-->
-                        <!--<div class="overbox">-->
-                            <!--<div class="title overtext"><a href="game.html">Chapter 1</a></div>-->
-                            <!--<div class="tagline overtext">Art Gallery</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<br /><br />-->
-            <!--<div class="row">-->
-                <!--<div class="col-md-6 text-center">-->
-                    <!--<div class="box">-->
-                        <!--<div class="lockTrial"><img src="../img/tools/lock%203.png"></div>-->
-                        <!--<div class="overbox">-->
-                            <!--<div class="title overtext"><a href="#">Chapter 2</a></div>-->
-                            <!--<div class="tagline overtext">Locked</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-                <!--<div class="col-md-6 text-center">-->
-                    <!--<div class="box">-->
-                        <!--&lt;!&ndash;<img src="../resource/img/site/unknown.jpg">&ndash;&gt;-->
-                        <!--<div class="lockTrial"><img src="../img/tools/lock%203.png"></div>-->
-                        <!--<div class="overbox">-->
-                            <!--<div class="title overtext"><a href="#">Chapter 3</a></div>-->
-                            <!--<div class="tagline overtext">Locked</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<br/>-->
-            <!--<br/>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div id="game" ng-show="showTut">-->
-        <!--<div class="game_row">-->
-            <!--<div class="game_container">-->
-                <!--<div class="mp3player">-->
-                    <!--&lt;!&ndash;<audio id="mp3_1" controls autoplay loop>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<source src="mp3/不思議な町.ogg" type="audio/ogg">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<source src="mp3/不思議な町.mp3" type="audio/mpeg">&ndash;&gt;-->
-                    <!--&lt;!&ndash;Your browser does not support the audio element.&ndash;&gt;-->
-                    <!--&lt;!&ndash;</audio>&ndash;&gt;-->
-                    <!--<audio id="mp3_1" src="../mp3/雷顿教授 - レイトン教授のテーマ.mp3" controls autoplay loop></audio>-->
-                <!--</div>-->
-
-                <!--&lt;!&ndash;The following is win pop-up box&ndash;&gt;-->
-                <!--<div id="winmessage">-->
-                    <!--<div id="heading">-->
-                        <!--Congratulations! Your detection time is:-->
-                    <!--</div>-->
-                    <!--<div id="content" class="button">-->
-                        <!--<p></p>-->
-                        <!--<a href="game.html" class="btnB">Next Chapter</a>-->
-                        <!--<a href="user.html" class="btnO">Go to Dashboard</a>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="winmask"></div>-->
-                <!--<div id="countdown"></div>-->
-                <!--<div id="checkinput">-->
-                    <!--<form>-->
-                        <!--<input type="text" value="" id="questionT">-->
-                        <!--<input type="button" id="submit" value="Submit">-->
-                    <!--</form>-->
-                <!--</div>-->
-                <!--<div id="canvas" class="tutorial" ng-controller="imagecontroller">-->
-                    <!--<div id="dialog_box">-->
-                        <!--<div id="imagebox">-->
-                            <!--<img class="imageswap" src="../img/char/chapterTutorial/1.png">-->
-                        <!--</div>-->
-                        <!--<div id="operationButtonBox">-->
-                            <!--&lt;!&ndash;<div id="backButton" class="operationButton"></div>&ndash;&gt;-->
-                            <!--&lt;!&ndash;<div id="nextButton" class="operationButton"></div>&ndash;&gt;-->
-                            <!--&lt;!&ndash;<div id="skipButton" class="operationButton"></div>&ndash;&gt;-->
-                            <!--<img id="backButton" class="operationButton" src="../img/tools/back.png" alt="backButton" />-->
-                            <!--<img id="nextButton" class="operationButton" src="../img/tools/next.png" alt="backButton" />-->
-                            <!--<img id="skipButton" class="operationButton" src="../img/tools/skip.png" alt="backButton" />-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-                    <!--<div class="question">-->
-                        <!--<img class="questionimg" src="../img/char/Q0.png">-->
-                    <!--</div>-->
-
-                    <!--<div id="" class="checkpoint custom letterT" ng-mouseleave="letterT()"> &lt;!&ndash;Louis XIV&ndash;&gt;</div>-->
-                    <!--<div id="" class="checkpoint custom newspaperT" ng-mouseleave="newspaperT()"> &lt;!&ndash;gongzhan bashidiyu&ndash;&gt;</div>-->
-                    <!--&lt;!&ndash;<img src="../resource/img/site/level1.jpg">&ndash;&gt;-->
-                    <!--<div id="" class="checkpoint custom mapT" ng-mouseleave="mapT()"> &lt;!&ndash;gongzhan bashidiyu&ndash;&gt;</div>-->
-                    <!--<div class="mask"></div>-->
-                    <!--<div id="window">-->
-                        <!--<div class="close">-->
-                            <!--<div class="close-icon"></div>-->
-                        <!--</div>-->
-                        <!--<div class="clue">-->
-                            <!--<div class="showImage"><img ng-src="{{image}}" class="existClueImage"></div>-->
-                            <!--&lt;!&ndash;use angular.js load introduction dynamically&ndash;&gt;-->
-                            <!--<div class="introduction">-->
-                                <!--<h2 class="header">{{title}}</h2>-->
-                                <!--<p class="clueText">{{content}}</p>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
 
     <script src="lib/jquery/jquery.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
@@ -244,7 +89,6 @@
     <script src="lib/ngstorage/ngStorage.js"></script>
 
     <script src="js/app.js"></script>
-
     <script src="js/services/userService.js"></script>
     <script src="js/services/authenticationService.js"></script>
     <script src="js/services/flashService.js"></script>
@@ -254,14 +98,5 @@
     <script src="js/imgcontroller.js"></script>
     <script src="js/gameTutorial.js"></script>
     <script src="js/Controller/loginController.js"></script>
-    <!--<script src="../js/Controller/imgcontroller.js"></script>-->
-
-    <!--<script type="text/javascript">-->
-        <!--window.onbeforeunload = function() {-->
-            <!--return "If you reload this page, all your current progress will be lost.";-->
-        <!--}-->
-    <!--</script>-->
-    <!--<script src="../js/Controller/dashboardController.js"></script>-->
-
 </body>
 </html>

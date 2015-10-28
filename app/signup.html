@@ -27,41 +27,30 @@
             </div>
             <div class="collapse navbar-collapse navHeaderCollapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Leaderboard</a></li>
-                    <!--<li><a href="#">Profile</a></li>-->
+                    <li><span ng-click="toIndex()">Home</span></li>
+                    <li><span ng-click="toLB()">Leaderboard</span></li>
                 </ul>
-                <!--<ul class="nav navbar-nav navbar-right">-->
-                    <!--<li class="dropdown">-->
-                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>{{username}}</span><b class="caret"></b></a>-->
-                        <!--<ul class="dropdown-menu">-->
-                            <!--<li><a href="#">Account Setting</a></li>-->
-                            <!--<li><a href="#">Invite Friends</a></li>-->
-                            <!--<li><a href="#">Help</a></li>-->
-                            <!--<li><a href="../index.html">Log Out</a></li>-->
-                        <!--</ul>-->
-                    <!--</li>-->
-                <!--</ul>-->
             </div>
         </div>
     </nav>
 
     <div id="signup-form" layout-align="center center" ng-controller="loginCtrl">
         <md-content layout-padding layout-margin class="login-content">
-            <!--<md-toolbar class="login-toolbar">-->
-            <!--<div class="close-button-container">-->
-            <!--<md-button class="md-icon-button close-button" ng-click="cancel()">-->
-            <!--<md-icon md-svg-src="../images/icons/ic_close_black_24px.svg" aria-label="Close dialog"></md-icon>-->
-            <!--</md-button>-->
-            <!--</div>-->
-            <!--</md-toolbar>-->
             <form name="signupForm" ng-submit="register()">
-                <md-input-container flex>
+                <h3 class="formTitle">Sign up</h3>
+                <div class="warning-container">
+                    <div ng-show="signupForm.$submitted || signupForm.username.$touched" class="warning">
+                        <div ng-show="signupForm.username.$error.pattern">Invalid username.</div>
+                    </div>
+                </div>
+                <md-input-container flex class="signup-input">
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="username" ng-model="user.username" required>
-                    <span ng-show="form.username.$dirty && form.username.$error.required" class="signup-helper">Username is required</span>
+                    <input type="text" name="username" id="username" ng-model="user.username" required ng-required="true" ng-maxlength="15" ng-pattern="/^[a-zA-Z0-9]*$/" md-maxlength="20">
+                    <div ng-messages="signupForm.username.$error" multiple>
+                        <div ng-message="maxlength">Username should not be longer than 15 characters and should only contain alphanumerics.</div>
+                    </div>
                 </md-input-container>
-                <md-input-container flex>
+                <md-input-container flex class="signup-input">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" ng-model="user.password" required>
                 </md-input-container>
