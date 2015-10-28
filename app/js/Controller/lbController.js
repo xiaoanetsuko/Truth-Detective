@@ -25,4 +25,10 @@ angular.module('TruthDetective')
                 $scope.c3.push(current);
             }
         }
+
+        $scope.c1.sort(function(a,b){
+            return parseInt(a.duration.replace(/ /g, '').split(':').join(''),10)-parseInt(b.duration.replace(/ /g, '').split(':').join(''),10);
+        });
+
+        console.log($scope.c1)
     });

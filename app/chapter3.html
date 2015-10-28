@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse navHeaderCollapse">
                 <ul class="nav navbar-nav">
                     <li><span ng-click="toDash()">Home</span></li>
-                    <li><span>Leaderboard</span></li>
+                    <li><span ng-click="toLB()">Leaderboard</span></li>
                     <li><span>Profile</span></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -61,9 +61,9 @@
                         Congratulations! Your detection time is:
                     </div>
                     <div id="content" class="button">
-                        <p></p>
+                        <p id="recordTime"></p>
                         <!--<a href="#" class="btnB" ng-click="completeThree()">Next Chapter</a>-->
-                        <a href="user.html" class="btnO" ng-click="completeThreeGoBack()">Go to Dashboard</a>
+                        <span class="btnO" ng-click="completeThreeGoBack()">Go to Dashboard</span>
                     </div>
                 </div>
                 <div class="winmask"></div>
@@ -139,18 +139,16 @@
     <script src="lib/ngstorage/ngStorage.js"></script>
 
     <script src="js/app.js"></script>
-    <script src="js/chapter3.js"></script>
-    <script src="js/answer.js"></script>
     <script src="js/services/userService.js"></script>
     <script src="js/services/authenticationService.js"></script>
     <script src="js/services/flashService.js"></script>
 
     <script src="js/Controller/imgcontroller.js"></script>
     <script src="js/Controller/testController.js"></script>
-
-    <script src="assets/countup/jquery.countup.js" content="canBeDisabled"></script>
     <script src="js/game.js"></script>
-
+    <script src="js/chapter3.js"></script>
+    <script src="js/answer.js"></script>
+    <script src="assets/countup/jquery.countup.js" content="canBeDisabled"></script>
 
 </body>
 </html>

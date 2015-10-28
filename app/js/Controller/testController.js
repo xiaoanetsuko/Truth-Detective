@@ -20,12 +20,7 @@ angular.module('TruthDetective')
         };
 
         $scope.completeTut = function () {
-            console.log("current user name ---- ");
-            console.log($scope.username);
-            console.log("localstorage.user --- ");
-            console.log($localStorage.user);
             //userService.GetByUsername($rootScope.globals.currentUser.username);
-
             var timeUsed = document.getElementById("recordTime").innerHTML;
             userService.recordFinishTime(timeUsed, $scope.username, 'tutorial');
             userService.finishTut(user);
@@ -37,7 +32,7 @@ angular.module('TruthDetective')
             $window.location.href = "http://deco1800-g51.uqcloud.net/chapter1.html";
         };
         $scope.completeTutGoBack = function () {
-            userService.GetByUsername($rootScope.globals.currentUser.username);
+            //userService.GetByUsername($rootScope.globals.currentUser.username);
             //console.log(userService.GetByUsername($scope.username));
             var timeUsed = document.getElementById("recordTime").innerHTML;
             userService.recordFinishTime(timeUsed, $scope.username, 'tutorial');
@@ -47,23 +42,16 @@ angular.module('TruthDetective')
         };
 
         $scope.completeOne = function () {
-            console.log("current user name ---- ");
-            console.log($scope.username);
-            console.log("localstorage.user --- ");
-            console.log($localStorage.user);
-            userService.GetByUsername($rootScope.globals.currentUser.username);
+            //userService.GetByUsername($rootScope.globals.currentUser.username);
             //console.log(userService.GetByUsername($scope.username));
             var timeUsed = document.getElementById("recordTime").innerHTML;
             userService.recordFinishTime(timeUsed, $scope.username, 'one');
             userService.finishOne(user);
 
-            console.log("chapterInfo as JSON ..... ");
-            var tmp = userService.getInfo();
-            console.log(tmp);
             $window.location.href = "http://deco1800-g51.uqcloud.net/chapter2.html";
         };
         $scope.completeOneGoBack = function () {
-            userService.GetByUsername($rootScope.globals.currentUser.username);
+            //userService.GetByUsername($rootScope.globals.currentUser.username);
             //console.log(userService.GetByUsername($scope.username));
             var timeUsed = document.getElementById("recordTime").innerHTML;
             userService.recordFinishTime(timeUsed, $scope.username, 'one');
@@ -73,30 +61,29 @@ angular.module('TruthDetective')
         };
 
         $scope.completeTwo = function () {
-            console.log("current user name ---- ");
-            console.log($scope.username);
-            console.log("localstorage.user --- ");
-            console.log($localStorage.user);
-            userService.GetByUsername($rootScope.globals.currentUser.username);
+            //userService.GetByUsername($rootScope.globals.currentUser.username);
             //console.log(userService.GetByUsername($scope.username));
+            var timeUsed = document.getElementById("recordTime").innerHTML;
+            console.log('time gotten from div ,,, ')
+            console.log(timeUsed);
+            userService.recordFinishTime(timeUsed, $scope.username, 'two');
             userService.finishTwo(user);
-
-            console.log("chapterInfo as JSON ..... ");
-            var tmp = userService.getInfo();
-            console.log(tmp);
+            
             $window.location.href = "http://deco1800-g51.uqcloud.net/chapter3.html";
         };
         $scope.completeTwoGoBack = function () {
-            userService.GetByUsername($rootScope.globals.currentUser.username);
-            //console.log(userService.GetByUsername($scope.username));
+            //userService.GetByUsername($rootScope.globals.currentUser.username);
+            var timeUsed = document.getElementById("recordTime").innerHTML;
+            userService.recordFinishTime(timeUsed, $scope.username, 'two');
             userService.finishTwo(user);
 
             $window.location.href = "http://deco1800-g51.uqcloud.net/user.html";
         };
 
         $scope.completeThreeGoBack = function () {
-            userService.GetByUsername($rootScope.globals.currentUser.username);
-            //console.log(userService.GetByUsername($scope.username));
+            //userService.GetByUsername($rootScope.globals.currentUser.username);
+            var timeUsed = document.getElementById("recordTime").innerHTML;
+            userService.recordFinishTime(timeUsed, $scope.username, 'three');
             userService.finishThree(user);
 
             $window.location.href = "http://deco1800-g51.uqcloud.net/user.html";

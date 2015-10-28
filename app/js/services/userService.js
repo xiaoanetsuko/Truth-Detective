@@ -263,8 +263,8 @@ function userService($timeout, $filter, $q) {
             setFinishTime(timeInfo);
             console.log(timeInfo);
         } else {
-            var currentBest = parseInt(currentRecord.replace(/ /g, '').split(':').join('').replace(/0/g, ''));
-            var latest = parseInt(duration.replace(/ /g, '').split(':').join('').replace(/0/g, ''));
+            var currentBest = parseInt(currentRecord.replace(/ /g, '').split(':').join(''),10);
+            var latest = parseInt(duration.replace(/ /g, '').split(':').join(''),10);
             if (latest < currentBest) {
                 timeInfoBeforeUpdate.duration = duration;
                 setFinishTime(timeInfo);
