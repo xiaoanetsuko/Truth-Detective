@@ -11,13 +11,13 @@ $("#submit").click(function(e) {
     if (inputValT == "france" || inputValT =="franch") {
         winmessage()
     }
-    if (inputVal1=="louis xvi" || inputVal1=="louis 16") {
+    else if (inputVal1=="louis xvi" || inputVal1=="louis 16") {
         winmessage()
     }
-    if (inputVal2=="london") {
+    else if (inputVal2=="london") {
         winmessage()
     }
-    if (inputVal3=="industrial revolution") {
+    else if (inputVal3=="industrial revolution") {
         winmessage()
     }
     else {alert("Incorrect Answer!");}
