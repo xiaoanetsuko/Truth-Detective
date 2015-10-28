@@ -81,7 +81,7 @@ angular.module('TruthDetective')
                 $scope.chOneImg = 'resource/img/site/1.jpg';
                 $scope.chOneName = 'Art Gallery';
                 $scope.chTwoImg = 'resource/img/site/2.jpg';
-                $scope.chTwoName = '';
+                $scope.chTwoName = 'Bedroom';
                 $scope.barWidth+=50;
                 $scope.openChOne = function () {
                     $window.location.href = "http://deco1800-g51.uqcloud.net/chapter1.html";
@@ -95,9 +95,9 @@ angular.module('TruthDetective')
                 $scope.chOneImg = 'resource/img/site/1.jpg';
                 $scope.chOneName = 'Art Gallery';
                 $scope.chTwoImg = 'resource/img/site/2.jpg';
-                $scope.chTwoName = '';
+                $scope.chTwoName = 'Bedroom';
                 $scope.chThreeImg = 'resource/img/site/3.jpg';
-                $scope.chThreeName = '';
+                $scope.chThreeName = 'Study Room';
                 $scope.barWidth+=75;
                 $scope.openChOne = function () {
                     $window.location.href = "http://deco1800-g51.uqcloud.net/chapter1.html";
@@ -114,9 +114,9 @@ angular.module('TruthDetective')
                 $scope.chOneImg = 'resource/img/site/1.jpg';
                 $scope.chOneName = 'Art Gallery';
                 $scope.chTwoImg = 'resource/img/site/2.jpg';
-                $scope.chTwoName = '';
+                $scope.chTwoName = 'Bedroom';
                 $scope.chThreeImg = 'resource/img/site/3.jpg';
-                $scope.chThreeName = '';
+                $scope.chThreeName = 'Study Room';
                 $scope.barWidth+=100;
                 $scope.openChOne = function () {
                     $window.location.href = "http://deco1800-g51.uqcloud.net/chapter1.html";
