@@ -351,7 +351,11 @@ p.feature-body-right{
     border: none;
     margin: 1em 0em 2.5em;
     box-shadow: none;
-    background: rgba(74, 91, 183, 0.86);
+    /*background: rgba(74, 91, 183, 0.86);*/
+    background-image: url("../img/tools/texture.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat-x;
     padding: 4px 6px;
     border-radius: 0.28571429rem;
 }
