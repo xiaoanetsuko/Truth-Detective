@@ -50,6 +50,11 @@ function userService($timeout, $filter, $q) {
         return tmp;
     }
 
+    function getRecord() {
+        var tmp = getFinishTime();
+        return tmp;
+    }
+
     function Create(user) {
         var deferred = $q.defer();
 
@@ -318,6 +323,7 @@ function userService($timeout, $filter, $q) {
     service.finishThree = finishThree;
     service.getInfo = getInfo;
     service.recordFinishTime = recordFinishTime;
+    service.getRecord = getRecord;
 
     return service;
 }

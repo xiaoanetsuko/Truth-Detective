@@ -147,4 +147,8 @@ angular.module('TruthDetective')
             $scope.toIndex = function () {
                 $window.location.href = "http://deco1800-g51.uqcloud.net/index.html";
             };
+
+            $scope.toLB = function () {
+                $window.location.href = "http://deco1800-g51.uqcloud.net/leaderboard.html";
+            }
         });
