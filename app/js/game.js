@@ -103,7 +103,7 @@ $(document).ready( function() {
         for (var i in loadedImages) {
             var image = new Image();
             image.src = loadedImages[i].url;
-            image.style.width = "auto";
+            image.style.width = "100%";
             $('#game #canvas .showImage').append(image);
             $('#game #canvas .showImage img[style]').addClass("clueImage");
         }
