@@ -98,7 +98,6 @@
 }
 
 #canvas img {
-    z-index: -1;
     align-content: center;
 }
 
@@ -371,6 +370,22 @@
     margin-top:-94px !important;
     margin-left:-180px !important;
     z-index:101;
+}
+
+#wrongMask {
+    position: absolute;
+    top: -100px;
+    width: 1728px;
+    height: 864px;
+    z-index: 99;
+    display: none;
+}
+
+#continueButton {
+    position: absolute;
+    top: 100%;
+    left: 74%;
+    z-index: 12;
 }
 
 #heading{

@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse navHeaderCollapse">
                 <ul class="nav navbar-nav">
                     <li><span ng-click="toDash()">Home</span></li>
-                    <li><span>Leaderboard</span></li>
+                    <li><span ng-click="toLB()">Leaderboard</span></li>
                     <li><span>Profile</span></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -83,6 +83,10 @@
                     <div id="dialog_box">
                         <div id="imagebox">
                             <img class="imageswap" src="img/char/beforeT/1.png">
+                        </div>
+                        <div id="wrongMask">
+                            <img src="img/char/wrong.png" >
+                            <img id="continueButton" class="operationButton" src="img/tools/continue_button.png" alt="continueButton" />
                         </div>
                         <div id="operationButtonBox">
                             <img id="skipButton" class="operationButton" src="img/tools/skip_button.png" alt="skipButton" />

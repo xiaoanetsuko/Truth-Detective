@@ -15,6 +15,10 @@ angular.module('TruthDetective')
             $window.location.href = "http://deco1800-g51.uqcloud.net/index.html";
         };
 
+        $scope.toLB = function () {
+            $window.location.href = "http://deco1800-g51.uqcloud.net/leaderboard.html";
+        };
+
         $scope.completeTut = function () {
             console.log("current user name ---- ");
             console.log($scope.username);
@@ -30,12 +34,13 @@ angular.module('TruthDetective')
             var tmp = userService.getInfo();
             console.log(tmp);
 
-
-            //$window.location.href = "http://deco1800-g51.uqcloud.net/chapter1.html";
+            $window.location.href = "http://deco1800-g51.uqcloud.net/chapter1.html";
         };
         $scope.completeTutGoBack = function () {
             userService.GetByUsername($rootScope.globals.currentUser.username);
             //console.log(userService.GetByUsername($scope.username));
+            var timeUsed = document.getElementById("recordTime").innerHTML;
+            userService.recordFinishTime(timeUsed, $scope.username, 'tutorial');
             userService.finishTut(user);
 
             $window.location.href = "http://deco1800-g51.uqcloud.net/user.html";
@@ -55,11 +60,13 @@ angular.module('TruthDetective')
             console.log("chapterInfo as JSON ..... ");
             var tmp = userService.getInfo();
             console.log(tmp);
-            //$window.location.href = "http://deco1800-g51.uqcloud.net/chapter2.html";
+            $window.location.href = "http://deco1800-g51.uqcloud.net/chapter2.html";
         };
         $scope.completeOneGoBack = function () {
             userService.GetByUsername($rootScope.globals.currentUser.username);
             //console.log(userService.GetByUsername($scope.username));
+            var timeUsed = document.getElementById("recordTime").innerHTML;
+            userService.recordFinishTime(timeUsed, $scope.username, 'one');
             userService.finishOne(user);
 
             $window.location.href = "http://deco1800-g51.uqcloud.net/user.html";
