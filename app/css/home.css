@@ -130,11 +130,11 @@ a.joingame:hover{
 }
 
 .textbox{
-    margin-top: 128px;
+    margin-top: 96px;
     margin-left: 90px;
     margin-right: 90px;
     color: #ffffff;
-
+    transition: all 0.2s ease-in-out;
 }
 .headertext{
     font-size: 28px;
@@ -142,16 +142,50 @@ a.joingame:hover{
     display: block;
     font-family: Bookman;
     text-align: center;
+    transition: all 0.2s ease-in-out;
 }
 
 .lead {
     text-align: center;
     display: block;
-    padding-top: 128px;
+    padding-top: 80px;
+    transition: all 0.2s ease-in-out;
 }
 
 .lead img {
-    height: 448px;
+    height: 512px;
+    transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 760px) {
+    .lead {
+        padding-top: 64px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .textbox {
+        margin: 80px 64px 0 64px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .lead img {
+        height: auto;
+        width: 96%;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .headertext{
+        font-size: 20px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .joingame {
+        font-size: 1.5em;
+        padding: 12px 24px;
+        transition: all 0.2s ease-in-out;
+    }
+
+
 }
 
 .thirdbox{

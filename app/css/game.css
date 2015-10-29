@@ -8,7 +8,9 @@
     url(../resource/font/BOOKOS.woff);
 }
 
-
+body{
+    background-color: rgba(0, 0, 0, 0.76);
+}
 
 /*@override*/
 .navbar {
@@ -71,6 +73,15 @@
     width: auto;
 }
 
+#operationButtonBoxLast {
+    display: none;
+    position: relative;
+    top: 768px;
+    left: 15%;
+    z-index: 100;
+    width: auto;
+}
+
 .operationButton {
     float: left;
     cursor: pointer;
@@ -89,7 +100,21 @@
     transition: all 0.2s ease-in-out;
 }
 
+#skipButtonLast {
+    background-image: url("../img/tools/skip_button.png");
+    width: 94px;
+    position:relative;
+    margin-right: 48%;
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
 #skipButton:hover {
+    background-image: url("../img/tools/skip_button_hover.png");
+    transition: all 0.2s ease-in-out;
+}
+
+#skipButtonLast:hover {
     background-image: url("../img/tools/skip_button_hover.png");
     transition: all 0.2s ease-in-out;
 }
@@ -100,7 +125,18 @@
     transition: all 0.2s ease-in-out;
 }
 
+#nextButtonLast {
+    background-image: url("../img/tools/next_button.png");
+    width: 118px;
+    transition: all 0.2s ease-in-out;
+}
+
 #nextButton:hover {
+    background-image: url("../img/tools/next_button_hover.png");
+    transition: all 0.2s ease-in-out;
+}
+
+#nextButtonLast:hover {
     background-image: url("../img/tools/next_button_hover.png");
     transition: all 0.2s ease-in-out;
 }
@@ -112,7 +148,19 @@
     transition: all 0.2s ease-in-out;
 }
 
+#backButtonLast {
+    background-image: url("../img/tools/prev_button.png");
+    width: 118px;
+    margin-right: 4%;
+    transition: all 0.2s ease-in-out;
+}
+
 #backButton:hover {
+     background-image: url("../img/tools/prev_button_hover.png");
+     transition: all 0.2s ease-in-out;
+ }
+
+#backButtonLast:hover {
     background-image: url("../img/tools/prev_button_hover.png");
     transition: all 0.2s ease-in-out;
 }
@@ -120,6 +168,27 @@
 #imagebox {
     position: relative;
     /*left: -128px;*/
+    z-index: 99;
+}
+
+.imageswap{
+    position: absolute;
+    width: 1728px;
+    height: 864px;
+    z-index: 99;
+}
+
+#lastDialog {
+    position: relative;
+    display: none;
+    /*left: -128px;*/
+    z-index: 99;
+}
+
+.last{
+    position: absolute;
+    width: 1728px;
+    height: 864px;
     z-index: 99;
 }
 
@@ -268,13 +337,12 @@
 
 .Industrial_Revolution {
     position: absolute;
-    top: 86%;
-    left: 26%;
-    width: 40px;
-    height: 40px;
+    top: 58%;
+    left: 11%;
+    width: 270px;
+    height: 120px;
     background-color: rgba(255, 255, 255, 0);
     z-index: 2;
-    border-radius: 20px;
 }
 
 /*-----Chapter 3------*/
@@ -397,6 +465,7 @@
     margin-left:-180px !important;
     z-index:101;
 }
+
 
 #wrongMask {
     position: absolute;
@@ -578,7 +647,7 @@
     max-width: 45%;
     max-height: 500px;
     margin-left: 40px;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
 .introduction .header {
@@ -811,9 +880,3 @@ input.game-input:focus:-ms-input-placeholder {
     -o-transition: all 0.2s ease-in-out;
 }
 
-.imageswap{
-    position: absolute;
-    width: 1728px;
-    height: 864px;
-    z-index: 99;
-}
