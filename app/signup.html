@@ -15,7 +15,7 @@
 </head>
 
 <body ng-app="TruthDetective" id="signup-body">
-    <nav class="topnav navbar navbar-default navbar-static-top">
+    <nav class="topnav navbar navbar-default navbar-static-top" ng-controller="loginCtrl">
         <div class="container">
             <div class="navbar-header">
                 <a href="#" class="navbar-brand">Truth Detective</a>
@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse navHeaderCollapse">
                 <ul class="nav navbar-nav">
                     <li><span ng-click="toIndex()">Home</span></li>
-                    <li><span ng-click="toLB()">Leaderboard</span></li>
+                    <!--<li><span ng-click="toLB()">Leaderboard</span></li>-->
                 </ul>
             </div>
         </div>
@@ -41,6 +41,7 @@
                 <div class="warning-container">
                     <div ng-show="signupForm.$submitted || signupForm.username.$touched" class="warning">
                         <div ng-show="signupForm.username.$error.pattern">Invalid username.</div>
+                        <!--<div ng-show="duplicate">Username is already taken.</div>-->
                     </div>
                 </div>
                 <md-input-container flex class="signup-input">
