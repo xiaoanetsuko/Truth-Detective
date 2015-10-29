@@ -5,7 +5,13 @@
 angular.module('TruthDetective')
     .controller('leaderboardCtrl', function ($scope, $rootScope, $localStorage, $window, userService) {
         $scope.c1=[], $scope.c2=[], $scope.c3=[];
-        $scope.username = $rootScope.globals.currentUser.username;
+        $scope.loggedIn = false;
+        console.log($rootScope.globals.currentUser)
+        if ($rootScope.globals.currentUser) {
+            $scope.loggedIn = true;
+        } else{
+            $scope.username = $rootScope.globals.currentUser.username;
+        }
 
         $scope.toDash = function () {
             $window.location.href = "http://deco1800-g51.uqcloud.net/user.html";

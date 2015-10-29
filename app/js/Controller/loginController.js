@@ -7,6 +7,7 @@ angular.module('TruthDetective')
     .controller('loginCtrl', function($scope, userService, $rootScope, flashService, $location, authenticationService, $localStorage, $window) {
         $rootScope.userInfo = [];
         $scope.loginVerify = false;
+        $scope.duplicate = false;
 
         $scope.openLogin = function () {
             $window.location.href = "http://deco1800-g51.uqcloud.net/login.html";
@@ -33,6 +34,7 @@ angular.module('TruthDetective')
                         flashService.Success('Sign up Successful', true);
                         $window.location.href = "http://deco1800-g51.uqcloud.net/login.html";
                     } else {
+                        $scope.duplicate = true;
                         flashService.Error(response.message);
                         console.log('errorrrrrrr');
                     }
