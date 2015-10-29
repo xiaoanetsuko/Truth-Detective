@@ -570,6 +570,34 @@ body{
     text-decoration: none;
 }
 
+.btnOLast {
+    background: #d98934;
+    background-image: -webkit-linear-gradient(top, #d98934, #c96800);
+    background-image: -moz-linear-gradient(top, #d98934, #c96800);
+    background-image: -ms-linear-gradient(top, #d98934, #c96800);
+    background-image: -o-linear-gradient(top, #d98934, #c96800);
+    background-image: linear-gradient(to bottom, #d98934, #c96800);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    float: right;
+}
+
+.btnOLast:hover {
+    background: #c7752e;
+    background-image: -webkit-linear-gradient(top, #c7752e, #ab440c);
+    background-image: -moz-linear-gradient(top, #c7752e, #ab440c);
+    background-image: -ms-linear-gradient(top, #c7752e, #ab440c);
+    background-image: -o-linear-gradient(top, #c7752e, #ab440c);
+    background-image: linear-gradient(to bottom, #c7752e, #ab440c);
+    text-decoration: none;
+}
+
 #window {
     width: 800px;
     max-height: 1000px;
