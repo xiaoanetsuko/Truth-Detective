@@ -584,8 +584,9 @@ body{
     color: #ffffff;
     font-size: 15px;
     padding: 10px 20px 10px 20px;
+    margin-top: 15px;
     text-decoration: none;
-    float: right;
+
 }
 
 .btnOLast:hover {
@@ -739,7 +740,7 @@ body{
 
 .questionimg{
     height: 100%;
-    width: 100%;
+    width: 875px;
 }
 
 #checkinput{
