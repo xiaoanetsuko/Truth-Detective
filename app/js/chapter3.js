@@ -48,7 +48,7 @@ $(function(){
 
 function showLastDialog(){
 
-    var imagesLast = ["img/char/after4/2.png", "img/char/after4/3.png", "img/char/after4/4.png", "img/char/after4/5.png", "img/char/after4/6.png", "img/char/after4/7.png", "img/char/after4/8.png", "img/char/after4/9.png", "img/char/after4/10.png", "img/char/after4/11.png", "img/char/after4/12.png", "img/char/after4/13.png", "img/char/after4/14.png", "img/char/after4/15.png", "img/char/after4/16.png", "img/char/after4/17.png", "img/char/after4/18.png" ];
+    var imagesLast = ["img/char/after4/0-1.png", "img/char/after4/0-2.png", "img/char/after4/0-3.png", "img/char/after4/1.png", "img/char/after4/2.png", "img/char/after4/3.png", "img/char/after4/4.png", "img/char/after4/5.png", "img/char/after4/6.png", "img/char/after4/7.png", "img/char/after4/8.png", "img/char/after4/9.png", "img/char/after4/10.png", "img/char/after4/11.png", "img/char/after4/12.png", "img/char/after4/13.png", "img/char/after4/14.png", "img/char/after4/15.png", "img/char/after4/16.png", "img/char/after4/17.png", "img/char/after4/18.png" ];
     var maxLast = imagesLast.length;
     var num = 0;
 
