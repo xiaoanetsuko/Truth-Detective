@@ -72,7 +72,6 @@ function timeTranslator (second) {
         }
     }else{ sec = second }
     $("#content p").append(strTime(hour, min, sec));
-    console.log(strTime(hour, min, sec));
 }
 
 function strTime(hour, min, sec) {

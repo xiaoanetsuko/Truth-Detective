@@ -26,17 +26,14 @@ angular.module('TruthDetective')
         };
 
         $scope.register = function () {
-            console.log('in hereeeeeeeeee');
             userService.Create(this.user)
                 .then(function (response){
                     if (response.success) {
-                        console.log("success");
                         flashService.Success('Sign up Successful', true);
                         $window.location.href = "http://deco1800-g51.uqcloud.net/login.html";
                     } else {
                         $scope.duplicate = true;
                         flashService.Error(response.message);
-                        console.log('errorrrrrrr');
                     }
                 });
 
@@ -52,33 +49,20 @@ angular.module('TruthDetective')
 
             var temp = $localStorage;
             $rootScope.userInfo.push($scope.$storage);
-            console.log("user info after sign up --> ");
-            console.log($rootScope.userInfo);
         };
 
         $scope.login = function () {
             var vm = this;
-            console.log('in loginnnnnn');
             authenticationService.ClearCredentials();
-            console.log("username --- " + $scope.vm.username);
             authenticationService.Login($scope.vm.username, $scope.vm.password, function (response) {
                 if (response.success) {
                     authenticationService.SetCredentials($scope.vm.username, $scope.vm.password);
-                    console.log('login succeed');
                     $window.location.href = "http://deco1800-g51.uqcloud.net/user.html";
                 } else {
                     $scope.loginVerify = true;
                     flashService.Error(response.message);
-                    console.log('login error')
                 }
             });
-            console.log("local storage after log in -->");
-            console.log($localStorage);
-
-            if ($scope.vm.username == $localStorage.user) {
-                console.log("first --> " + $localStorage.first);
-                console.log("second --> " + $localStorage.second);
-            }
         };
     });
 

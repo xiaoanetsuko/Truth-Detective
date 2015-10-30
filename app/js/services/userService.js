@@ -25,16 +25,7 @@ function userService($timeout, $filter, $q) {
         var deferred = $q.defer();
         var filtered = $filter('filter')(getUsers(), { username: username });
         var user = filtered.length ? filtered[0] : null;
-        //for (var i=0; i<filtered.length; i++) {
-        //    console.log(filtered[i].username);
-        //
-        //    //if (filtered[i].username === username) {
-        //    //    console.log(filtered[i]);
-        //    //    return filtered[i];
-        //    //}
-        //}
         deferred.resolve(user);
-        console.log(user);
         return deferred.promise;
     }
 
@@ -75,7 +66,6 @@ function userService($timeout, $filter, $q) {
                         // save to local storage
                         users.push(user);
                         setUsers(users);
-                        console.log(users);
                         deferred.resolve({ success: true });
                     }
               });
@@ -131,7 +121,6 @@ function userService($timeout, $filter, $q) {
                         tmp.push(chapterInfo[i].id);
                     }
                 }
-                console.log(tmp);
                 if (tmp.indexOf(userID) == -1) {
                     // assign id
                     user.id = userID;
@@ -141,8 +130,6 @@ function userService($timeout, $filter, $q) {
                     // save to local storage
                     chapterInfo.push(user);
                     setChInfo(chapterInfo);
-                    console.log('chapter info after .... ');
-                    console.log(chapterInfo);
                     return JSON.parse(localStorage.chapterInfo);
                 }
             });
@@ -172,7 +159,6 @@ function userService($timeout, $filter, $q) {
                     // save to local storage
                     chapterInfo.push(user);
                     setChInfo(chapterInfo);
-                    console.log(chapterInfo);
                     return JSON.parse(localStorage.chapterInfo);
                 }
             });
@@ -202,7 +188,6 @@ function userService($timeout, $filter, $q) {
                     // save to local storage
                     chapterInfo.push(user);
                     setChInfo(chapterInfo);
-                    console.log(chapterInfo);
                     return JSON.parse(localStorage.chapterInfo);
                 }
             });
@@ -232,7 +217,6 @@ function userService($timeout, $filter, $q) {
                      // save to local storage
                      chapterInfo.push(user);
                      setChInfo(chapterInfo);
-                     console.log(chapterInfo);
                      return JSON.parse(localStorage.chapterInfo);
                  }
             });
@@ -253,23 +237,18 @@ function userService($timeout, $filter, $q) {
                 }
             }
         }
-        console.log("current best ..... ")
-        console.log(currentRecord)
         if (completed.indexOf(chapter) == -1) {
             finishTime.duration = duration;
             finishTime.username = username;
             finishTime.chapter = chapter;
             timeInfo.push(finishTime);
             setFinishTime(timeInfo);
-            console.log(timeInfo);
         } else {
             var currentBest = parseInt(currentRecord.replace(/ /g, '').split(':').join(''),10);
             var latest = parseInt(duration.replace(/ /g, '').split(':').join(''),10);
             if (latest < currentBest) {
                 timeInfoBeforeUpdate.duration = duration;
                 setFinishTime(timeInfo);
-            } else{
-                console.log('notttt gonna happen')
             }
         }
     }

@@ -8,13 +8,10 @@ angular.module('TruthDetective')
             $scope.username = $rootScope.globals.currentUser.username;
             $scope.barWidth = 0;
             $scope.completed = false;
-            console.log("globals.....");
-            console.log($rootScope.globals);
             var lockedImg = 'img/tools/lock%203.png';
             var lockedTitle = 'Locked';
             var allChInfo = userService.getInfo();
             var userChInfo = [];
-
             $scope.chTutImg = 'resource/img/site/t.jpg';
             $scope.chOneImg = lockedImg;
             $scope.chTwoImg = lockedImg;
@@ -65,9 +62,6 @@ angular.module('TruthDetective')
                     userChInfo.push(allChInfo[i].chapter)
                 }
             }
-
-            console.log('chapter completed by this user ... ');
-            console.log(userChInfo);
 
             if (userChInfo.length == 1) {
                 $scope.chOneImg = 'resource/img/site/1.jpg';

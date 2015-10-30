@@ -14,9 +14,6 @@ $(document).ready( function() {
             loadedImages = [];
             var apiKey = "5ojt8mghlf9s8ahc";
             var requestUrl = "http://api.trove.nla.gov.au/work/" + id + "?encoding=json&key=" + apiKey + "&callback=?";
-            console.log(id);
-            console.log(requestUrl);
-            console.log(requestUrl === "http://api.trove.nla.gov.au/work/22743028?encoding=json&key=jsk1qqntnrj7qbvf&callback=?");
             clueWindow();
             $.ajax({
                 type: "GET",
@@ -72,8 +69,6 @@ $(document).ready( function() {
         //    addFlickrItem(imgUrl, troveItem);
         //
         //} else
-        console.log(imgUrl);
-        console.log("Haha");
 
         if (imgUrl.indexOf(urlPatterns[0]) >= 0) { // nla.gov
             loadedImages.push({

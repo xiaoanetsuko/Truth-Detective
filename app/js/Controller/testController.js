@@ -3,7 +3,6 @@
  */
 angular.module('TruthDetective')
     .controller('testCtrl', function ($scope, $rootScope, $localStorage, $window, userService) {
-        console.log($rootScope.globals);
         $scope.username = $rootScope.globals.currentUser.username;
         var user = userService.GetUser($scope.username);
 
@@ -25,9 +24,7 @@ angular.module('TruthDetective')
             userService.recordFinishTime(timeUsed, $scope.username, 'tutorial');
             userService.finishTut(user);
 
-            console.log("chapterInfo as JSON ..... ");
             var tmp = userService.getInfo();
-            console.log(tmp);
 
             $window.location.href = "http://deco1800-g51.uqcloud.net/chapter1.html";
         };
@@ -64,8 +61,6 @@ angular.module('TruthDetective')
             //userService.GetByUsername($rootScope.globals.currentUser.username);
             //console.log(userService.GetByUsername($scope.username));
             var timeUsed = document.getElementById("recordTime").innerHTML;
-            console.log('time gotten from div ,,, ')
-            console.log(timeUsed);
             userService.recordFinishTime(timeUsed, $scope.username, 'two');
             userService.finishTwo(user);
 
